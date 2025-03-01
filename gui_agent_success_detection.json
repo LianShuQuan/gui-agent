@@ -1,0 +1,29 @@
+[
+    {
+      "messages": [
+        {
+          "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
+          "role": "system"
+        },
+        {
+          "content": "<image>Who are they?",
+          "role": "user"
+        },
+        {
+          "content": "They're Kane and Gretzka from Bayern Munich.",
+          "role": "assistant"
+        },
+        {
+          "content": "What are they doing?",
+          "role": "user"
+        },
+        {
+          "content": "They are celebrating on the soccer field.",
+          "role": "assistant"
+        }
+      ],
+      "images": [
+        "mllm_demo_data/1.jpg"
+      ]
+    }
+]

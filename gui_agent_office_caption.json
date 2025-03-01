@@ -1,0 +1,59 @@
+[
+    {
+      "messages": [
+        {
+          "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
+          "role": "system"
+        },
+        {
+          "content": "<image>代表什么意思?",
+          "role": "user"
+        },
+        {
+          "content": "在ppt中，代表文本的字号是54，点击可以选择字号",
+          "role": "assistant"
+        }
+      ],
+      "images": [
+        "gui_agent_office_caption_data/ppt/screenshot-20250217-203910.png"
+      ]
+    },
+    {
+        "messages": [
+          {
+            "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
+            "role": "system"
+          },
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "在ppt中，代表文本的字体是黑体，点击可选择字体",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "gui_agent_office_caption_data/ppt/screenshot-20250217-204245.png"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
+            "role": "system"
+          },
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "在ppt中，代表文本的字体是黑体，点击可选择字体",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "gui_agent_office_caption_data/ppt/screenshot-20250217-204245.png"
+        ]
+      },
+]

@@ -1,0 +1,30 @@
+[
+    {
+      "messages": [
+        {
+          "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
+          "role": "system"
+        },
+        {
+          "content": "<image>为什么上方的编辑文本的所有功能不可用？",
+          "role": "user"
+        },
+        {
+          "content": "因为当前没有选中任何文本，功能图标都是暗淡的，不可用编辑文本。点击想要编辑的文本框后，功能图标变亮，即可使用编辑。",
+          "role": "assistant"
+        },
+        {
+          "content": "<image>",
+          "role": "user"
+        },
+        {
+          "content": "第二张image中点击里文本框后，功能图标变亮，已经可使用编辑。",
+          "role": "assistant"
+        }
+      ],
+      "images": [
+        "gui_agent_office_knowledge_data/ppt/screenshot-20250217-210457.png",
+        "gui_agent_office_knowledge_data/ppt/screenshot-20250217-211125.png"
+      ]
+    }
+]
