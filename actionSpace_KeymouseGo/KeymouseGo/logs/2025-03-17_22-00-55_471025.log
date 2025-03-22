@@ -1,0 +1,37 @@
+2025-03-17 22:00:55.491 | INFO     | UIFunc:__init__:105 - assets root:C:\Users\ADMINI~1\AppData\Local\Temp\_MEI255322\assets
+2025-03-17 22:00:55.557 | INFO     | Plugin.Manager:discover_plugin:55 - Discovered Plugin []
+2025-03-17 22:00:55.558 | INFO     | Plugin.Manager:register_plugin:68 - Registered functions: dict_keys([])
+2025-03-17 22:01:18.866 | INFO     | UIFunc:recordMethod:455 - Record start
+2025-03-17 22:01:18.866 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:18.867 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:20.430 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:20.511 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_mouse_left_down_20250317_220120_430767.png
+2025-03-17 22:01:20.532 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:20.599 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_mouse_left_up_20250317_220120_532336.png
+2025-03-17 22:01:22.649 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:22.760 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220122_649879.png
+2025-03-17 22:01:22.762 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:22.885 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220122_762645.png
+2025-03-17 22:01:22.887 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.022 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220122_888140.png
+2025-03-17 22:01:23.024 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.127 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220123_024683.png
+2025-03-17 22:01:23.129 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.241 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220123_130184.png
+2025-03-17 22:01:23.243 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.356 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220123_243828.png
+2025-03-17 22:01:23.360 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.463 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220123_360341.png
+2025-03-17 22:01:23.467 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.561 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220123_467449.png
+2025-03-17 22:01:23.562 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.657 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220123_562127.png
+2025-03-17 22:01:23.660 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.753 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220123_661252.png
+2025-03-17 22:01:23.785 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:23.877 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_down_20250317_220123_786430.png
+2025-03-17 22:01:23.913 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:24.009 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\screenshot_key_up_20250317_220123_913884.png
+2025-03-17 22:01:25.337 | INFO     | UIFunc:recordMethod:444 - Record stop
+2025-03-17 22:01:25.338 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2201\script.json5
+2025-03-17 22:01:25.340 | INFO     | UIFunc:check_hotkeys:237 - Record stop

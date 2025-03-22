@@ -1,217 +1,228 @@
 from typing import List
+from abc import ABC, abstractmethod
+
 from openai import OpenAI
-from prompts import *
 from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
-from utils import *
 import torch
-
-import logging
+from pydantic import BaseModel
+from pydantic.fields import Field
+from logger import logger
 
 from excutor import *
+from prompts import *
+from utils import *
+from schema import *
+from config.config import LLMSettings, config
 
+class MLLM(BaseModel, ABC):
+    name: str = Field(None, description="Model name")
+    temperature: float = Field(1.0, description="Sampling temperature")
+    max_tokens: int = Field(2048, description="Maximum tokens to generate")
+    @abstractmethod
+    def call(self) -> str:
+        """Call the model"""
 
+    @staticmethod
+    def format_messages(messages: List[Union[dict, Message]]) -> List[dict]:
+        """
+        Format messages for LLM by converting them to OpenAI message format.
 
-class Agent:
-    def __init__(self, local: bool=False, 
-                 llm_model: str=None, llm_api_key: str=None, llm_api_base: str=None,
-                 qwen_path: str=None, model_path: str=None):
-        self.history = []
-        self.llm_model = llm_model
-        self.llm_api_key = llm_api_key
-        self.llm_api_base = llm_api_base
-        self.local = local
+        Args:
+            messages: List of messages that can be either dict or Message objects
 
-        if not local:
-            # openai client
-            self.client = OpenAI(api_key=self.llm_api_key, base_url=self.llm_api_base)
+        Returns:
+            List[dict]: List of formatted messages in OpenAI format
+
+        Raises:
+            ValueError: If messages are invalid or missing required fields
+            TypeError: If unsupported message types are provided
+
+        Examples:
+            >>> msgs = [
+            ...     Message.system_message("You are a helpful assistant"),
+            ...     {"role": "user", "content": "Hello"},
+            ...     Message.user_message("How are you?")
+            ... ]
+            >>> formatted = LLM.format_messages(msgs)
+        """
+        formatted_messages = []
+
+        for message in messages:
+            if isinstance(message, dict):
+                # If message is already a dict, ensure it has required fields
+                if "role" not in message:
+                    raise ValueError("Message dict must contain 'role' field")
+                formatted_messages.append(message)
+            elif isinstance(message, Message):
+                # If message is a Message object, convert it to dict
+                formatted_messages.append(message.to_dict())
+            else:
+                raise TypeError(f"Unsupported message type: {type(message)}")
+
+        # Validate all messages have required fields
+        for msg in formatted_messages:
+            if msg["role"] not in ["system", "user", "assistant", "tool"]:
+                raise ValueError(f"Invalid role: {msg['role']}")
+            if "content" not in msg and "tool_calls" not in msg:
+                raise ValueError(
+                    "Message must contain either 'content' or 'tool_calls'"
+                )
+
+        return formatted_messages
+
+class LocalMLLM(MLLM):
+    processor_path: str = Field(..., description="Qwen2VL Processor path")
+    path: str = Field(..., description="model path")
+
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.processor = AutoProcessor.from_pretrained(self.processor_path)
+    #     self.model = Qwen2VLForConditionalGeneration.from_pretrained(self.model_path, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16)
+
+    def model_post_init(self, __context):
+        # 这个方法会在模型初始化后自动调用
+        self._processor = AutoProcessor.from_pretrained(self.processor_path)
+        self._model = Qwen2VLForConditionalGeneration.from_pretrained(self.path, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16)
+
+    def call(self, messages: List[Message]) -> str:
+        return qwen2generate(self._model, self._processor, MLLM.format_messages(messages))
+    
+
+class ApiMLLM(MLLM):
+    base_url: str = Field(..., description="API base URL")
+    api_key: str = Field(..., description="API key")
+
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+
+    def model_post_init(self, __context):
+        # 这个方法会在模型初始化后自动调用
+        self._client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+
+    def call(self, messages: List[Message]) -> str:
+        logger.debug(f"format_messages: {MLLM.format_messages(messages)}")
+        return self._client.chat.completions.create(model=self.name, messages=MLLM.format_messages(messages), temperature=self.temperature, max_tokens=self.max_tokens).choices[0].message.content
+
+class BaseAgent():
+    agent_name: str = None
+    memory: Memory = Memory()
+    mllm: MLLM
+    cur_subtask_idx: int = 0
+    cur_subtask: str = None
+
+    def __init__(self, config_name: str = "default", llm_config: Optional[LLMSettings] = None):
+        """
+        config_name is llm.config_name in toml file
+        """
+        llm_config = llm_config or config.llm.get(config_name)
+        self.agent_name = llm_config.agent_name
+        if llm_config.local:
+            self.mllm = LocalMLLM(name=llm_config.model, processor_path=llm_config.processor_path,
+                                  path=llm_config.model_path, temperature=llm_config.temperature, max_tokens=llm_config.max_tokens)
         else:
-            # local model only support qwen2based
-            self.processor = AutoProcessor.from_pretrained(qwen_path)
+            self.mllm = ApiMLLM(name=llm_config.model, base_url=llm_config.base_url, api_key=llm_config.api_key, temperature=llm_config.temperature, max_tokens=llm_config.max_tokens)
 
-            self.model = Qwen2VLForConditionalGeneration.from_pretrained(model_path, device_map="auto", trust_remote_code=True, torch_dtype=torch.bfloat16) # load with model checkpoint
-
-    def reset(self, _logger=None):
-        self.history = []
-
-    def sync_history(self, history: List):
-        self.history = history
-
-class Planner(Agent):
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def reset(self):
+        self.memory = Memory()
         self.cur_subtask_idx = 0
         self.cur_subtask = None
 
-    def inference_subtask(self, instruction: str, img_path: str=None) -> str:
-        messages = [
-            {"role": "system", "content": SYS_PLANNER},
-            {"role": "user", "content": USR_SUBTASK_INTFRENCE.format(task_description=instruction, history=self.history if len(self.history) > 0 else "None")},
-        ]
-        if img_path:
-            messages[1]["content"] = [
-                {"type": "image_url", 'image_url': {"url": img_path}},
-                {"type": "text", 'text': messages[1]["content"]}
-            ]
-
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-
-
-        logging.info(f'''subtask inference {self.cur_subtask_idx}: {response}''')
-        messages.append({"role": "assistant", "content": response})
-        messages.append({"role": "user", "content": USR_SUBTASK_INTFRENCE_FINAL})
-
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-        self.cur_subtask_idx += 1
-        self.cur_subtask = response
-        logging.info(f"current subtask: {self.cur_subtask}")
-        return self.cur_subtask
-    
-    def add_subtask_history(self, feedback: str):
-        self.history.append(f"""
-Subtask {self.cur_subtask_idx}: {self.cur_subtask}
-""")
-        self.history.append(f"""
-Feedback: {feedback}
-""")
-
-
-    def parse_actions(self, response: str, masks=None):
-        pass
-
-
-    def close(self):
-        pass
-
-
-
-
-class DetectionAgent(Agent):
-
-    def detect(self, instruction: str, img_path: str=None) -> bool:
-        messages = [
-            {"role": "system", "content": SYS_PLANNER},
-            {"role": "user", "content": USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.history if len(self.history) > 0 else "None")},
-        ]
-        if img_path:
-            messages[1]["content"] = [
-                {"type": "image_url", 'image_url': {"url": img_path}},
-                {"type": "text", 'text': messages[1]["content"]}
-            ]
-
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages,
-                max_tokens=1000).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-        logging.info(f"detection response: {response}")
-        
-        messages.append({"role": "assistant", "content": response})
-        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
-
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages,
-                max_tokens=1000).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-
-        if "YES" in response:
-            return True
-        elif "NO" in response:
-            return False
-        else:
-            raise ValueError(f"detection Invalid response: {response}")
-
-    
-    def detect_subtask(self, task_description: str, 
-                            current_subtask_description: str, excution_response: str=None, img_path: str=None) -> str:
-        messages = [
-            {"role": "system", "content": SYS_PLANNER},
-            {"role": "user", "content": USR_SUBTASK_SUCCESS_DETECTION.format(task_description=task_description, 
-                                                                             excution_response=excution_response, 
-                                                                             current_subtask_description=current_subtask_description)},
-        ]
-        if img_path:
-            messages[1]["content"] = [
-                {"type": "image_url", 'image_url': {"url": img_path}},
-                {"type": "text", 'text': messages[1]["content"]}
-            ]
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages,
-                max_tokens=1000).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-        logging.info(f"detection response: {response}")
-        
-        messages.append({"role": "assistant", "content": response})
-        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
-
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=messages).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, messages)
-
-        if "YES" in response:
-            return True
-        elif "NO" in response:
-            return False
-        else:
-            raise ValueError(f"detection Invalid response: {response}")
-    
-    
-
-class UITars(Agent):
+class Planner(BaseAgent):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+    def inference_subtask(self, instruction: str, img: str|Image.Image=None) -> str:
+        messages = []
+        messages.append(Message.system_message(SYS_PLANNER))
+        if img:
+            messages.append(Message.user_message([Content(type="image_url", value=img), Content(type="text", value=USR_SUBTASK_INTFRENCE.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None"))]))
+        else:
+            messages.append(Message.user_message(USR_SUBTASK_INTFRENCE.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")))
+        logger.debug(f"messages: {messages}")
+        response = self.mllm.call(messages)
+        logger.info(f'''subtask inference {self.cur_subtask_idx}: {response}''')
+        messages.append(Message.assistant_message(response))
+
+        messages.append(Message.user_message(USR_SUBTASK_INTFRENCE_FINAL))
+        response = self.mllm.call(messages)
+        messages.append(Message.assistant_message(response))
+        self.cur_subtask_idx += 1
+        self.cur_subtask = response
+        logger.info(f"current subtask: {self.cur_subtask}")
+
+        self.memory.add_messages(messages)
+        return self.cur_subtask
+    
+    def detect(self, instruction: str, img: str|Image.Image=None) -> bool:
+
+        messages = [Message.system_message(SYS_PLANNER)]
+        if img:
+            messages.append(Message.user_message([Content(type="text",value=USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")),
+                                                  Content(type="image_url", value=img)]))
+        else:
+            messages.append(Message.user_message(USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")))
+        response = self.mllm.call(messages)
+        logger.info(f"detection response: {response}")
+        messages.append({"role": "assistant", "content": response})
+
+
+        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
+        response = self.mllm.call(messages)
+        if "YES" in response:
+            return True
+        elif "NO" in response:
+            return False
+        else:
+            raise ValueError(f"detection Invalid response: {response}")
+    
+
+
+
+
+class DetectionAgent(BaseAgent):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)    
+
+
+
+
+    
+    def detect_subtask(self, task_description: str, 
+                            current_subtask_description: str, excution_response: str=None, img: str|Image.Image=None) -> str:
+        messages = [Message.system_message(SYS_PLANNER)]
+        if img:
+            messages.append(Message.user_message([Content(type="text", value=USR_SUBTASK_SUCCESS_DETECTION.format(task_description=task_description, excution_response=excution_response, current_subtask_description=current_subtask_description)),
+                                                  Content(type="image_url", value=img)]))
+        else:
+            messages.append(Message.user_message(USR_SUBTASK_SUCCESS_DETECTION.format(task_description=task_description, excution_response=excution_response, current_subtask_description=current_subtask_description)))
+        response = self.mllm.call(messages)
+        logger.info(f"detection response: {response}")
+        
+        messages.append({"role": "assistant", "content": response})
+        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
+        response = self.mllm.call(messages)
+        if "YES" in response:
+            return True
+        elif "NO" in response:
+            return False
+        else:
+            raise ValueError(f"detection Invalid response: {response}")
+    
+    
+
+class UITars(BaseAgent):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
     def output_action(self, current_subtask_description: str, img_path: str=None) -> str:
-        if len(self.history) == 0:
-            self.history.append(
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "image_url", 'image_url': {"url": img_path}},
-                        {"type": "text", 'text': SYS_CODE_UITARS_COMPUTER.format(language="English", instruction=current_subtask_description)}
-                    ]
-                }
-            )
+        if self.memory.len() == 0:
+            self.memory.add_message(Message.user_message([Content(type="text", value=SYS_CODE_UITARS_COMPUTER.format(language="Chinese", instruction=current_subtask_description)),
+                                                      Content(type="image_url", value=img_path)]))
         else:
-            self.history.append(
-                {
-                    "role": "user",
-                    "content": [{"type": "image_url", 'image_url': {"url": img_path}}]
-                }
-            )
-        if not self.local:
-            response = self.client.chat.completions.create(
-                model=self.llm_model,
-                messages=self.history,
-                max_tokens=1000).choices[0].message.content
-        else:
-            response = qwen2generate(self.model, self.processor, self.history)
-
-        self.history.append({"role": "assistant", "content": response})
-        logging.info(f'''output_action: {response}''')
-
+            self.memory.add_message(Message.user_message(Content(type="image_url", value=img_path)))
+        response = self.mllm.call(self.memory.messages)
+        logger.info(f'''output_action: {response}''')
         return response
     
 

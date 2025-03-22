@@ -1,0 +1,320 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(272,53)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(298,145)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(107,271)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0307_2016\\screenshot_mouse_left_up_20250307_201654_431774.png",
+      "scripts\\0307_2016\\screenshot_mouse_left_up_20250307_201657_038054.png",
+      "scripts\\0307_2016\\screenshot_mouse_left_up_20250307_201702_335996.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(51,59)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(209,212)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0307_2020\\screenshot_mouse_left_up_20250307_202011_974894.png",
+      "scripts\\0307_2020\\screenshot_mouse_left_up_20250307_202015_331152.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "drag(start_box='<|box_start|>(418,782)<|box_end|>', end_box='<|box_start|>(420,780)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(801,118)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(450,799)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1145\\screenshot_mouse_left_up_20250309_114537_936473.png",
+      "scripts\\0309_1145\\screenshot_mouse_left_up_20250309_114541_641989.png",
+      "scripts\\0309_1145\\screenshot_mouse_left_up_20250309_114543_578736.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(79,54)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(110,111)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(154,293)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(417,618)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1147\\screenshot_mouse_left_up_20250309_114726_204459.png",
+      "scripts\\0309_1147\\screenshot_mouse_left_up_20250309_114730_296309.png",
+      "scripts\\0309_1147\\screenshot_mouse_left_up_20250309_114742_431539.png",
+      "scripts\\0309_1147\\screenshot_mouse_left_up_20250309_114747_493742.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(79,60)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(110,146)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(214,354)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1148\\screenshot_mouse_left_up_20250309_114837_319435.png",
+      "scripts\\0309_1148\\screenshot_mouse_left_up_20250309_114839_985889.png",
+      "scripts\\0309_1148\\screenshot_mouse_left_up_20250309_114844_852305.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(145,55)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(147,144)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(163,237)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(440,668)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1154\\screenshot_mouse_left_up_20250309_115426_730900.png",
+      "scripts\\0309_1154\\screenshot_mouse_left_up_20250309_115433_693033.png",
+      "scripts\\0309_1154\\screenshot_mouse_left_up_20250309_115437_590362.png",
+      "scripts\\0309_1154\\screenshot_mouse_left_up_20250309_115441_744101.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(145,57)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(51,149)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(93,234)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(634,441)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1157\\screenshot_mouse_left_up_20250309_115740_941655.png",
+      "scripts\\0309_1157\\screenshot_mouse_left_up_20250309_115743_725394.png",
+      "scripts\\0309_1157\\screenshot_mouse_left_up_20250309_115748_252083.png",
+      "scripts\\0309_1157\\screenshot_mouse_left_up_20250309_115750_139443.png"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<image>You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task. \n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished()\ncall_user() # Submit the task and call the user when the task is unsolvable, or when you need the user's help.\n\n\n## Note\n- Use Chinese in `Thought` part.\n- Summarize your next action (with its target element) in one sentence in `Thought` part.\n\n## User Instruction\n请在屏幕上点击左键"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(83,54)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(148,146)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(169,215)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(62,263)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(198,312)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(383,517)<|box_end|>')"
+      },
+      {
+        "role": "user",
+        "content": "<image>"
+      },
+      {
+        "role": "assistant",
+        "content": "click(start_box='<|box_start|>(361,761)<|box_end|>')"
+      }
+    ],
+    "images": [
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120102_687562.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120105_279521.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120109_298031.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120113_566444.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120115_889158.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120119_585277.png",
+      "scripts\\0309_1201\\screenshot_mouse_left_up_20250309_120121_899636.png"
+    ]
+  }
+]

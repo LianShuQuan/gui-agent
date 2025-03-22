@@ -1,0 +1,3 @@
+2025-03-17 22:03:00.842 | INFO     | UIFunc:__init__:105 - assets root:C:\Users\ADMINI~1\AppData\Local\Temp\_MEI264162\assets
+2025-03-17 22:03:00.916 | INFO     | Plugin.Manager:discover_plugin:55 - Discovered Plugin []
+2025-03-17 22:03:00.916 | INFO     | Plugin.Manager:register_plugin:68 - Registered functions: dict_keys([])

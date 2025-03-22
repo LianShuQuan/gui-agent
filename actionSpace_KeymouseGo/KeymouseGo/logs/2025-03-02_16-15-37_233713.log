@@ -1,0 +1,10 @@
+2025-03-02 16:15:37.253 | INFO     | UIFunc:__init__:81 - assets root:C:\Users\ADMINI~1\AppData\Local\Temp\_MEI120882\assets
+2025-03-02 16:15:42.306 | INFO     | UIFunc:getextension:590 - Load plugin class <class 'Extension.Extension'> in module Extension
+2025-03-02 16:15:42.307 | INFO     | UIFunc:recordMethod:427 - Record start
+2025-03-02 16:15:44.764 | INFO     | UIFunc:recordMethod:406 - Record stop
+2025-03-02 16:15:44.764 | INFO     | UIFunc:get_script_path:356 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0302_1615.txt
+2025-03-02 16:16:42.387 | INFO     | UIFunc:OnBtrunButton:445 - Script start
+2025-03-02 16:16:42.388 | INFO     | UIFunc:get_script_path:356 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0302_1615.txt
+2025-03-02 16:16:42.389 | INFO     | UIFunc:run:513 - 0302_1615.txt running..
+2025-03-02 16:16:42.390 | INFO     | UIFunc:getextension:590 - Load plugin class <class 'Extension.Extension'> in module Extension
+2025-03-02 16:16:44.127 | INFO     | UIFunc:run:564 - Script run finish

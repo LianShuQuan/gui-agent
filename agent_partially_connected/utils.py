@@ -20,7 +20,7 @@ def pred_2_point(s):
 
 
 
-def qwen2generate(model: Qwen2VLForConditionalGeneration, processor: AutoProcessor, messages: List[dict]):
+def qwen2generate(model: Qwen2VLForConditionalGeneration, processor: AutoProcessor, messages: List[dict], max_tokens: int = 1000, temperature: float = 1) -> str:
     text = processor.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True,
     )
@@ -33,7 +33,7 @@ def qwen2generate(model: Qwen2VLForConditionalGeneration, processor: AutoProcess
         return_tensors="pt",
     )
     inputs = inputs.to("cuda")
-    generated_ids = model.generate(**inputs, max_new_tokens=1000)
+    generated_ids = model.generate(**inputs, max_new_tokens=max_tokens)
     generated_ids_trimmed = [
         out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
     ]

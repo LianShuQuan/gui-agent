@@ -1,0 +1,19 @@
+# Global LLM configuration
+[llm]
+model = "Qwen/Qwen2-VL-72B-Instruct"
+base_url = "https://api.siliconflow.cn/v1"
+api_key = "sk-bbwqnimupumnxffvokuqwwaruvdkavfmwobugvqgxwujhdfq"
+
+
+
+
+# Optional configuration for specific LLM models
+[llm.coder]
+model = "bytedance-research/UI-TARS-7B-DPO"
+base_url = "http://localhost:8000/v1"
+api_key = "sk-..."
+
+[llm.detect]
+model = "Qwen/Qwen2-VL-72B-Instruct"
+base_url = "https://api.siliconflow.cn/v1"
+api_key = "sk-bbwqnimupumnxffvokuqwwaruvdkavfmwobugvqgxwujhdfq"

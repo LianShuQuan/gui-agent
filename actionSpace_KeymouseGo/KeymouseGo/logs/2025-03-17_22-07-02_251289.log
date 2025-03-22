@@ -1,0 +1,221 @@
+2025-03-17 22:07:02.271 | INFO     | UIFunc:__init__:105 - assets root:C:\Users\ADMINI~1\AppData\Local\Temp\_MEI193602\assets
+2025-03-17 22:07:02.342 | INFO     | Plugin.Manager:discover_plugin:55 - Discovered Plugin []
+2025-03-17 22:07:02.343 | INFO     | Plugin.Manager:register_plugin:68 - Registered functions: dict_keys([])
+2025-03-17 22:07:14.016 | INFO     | UIFunc:recordMethod:455 - Record start
+2025-03-17 22:07:14.017 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:14.018 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:15.252 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:15.323 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220715_252617.png
+2025-03-17 22:07:15.345 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:15.409 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220715_345200.png
+2025-03-17 22:07:16.550 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:16.618 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220716_551920.png
+2025-03-17 22:07:16.641 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:16.709 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220716_641529.png
+2025-03-17 22:07:20.746 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:20.830 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220720_746102.png
+2025-03-17 22:07:20.833 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:20.915 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220720_833591.png
+2025-03-17 22:07:20.917 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.001 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220720_917640.png
+2025-03-17 22:07:21.003 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.089 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_003078.png
+2025-03-17 22:07:21.092 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.191 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_093031.png
+2025-03-17 22:07:21.377 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.469 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_378940.png
+2025-03-17 22:07:21.471 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.558 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_471116.png
+2025-03-17 22:07:21.561 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.651 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_561561.png
+2025-03-17 22:07:21.652 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.747 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_652033.png
+2025-03-17 22:07:21.747 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.836 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_747610.png
+2025-03-17 22:07:21.839 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:21.928 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_839468.png
+2025-03-17 22:07:21.930 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.020 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220721_930676.png
+2025-03-17 22:07:22.049 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.127 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_049478.png
+2025-03-17 22:07:22.130 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.203 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_130496.png
+2025-03-17 22:07:22.204 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.285 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_205783.png
+2025-03-17 22:07:22.287 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.357 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_288117.png
+2025-03-17 22:07:22.359 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.427 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_360173.png
+2025-03-17 22:07:22.430 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.489 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_430387.png
+2025-03-17 22:07:22.491 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:22.555 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220722_491349.png
+2025-03-17 22:07:23.085 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.172 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_085813.png
+2025-03-17 22:07:23.175 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.268 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_175774.png
+2025-03-17 22:07:23.270 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.358 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_270015.png
+2025-03-17 22:07:23.360 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.460 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_360603.png
+2025-03-17 22:07:23.462 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.579 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_462064.png
+2025-03-17 22:07:23.581 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.695 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_581048.png
+2025-03-17 22:07:23.696 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.813 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_696896.png
+2025-03-17 22:07:23.817 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:23.923 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_817047.png
+2025-03-17 22:07:23.926 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.023 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220723_926104.png
+2025-03-17 22:07:24.025 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.117 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220724_025003.png
+2025-03-17 22:07:24.119 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.210 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220724_119383.png
+2025-03-17 22:07:24.212 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.288 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220724_213091.png
+2025-03-17 22:07:24.290 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.356 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220724_290403.png
+2025-03-17 22:07:24.358 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:24.413 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220724_358501.png
+2025-03-17 22:07:25.050 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.109 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_050604.png
+2025-03-17 22:07:25.112 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.174 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_112939.png
+2025-03-17 22:07:25.176 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.243 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_176153.png
+2025-03-17 22:07:25.247 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.311 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_247125.png
+2025-03-17 22:07:25.312 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.385 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_312732.png
+2025-03-17 22:07:25.385 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.464 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_387178.png
+2025-03-17 22:07:25.468 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.545 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_468044.png
+2025-03-17 22:07:25.547 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:25.622 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220725_547621.png
+2025-03-17 22:07:26.233 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.312 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_233911.png
+2025-03-17 22:07:26.313 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.389 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_314671.png
+2025-03-17 22:07:26.391 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.464 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_391285.png
+2025-03-17 22:07:26.467 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.550 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_467991.png
+2025-03-17 22:07:26.553 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.651 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_553019.png
+2025-03-17 22:07:26.653 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:26.762 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_wheel_down_20250317_220726_654738.png
+2025-03-17 22:07:28.365 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:28.453 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220728_365863.png
+2025-03-17 22:07:28.496 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:28.574 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220728_496542.png
+2025-03-17 22:07:33.612 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:33.712 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220733_612856.png
+2025-03-17 22:07:33.714 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:33.810 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220733_715247.png
+2025-03-17 22:07:34.042 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:34.133 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220734_042384.png
+2025-03-17 22:07:34.146 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:34.227 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220734_146687.png
+2025-03-17 22:07:34.849 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:34.902 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220734_849931.png
+2025-03-17 22:07:34.955 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:35.007 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220734_956674.png
+2025-03-17 22:07:42.698 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:42.758 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_down_20250317_220742_698406.png
+2025-03-17 22:07:42.774 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:42.838 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_mouse_left_up_20250317_220742_774886.png
+2025-03-17 22:07:43.737 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:43.798 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220743_737070.png
+2025-03-17 22:07:43.799 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:43.865 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220743_801408.png
+2025-03-17 22:07:43.867 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:43.929 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220743_867653.png
+2025-03-17 22:07:43.953 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.018 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220743_953371.png
+2025-03-17 22:07:44.201 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.261 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220744_201250.png
+2025-03-17 22:07:44.328 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.387 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220744_328925.png
+2025-03-17 22:07:44.392 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.458 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220744_393446.png
+2025-03-17 22:07:44.460 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.523 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220744_461318.png
+2025-03-17 22:07:44.526 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.592 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220744_526572.png
+2025-03-17 22:07:44.594 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:44.660 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220744_594674.png
+2025-03-17 22:07:45.648 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:45.710 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220745_649464.png
+2025-03-17 22:07:46.156 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.214 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_156134.png
+2025-03-17 22:07:46.216 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.285 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_216941.png
+2025-03-17 22:07:46.287 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.350 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_288934.png
+2025-03-17 22:07:46.352 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.411 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_352392.png
+2025-03-17 22:07:46.413 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.477 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_413085.png
+2025-03-17 22:07:46.478 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.538 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_478820.png
+2025-03-17 22:07:46.539 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.596 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_539940.png
+2025-03-17 22:07:46.598 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.657 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_598878.png
+2025-03-17 22:07:46.660 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.722 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_660306.png
+2025-03-17 22:07:46.723 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.780 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_723036.png
+2025-03-17 22:07:46.781 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.841 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_782354.png
+2025-03-17 22:07:46.842 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.903 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_842712.png
+2025-03-17 22:07:46.903 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:46.967 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_904566.png
+2025-03-17 22:07:46.968 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.027 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220746_968406.png
+2025-03-17 22:07:47.028 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.085 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_029004.png
+2025-03-17 22:07:47.085 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.147 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_086923.png
+2025-03-17 22:07:47.151 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.210 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_151034.png
+2025-03-17 22:07:47.211 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.269 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_211527.png
+2025-03-17 22:07:47.272 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.340 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_272664.png
+2025-03-17 22:07:47.342 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.410 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_343385.png
+2025-03-17 22:07:47.412 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.479 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_413398.png
+2025-03-17 22:07:47.482 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.557 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_483091.png
+2025-03-17 22:07:47.665 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.734 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_665302.png
+2025-03-17 22:07:47.792 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.855 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_793456.png
+2025-03-17 22:07:47.857 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.923 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_858864.png
+2025-03-17 22:07:47.926 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:47.989 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220747_927443.png
+2025-03-17 22:07:47.992 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:48.062 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220747_992306.png
+2025-03-17 22:07:48.064 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:48.132 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220748_064935.png
+2025-03-17 22:07:48.256 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:48.318 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220748_256813.png
+2025-03-17 22:07:48.336 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:48.399 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220748_337505.png
+2025-03-17 22:07:49.201 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:49.269 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220749_201601.png
+2025-03-17 22:07:49.328 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:49.396 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_down_20250317_220749_329453.png
+2025-03-17 22:07:49.409 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:49.490 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220749_409306.png
+2025-03-17 22:07:49.897 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:49.964 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\screenshot_key_up_20250317_220749_897187.png
+2025-03-17 22:07:55.376 | INFO     | UIFunc:recordMethod:444 - Record stop
+2025-03-17 22:07:55.377 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\KeymouseGo\dist\scripts\0317_2207\script.json5
+2025-03-17 22:07:55.385 | INFO     | UIFunc:check_hotkeys:237 - Record stop
