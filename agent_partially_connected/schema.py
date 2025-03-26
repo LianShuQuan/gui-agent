@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, field_validator, ValidationInfo
 from PIL import Image
 
 
-from agent_partially_connected.utils import *
+from utils import *
 
 class AgentState(str, Enum):
     """Agent execution states"""
@@ -52,6 +52,12 @@ class Content(BaseModel):
                 return {"type": self.type, self.type: {"url": to_base64_openai_format(self.value)}}
             else:
                 return {"type": self.type, self.type: {"url": self.value}}
+            
+    def to_dict_not_show_img(self):
+        if self.type == "text":
+            return {"type": self.type, self.type: self.value}
+        if self.type == "image_url":
+            return {"type": self.type, self.type: {"url": self.value}}
 
                     
 class LocalQwen2VLContent(Content):
@@ -82,10 +88,11 @@ class Message(BaseModel):
     """
     Represents a chat message in the conversation
     In openai format, content can be list
+    根据OpenAI API的要求，当content包含多部分（如文本和图像）时，应该是一个数组，每个元素是一个包含type和对应内容的对象。即使用户只发送一个图像，content也应该是一个数组，里面有一个元素是图像类型的字典。如果用户直接传递了一个字典而不是数组，API会认为content的结构不正确，导致验证错误。
     """
 
     role: Literal["system", "user", "assistant", "tool"] = Field(...)
-    content: Optional[str|Content|List[Content]] = Field(default=None)
+    content: Optional[str|List[Content]] = Field(default=None)
     tool_calls: Optional[List[ToolCall]] = Field(default=None)
     name: Optional[str] = Field(default=None)
     tool_call_id: Optional[str] = Field(default=None)
@@ -110,16 +117,14 @@ class Message(BaseModel):
                 f"unsupported operand type(s) for +: '{type(other).__name__}' and '{type(self).__name__}'"
             )
 
-    def to_dict(self) -> dict:
+    def to_dict(self, decode:bool=True) -> dict:
         """Convert message to dictionary format"""
         message = {"role": self.role}
         if self.content is not None:
             if isinstance(self.content, str):
                 message["content"] = self.content
             elif isinstance(self.content, list):
-                message["content"] = [content.to_dict() for content in self.content]
-            else:
-                message["content"] = self.content.to_dict()
+                message["content"] = [content.to_dict(decode=decode) for content in self.content]
         if self.tool_calls is not None:
             message["tool_calls"] = [tool_call.dict() for tool_call in self.tool_calls]
         if self.name is not None:
@@ -127,19 +132,31 @@ class Message(BaseModel):
         if self.tool_call_id is not None:
             message["tool_call_id"] = self.tool_call_id
         return message
+    
+    def to_dict_not_show_img(self):
+        """Convert message to dictionary format"""
+        message = {"role": self.role}
+        if self.content is not None:
+            if isinstance(self.content, str):
+                message["content"] = self.content
+            elif isinstance(self.content, list):
+                message["content"] = [content.to_dict_not_show_img() for content in self.content]
+            else:
+                message["content"] = self.content.to_dict_not_show_img()
+        return message
 
     @classmethod
-    def user_message(cls, content: str|Content|List[Content]) -> "Message":
+    def user_message(cls, content: str|List[Content]) -> "Message":
         """Create a user message"""
         return cls(role="user", content=content)
 
     @classmethod
-    def system_message(cls, content: str|Content) -> "Message":
+    def system_message(cls, content: str|List[Content]) -> "Message":
         """Create a system message"""
         return cls(role="system", content=content)
 
     @classmethod
-    def assistant_message(cls, content: str|Content|List[Content] = None) -> "Message":
+    def assistant_message(cls, content: str|List[Content] = None) -> "Message":
         """Create an assistant message"""
         return cls(role="assistant", content=content)
 
@@ -250,9 +267,12 @@ class Memory(BaseModel):
         """Get n most recent messages"""
         return self.messages[-n:]
 
-    def to_dict_list(self) -> List[dict]:
+    def to_dict_list(self, decode:bool=True) -> List[dict]:
         """Convert messages to list of dicts"""
-        return [msg.to_dict() for msg in self.messages]
+        return [msg.to_dict(decode=decode) for msg in self.messages]
+    
+    def to_dict_not_show_img(self):
+        return [msg.to_dict_not_show_img() for msg in self.messages]
     
     def len(self) -> int:
         return len(self.messages)

@@ -46,7 +46,7 @@ def rescale_coords(x, y, model_coord_width=1000, model_coord_height=1000):
 
 
 
-def execute_action(action):
+def execute_action(action) -> str:
     """
     解析并执行 action，例如：
     click(start_box='[100, 200, 150, 250]') → 在中心点点击
@@ -108,6 +108,7 @@ def execute_action(action):
     elif action.startswith("call_user"):
         print("User intervention required!")
         input("Press Enter to continue...")
+    return f'Action "{action}" executed'
 
 # # 示例调用
 # actions = [
@@ -128,7 +129,7 @@ def execute_action(action):
 #         break
 
 
-def parse_and_execute_output(output_str):
+def parse_and_execute_output(output_str) -> str:
     """
     解析模型输出，并执行 `Action:` 后的每个操作
     """
@@ -144,8 +145,10 @@ def parse_and_execute_output(output_str):
                 return execute_action(action)
             else:
                 logging.error("❌ 空的 action")
+                return "❌ 空的 action"
     else:
         logging.error("❌ 没有找到 Action 部分！")
+        return "❌ 没有找到 Action 部分！"
 
 
 # 示例调用

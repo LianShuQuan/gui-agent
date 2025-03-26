@@ -7,7 +7,16 @@ from PIL import ImageGrab
 
 from loguru import logger
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
 
+logger.remove()  # 这行很关键，先删除logger自动产生的handler，不然会出现重复输出的问题
+logger.add(sys.stderr, level='DEBUG')  # 只输出警告以上的日志
+
+
+def str_match(str1: str, str2: str) -> bool:
+    return str1.lower() in str2.lower() or str2.lower() in str1.lower()
 
 
 if __name__ == "__main__":
@@ -25,7 +34,7 @@ if __name__ == "__main__":
     coder = UITars(config_name="coder")
 
     planner = Planner()
-    instruction = "copy the first line and paste in the last line."
+    instruction = "分步把ppt里每一个页的“your logo”删除。"
 
 
     success = False
@@ -33,11 +42,13 @@ if __name__ == "__main__":
         subtask_success = False
         img = ImageGrab.grab()
         subtask = planner.inference_subtask(instruction, img=img)
+        if str_match(subtask, "Task completed"):
+            success = True
         while not subtask_success:
             action = coder.output_action(subtask, img=img)
             try:
                 feedback = parse_and_execute_output(action)
-                if "finished()" in feedback:
+                if feedback and "finished()" in feedback:
                     subtask_success = True
             except Exception as e:
                 logger.error(f"Execute Action Error: {str(e)}")
@@ -46,8 +57,8 @@ if __name__ == "__main__":
             logger.info(f"Subtask Success: {subtask_success}")
         coder.reset()
 
-        success = planner.detect(instruction, img)
-        logger.info(f"Success: {success}")
+        # success = planner.detect(instruction, img)
+        # logger.info(f"Success: {success}")
             
 
 

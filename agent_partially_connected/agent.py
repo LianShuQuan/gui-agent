@@ -101,16 +101,17 @@ class ApiMLLM(MLLM):
         # 这个方法会在模型初始化后自动调用
         self._client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 
-    def call(self, messages: List[Message]) -> str:
-        logger.debug(f"format_messages: {MLLM.format_messages(messages)}")
-        return self._client.chat.completions.create(model=self.name, messages=MLLM.format_messages(messages), temperature=self.temperature, max_tokens=self.max_tokens).choices[0].message.content
+    def call(self, messages: List[Message], temperature: Optional[float]=None) -> str:
+        if temperature is None:
+            temperature = self.temperature
+        logger.debug(f"messages: {[message.to_dict_not_show_img() for message in messages]}")
+        return self._client.chat.completions.create(model=self.name, messages=MLLM.format_messages(messages), temperature=temperature, max_tokens=self.max_tokens).choices[0].message.content
 
 class BaseAgent():
     agent_name: str = None
-    memory: Memory = Memory()
+    memory: Memory
     mllm: MLLM
-    cur_subtask_idx: int = 0
-    cur_subtask: str = None
+    subtasks: list = []
 
     def __init__(self, config_name: str = "default", llm_config: Optional[LLMSettings] = None):
         """
@@ -123,13 +124,20 @@ class BaseAgent():
                                   path=llm_config.model_path, temperature=llm_config.temperature, max_tokens=llm_config.max_tokens)
         else:
             self.mllm = ApiMLLM(name=llm_config.model, base_url=llm_config.base_url, api_key=llm_config.api_key, temperature=llm_config.temperature, max_tokens=llm_config.max_tokens)
+        self.memory = Memory()
 
     def reset(self):
         self.memory = Memory()
-        self.cur_subtask_idx = 0
-        self.cur_subtask = None
+        self.cur_subtask = []
+
+    def cur_subtask(self):
+        return self.subtasks[-1]
+    
+    def cur_subtask_idx(self):
+        return len(self.subtasks) - 1
 
 class Planner(BaseAgent):
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -137,92 +145,55 @@ class Planner(BaseAgent):
         messages = []
         messages.append(Message.system_message(SYS_PLANNER))
         if img:
-            messages.append(Message.user_message([Content(type="image_url", value=img), Content(type="text", value=USR_SUBTASK_INTFRENCE.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None"))]))
+            messages.append(Message.user_message([Content(type="image_url", value=img), Content(type="text", value=USR_SUBTASK_INTFRENCE.format(task_description=instruction, subtasks=self.subtasks if len(self.subtasks) > 0 else "None"))]))
         else:
-            messages.append(Message.user_message(USR_SUBTASK_INTFRENCE.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")))
-        logger.debug(f"messages: {messages}")
+            messages.append(Message.user_message(USR_SUBTASK_INTFRENCE.format(task_description=instruction, subtasks=self.subtasks if len(self.subtasks) > 0 else "None")))
         response = self.mllm.call(messages)
-        logger.info(f'''subtask inference {self.cur_subtask_idx}: {response}''')
-        messages.append(Message.assistant_message(response))
+        logger.info(f'''subtask inference: {response}''')
 
-        messages.append(Message.user_message(USR_SUBTASK_INTFRENCE_FINAL))
-        response = self.mllm.call(messages)
-        messages.append(Message.assistant_message(response))
-        self.cur_subtask_idx += 1
-        self.cur_subtask = response
-        logger.info(f"current subtask: {self.cur_subtask}")
+        self.subtasks.append(response)
 
-        self.memory.add_messages(messages)
-        return self.cur_subtask
+        logger.info(f"subtask {self.cur_subtask_idx()}: {self.cur_subtask()}")
+        return self.cur_subtask()
     
     def detect(self, instruction: str, img: str|Image.Image=None) -> bool:
 
         messages = [Message.system_message(SYS_PLANNER)]
         if img:
-            messages.append(Message.user_message([Content(type="text",value=USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")),
+            messages.append(Message.user_message([Content(type="text",value=USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.subtasks if len(self.subtasks) > 0 else "None")),
                                                   Content(type="image_url", value=img)]))
         else:
-            messages.append(Message.user_message(USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.memory.to_dict_list() if self.memory.len() > 0 else "None")))
+            messages.append(Message.user_message(USR_SUCCESS_DETECTION.format(task_description=instruction, history=self.subtasks if len(self.subtasks) > 0 else "None")))
         response = self.mllm.call(messages)
         logger.info(f"detection response: {response}")
-        messages.append({"role": "assistant", "content": response})
+        messages.append(Message.assistant_message(response))
 
-
-        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
+        messages.append(Message.user_message(USR_SUCCESS_DETECTION_FINAL))
         response = self.mllm.call(messages)
+        self.memory.add_messages(messages)
         if "YES" in response:
             return True
         elif "NO" in response:
             return False
         else:
-            raise ValueError(f"detection Invalid response: {response}")
+            raise ValueError(f"detection response Invalid: {response}")
     
 
-
-
-
-class DetectionAgent(BaseAgent):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)    
-
-
-
-
-    
-    def detect_subtask(self, task_description: str, 
-                            current_subtask_description: str, excution_response: str=None, img: str|Image.Image=None) -> str:
-        messages = [Message.system_message(SYS_PLANNER)]
-        if img:
-            messages.append(Message.user_message([Content(type="text", value=USR_SUBTASK_SUCCESS_DETECTION.format(task_description=task_description, excution_response=excution_response, current_subtask_description=current_subtask_description)),
-                                                  Content(type="image_url", value=img)]))
-        else:
-            messages.append(Message.user_message(USR_SUBTASK_SUCCESS_DETECTION.format(task_description=task_description, excution_response=excution_response, current_subtask_description=current_subtask_description)))
-        response = self.mllm.call(messages)
-        logger.info(f"detection response: {response}")
-        
-        messages.append({"role": "assistant", "content": response})
-        messages.append({"role": "user", "content": USR_SUCCESS_DETECTION_FINAL})
-        response = self.mllm.call(messages)
-        if "YES" in response:
-            return True
-        elif "NO" in response:
-            return False
-        else:
-            raise ValueError(f"detection Invalid response: {response}")
     
     
 
 class UITars(BaseAgent):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-    def output_action(self, current_subtask_description: str, img_path: str=None) -> str:
+    def output_action(self, current_subtask_description: str, img: str|Image.Image=None) -> str:
         if self.memory.len() == 0:
             self.memory.add_message(Message.user_message([Content(type="text", value=SYS_CODE_UITARS_COMPUTER.format(language="Chinese", instruction=current_subtask_description)),
-                                                      Content(type="image_url", value=img_path)]))
+                                                      Content(type="image_url", value=img)]))
         else:
-            self.memory.add_message(Message.user_message(Content(type="image_url", value=img_path)))
+            self.memory.add_message(Message.user_message([Content(type="image_url", value=img)]))
         response = self.mllm.call(self.memory.messages)
         logger.info(f'''output_action: {response}''')
+        self.memory.add_message(Message.assistant_message(response))
         return response
     
 

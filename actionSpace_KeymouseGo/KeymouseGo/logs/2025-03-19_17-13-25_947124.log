@@ -1,3 +1,21 @@
 2025-03-19 17:13:25.969 | INFO     | UIFunc:__init__:105 - assets root:C:\Users\ADMINI~1\AppData\Local\Temp\_MEI153002\assets
 2025-03-19 17:13:26.037 | INFO     | Plugin.Manager:discover_plugin:55 - Discovered Plugin []
 2025-03-19 17:13:26.037 | INFO     | Plugin.Manager:register_plugin:68 - Registered functions: dict_keys([])
+2025-03-19 17:14:28.907 | INFO     | UIFunc:recordMethod:455 - Record start
+2025-03-19 17:14:28.907 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:28.908 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:29.982 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:30.054 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_right_down_20250319_171429_982743.png
+2025-03-19 17:14:30.100 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:30.161 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_right_up_20250319_171430_100742.png
+2025-03-19 17:14:44.799 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:44.869 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_left_down_20250319_171444_799346.png
+2025-03-19 17:14:44.940 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:45.001 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_left_up_20250319_171444_940732.png
+2025-03-19 17:14:47.879 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:47.934 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_left_down_20250319_171447_879907.png
+2025-03-19 17:14:47.961 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:48.015 | INFO     | UIFunc:on_record_event:296 - Save screenshot at C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\screenshot_mouse_left_up_20250319_171447_961786.png
+2025-03-19 17:14:50.107 | INFO     | UIFunc:recordMethod:444 - Record stop
+2025-03-19 17:14:50.107 | INFO     | UIFunc:get_script_path:383 - Script path: C:\Users\Administrator\Desktop\code\gui-agent\actionSpace_KeymouseGo\KeymouseGo\scripts\0319_1714\script.json5
+2025-03-19 17:14:50.111 | INFO     | UIFunc:check_hotkeys:237 - Record stop
