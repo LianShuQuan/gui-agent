@@ -40,20 +40,167 @@
       {
         "messages": [
           {
-            "content": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.",
-            "role": "system"
+            "content": "<image>代表什么意思?",
+            "role": "user"
           },
+          {
+            "content": "Changes the size of the text.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/9aa50225-e313-4068-a73c-3fee6a2c03a5/d0021cc8e70809a596823cafcb551fdcd1549104.jpg"
+        ]
+      },
+      {
+        "messages": [
           {
             "content": "<image>代表什么意思?",
             "role": "user"
           },
           {
-            "content": "在ppt中，代表文本的字体是黑体，点击可选择字体",
+            "content": "Clears all formatting for the selected text, leaving only the plain text.",
             "role": "assistant"
           }
         ],
         "images": [
-          "gui_agent_office_caption_data/ppt/screenshot-20250217-204245.png"
+          "https://cxcs.microsoft.net/static/public/office/neutral/74208996-048f-4ec7-be54-4fb1e5f7b18a/0bca7cb4f8e21548257ab4b0171d9be65f1a5f55.jpg"
         ]
       },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Draws a line under the selected text. Click the dropdown arrow to select the type of underline.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/a4b705dc-baa6-463e-b86a-c7ddd1c0ac6e/657039392cd7fa13e278587696ba0effc845b120.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Draws a line through the middle of selected text.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/eb57a24e-0dd6-4de4-ac14-a68ce991ed5e/f67c09564257175890edc1c9a00df6d5acf0e942.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Creates subscript characters.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/e471ddd8-e5ae-4a7a-9f99-084e7218c0e0/9969a0302cc26f49889d2f042e35086e01e333d0.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Creates superscript characters.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/bd297564-4e3b-4691-b2f3-06329ff2e256/bfd51dd0d1716cb5d76ba4a271f9aa3b3990b619.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Apply a visual effect to selected text, such as shadow, glow, or reflection.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/5b30dae1-12e6-45f4-bb66-dec4306ca561/a823842c287161d03679cbd657f6ca12478200a2.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Makes text look like it was marked with a highlighter pen.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/e5c77bcb-15cc-45a4-b379-9907fec779ec/b90ffc844b4a68fde5490e7b4538262df2182e21.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Changes the text color.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/e5c77bcb-15cc-45a4-b379-9907fec779ec/b90ffc844b4a68fde5490e7b4538262df2182e21.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Italicizes the selected text.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/8632e7e8-ceff-4c77-97a9-ee54097aa881/8c3be82d44d4444bcd4cce70a93ad58b5553db24.jpg"
+        ]
+      },
+      {
+        "messages": [
+          {
+            "content": "<image>代表什么意思?",
+            "role": "user"
+          },
+          {
+            "content": "Makes the selected text bold.",
+            "role": "assistant"
+          }
+        ],
+        "images": [
+          "https://cxcs.microsoft.net/static/public/office/neutral/5cb51f26-d500-4c4a-bf41-b8664a09766a/b3c89c53aaa24cdae63e59daed589bc77a9fdb9f.jpg"
+        ]
+      },
+      
 ]

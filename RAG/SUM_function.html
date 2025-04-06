@@ -1,0 +1,467 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    SUM function
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      SUM
+     </b>
+     function adds values. You can add individual values, cell references or ranges or a mix of all three.
+    </p>
+    <p>
+     For example:
+    </p>
+    <ul>
+     <li>
+      <p>
+       <b class="ocpLegacyBold">
+        =SUM(A2:A10)
+       </b>
+       Adds the values in cells A2:10.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b class="ocpLegacyBold">
+        =SUM(A2:A10, C2:C10)
+       </b>
+       Adds the values in cells A2:10, as well as cells C2:C10.
+      </p>
+     </li>
+    </ul>
+    <div class="ocpVideo" data-channel="" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RE25Ncp" data-videotitle="SUM (RE25Ncp)" data-videotype="single" id="ocpVideo1">
+     <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"SUM (RE25Ncp)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/video_1001_1731964455191_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/video_1001_1731964455191_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/video_1001_1731964455191_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/video_1001_1731964455191.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/video_1001_1731964455191_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-f6702eaf-cd54-4060-bae2-5c9a1a22ddd3/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+      <picture>
+       <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+      </picture>
+     </universal-media-player>
+    </div>
+   </section>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EL-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Syntax:
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EL-button" class="ocpebw" id="ID0EL-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       <b class="ocpLegacyBold">
+        SUM(number1,[number2],...)
+       </b>
+      </p>
+      <table aria-label="" class="banded">
+       <thead>
+        <tr>
+         <th>
+          <p>
+           <b class="ocpLegacyBold">
+            Argument name
+           </b>
+          </p>
+         </th>
+         <th>
+          <p>
+           <b class="ocpLegacyBold">
+            Description
+           </b>
+          </p>
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpRunInHead">
+            number1
+           </b>
+          </p>
+          <p>
+           Required
+          </p>
+         </td>
+         <td>
+          <p>
+           The first number you want to add. The number can be like 4, a cell reference like B6, or a cell range like B2:B8.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpRunInHead">
+            number2-255
+           </b>
+          </p>
+          <p>
+           Optional
+          </p>
+         </td>
+         <td>
+          <p>
+           This is the second number you want to add. You can specify up to 255 numbers in this way.
+          </p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EJ-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJ-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Best Practices with SUM
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EJ-button" class="ocpebw" id="ID0EJ-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       This section will discuss some best practices for working with the SUM function. Much of this can be applied to working with other functions as well.
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        The =1+2 or =A+B Method – While you can enter =1+2+3 or =A1+B1+C2 and get fully accurate results, these methods are error prone for several reasons:
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          Typos
+         </b>
+         – Imagine trying to enter more and/or much larger values like this:
+        </p>
+        <ul>
+         <li>
+          <p>
+           <b class="ocpLegacyBold">
+            =14598.93+65437.90+78496.23
+           </b>
+          </p>
+         </li>
+        </ul>
+        <p>
+         Then try to validate that your entries are correct. It's much easier to put these values in individual cells and use a SUM formula. In addition, you can format the values when they're in cells, making them much more readable then when they're in a formula.
+        </p>
+        <picture>
+         <img alt="Use the SUM function instead of hard-coding values in formulas.  Formula in cell D5 is =SUM(D2:D4)" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/c2beaf35-309e-4f19-8e58-c1f667b6059b/29c87be417572ce2570f22cabc20930063153bb5.png" style="aspect-ratio: 148/207" width="148"/>
+        </picture>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          #VALUE! errors from referencing text instead of numbers
+         </b>
+        </p>
+        <p>
+         If you use a formula like:
+        </p>
+        <ul>
+         <li>
+          <p>
+           <b class="ocpLegacyBold">
+            =A1+B1+C1
+           </b>
+           or
+           <b class="ocpLegacyBold">
+            =A1+A2+A3
+           </b>
+          </p>
+         </li>
+        </ul>
+        <picture>
+         <img alt="Example of poor formula construction.  Formula in cell D2 is =A2+B2+C2" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/fb65f75d-0448-4a9a-a376-f05693ed24b5/8d1529fb26484289ebee1df99eb3ec2873c60c3f.png" style="aspect-ratio: 370/136" width="370"/>
+        </picture>
+        <p>
+         Your formula can break if there are any non-numeric (text) values in the referenced cells, which will return a #VALUE! error. SUM will ignore text values and give you the sum of just the numeric values.
+        </p>
+        <picture>
+         <img alt="Proper formula construction.  Instead of =A2+B2+C2, cell D2's formula is =SUM(A2:C2)" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/d14d8503-5740-4e7a-a380-11de32081d52/360c3e5222fde07af662dfd72bf4ec2e0a6b453d.png" style="aspect-ratio: 359/127" width="359"/>
+        </picture>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          #REF! error from deleting rows or columns
+         </b>
+        </p>
+        <picture>
+         <img alt="#REF! error caused by deleting a column.  Formula has changed to =A2+#REF!+B2" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/26ddb8e0-c79e-424b-a35b-5f14e213ea89/dfb285d666cedcd957c120140d60c89f84411b46.png" style="aspect-ratio: 386/131" width="386"/>
+        </picture>
+        <p>
+         If you delete a row or column, the formula will not update to exclude the deleted row and it will return a #REF! error, where a SUM function will automatically update.
+        </p>
+        <picture>
+         <img alt="SUM function will automatically adjust for inserted or deleted rows and columns" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/baa70d74-ba30-4c7f-a681-f2f88a49c972/b0e67cc5488373a76c1bdc6521a611cc03bd0c30.png" style="aspect-ratio: 352/133" width="352"/>
+        </picture>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas won't update references when inserting rows or columns
+         </b>
+        </p>
+        <picture>
+         <img alt="=A+B+C formulas won't update if you add rows" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/37fa99e2-8724-4915-a5b4-2fbb26970184/70c59967b3618fd863555c684aa242b6ff32491f.png" style="aspect-ratio: 417/127" width="417"/>
+        </picture>
+        <p>
+         If you insert a row or column, the formula will not update to include the added row, where a SUM function will automatically update (as long as you're not outside of the range referenced in the formula). This is especially important if you expect your formula to update and it doesn't, as it will leave you with incomplete results that you might not catch.
+        </p>
+        <picture>
+         <img alt="Example portrays a SUM formula automatically expanding from =SUM(A2:C2) to =SUM(A2:D2) when a column was inserted" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/825c81d5-3773-4bc4-9198-2da4e23e3b3b/3707ab6c6f2f051567349cf9164919fe2b7d91d9.png" style="aspect-ratio: 414/127" width="414"/>
+        </picture>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          SUM with individual Cell References vs. Ranges
+         </b>
+        </p>
+        <p>
+         Using a formula like:
+        </p>
+        <ul>
+         <li>
+          <p>
+           <b class="ocpLegacyBold">
+            =SUM(A1,A2,A3,B1,B2,B3)
+           </b>
+          </p>
+         </li>
+        </ul>
+        <p>
+         Is equally error prone when inserting or deleting rows within the referenced range for the same reasons. It's much better to use individual ranges, like:
+        </p>
+        <ul>
+         <li>
+          <p>
+           <b class="ocpLegacyBold">
+            =SUM(A1:A3,B1:B3)
+           </b>
+          </p>
+         </li>
+        </ul>
+        <p>
+         Which will update when adding or deleting rows.
+        </p>
+       </li>
+      </ol>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Frequently Asked Questions
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+     <div class="ocpExpandoBody">
+      <ol type="1">
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          I just want to Add/Subtract/Multiply/Divide numbers
+         </b>
+         See
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/use-excel-as-your-calculator-a1abc057-ed11-443a-a635-68216555ad0a">
+          Use Excel as your calculator.
+         </a>
+        </p>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          How do I show more/less decimal places?
+         </b>
+         You can change your number format. Select the cell or range in question and use
+         <b class="ocpLegacyBold">
+          Ctrl+1
+         </b>
+         to bring up the
+         <b class="ocpLegacyBold">
+          Format Cells
+         </b>
+         Dialog, then click the
+         <b class="ocpLegacyBold">
+          Number tab
+         </b>
+         and select the format you want, making sure to indicate the number of decimal places you want.
+        </p>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          How do I add or subtract Times?
+         </b>
+         You can add and subtract times in a few different ways. For example, to get the difference between 8:00 AM - 12:00 PM for payroll purposes you would use:
+         <b class="ocpLegacyBold">
+          =("12:00 PM"-"8:00 AM")*24
+         </b>
+         , taking the end time minus the start time. Note that Excel calculates times as a fraction of a day, so you need to multiply by 24 to get the total hours. In the first example we're using
+         <b class="ocpLegacyBold">
+          =((B2-A2)+(D2-C2))*24
+         </b>
+         to get the sum of hours from start to finish, less a lunch break (8.50 hours total).
+        </p>
+        <p>
+         If you're simply adding hours and minutes and want to display that way, then you can sum and don't need to multiply by 24, so in the second example we're using
+         <b class="ocpLegacyBold">
+          =SUM(A6:C6)
+         </b>
+         since we just need the total number of hours and minutes for assigned tasks (5:36, or 5 hours, 36 minutes).
+        </p>
+        <picture>
+         <img alt="Calculating times" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/8456f8ed-67b4-44a9-8f67-0843b796bd6f/30a7c273a49159b7608b032111261ad450bf94d5.png" style="aspect-ratio: 520/144" width="520"/>
+        </picture>
+        <p>
+         For more information, see:
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/add-or-subtract-time-16aa6697-6d6e-49c1-8e2c-3398a7cad6ad">
+          Add or subtract time
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         <b class="ocpLegacyBold">
+          How do I sum just visible cells?
+         </b>
+         Sometimes, when you manually hide rows or use AutoFilter to display only certain data you also only want to sum the visible cells. You can use the
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/subtotal-function-7b027003-f060-4ade-9040-e478765b9939">
+          SUBTOTAL function.
+         </a>
+         If you're using a total row in an Excel table, any function you select from the Total drop-down will automatically be entered as a subtotal. See more about how to
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/total-the-data-in-an-excel-table-6944378f-a222-4449-93d8-474386b11f20">
+          Total the data in an Excel table
+         </a>
+         .
+        </p>
+       </li>
+      </ol>
+     </div>
+    </div>
+   </div>
+   <section aria-labelledby="ID0EDF" class="ocpSection">
+    <h2 class="" id="ID0EDF">
+     Need more help?
+    </h2>
+    <p>
+     You can always ask an expert in the
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+      Excel Tech Community
+     </a>
+     or get support in
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+      Communities
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+   </section>
+   <section aria-labelledby="ID0EDD" class="ocpSection">
+    <h2 class="" id="ID0EDD">
+     See Also
+    </h2>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/learn-more-about-sum-e8e46d7a-716a-414f-b59f-1073231ec0db">
+      Learn more about SUM
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
+      The SUMIF function adds only the values that meet a single criteria
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumifs-function-c9e748f5-7ea7-455d-9406-611cebce642b">
+      The SUMIFS function adds only the values that meet multiple criteria
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+      The COUNTIF function counts only the values that meet a single criteria
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">
+      The COUNTIFS function counts only the values that meet multiple criteria
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173">
+      Overview of formulas in Excel
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586">
+      How to avoid broken formulas
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/detect-formula-errors-in-excel-3a8acca5-1d61-4702-80e0-99a36a2822c1">
+      Find and correct errors in formulas
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/math-and-trigonometry-functions-reference-ee158fd6-33be-42c9-9ae5-d635c3ae8c16">
+      Math &amp; Trig functions
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">
+      Excel functions (alphabetical)
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">
+      Excel functions (by Category)
+     </a>
+    </p>
+   </section>
+  </article>
+ </body>
+</html>

@@ -101,11 +101,22 @@ class ApiMLLM(MLLM):
         # 这个方法会在模型初始化后自动调用
         self._client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 
-    def call(self, messages: List[Message], temperature: Optional[float]=None) -> str:
+    def call(self, messages: List[Message], temperature: Optional[float]=None, max_retry=5) -> str:
         if temperature is None:
             temperature = self.temperature
         logger.debug(f"messages: {[message.to_dict_not_show_img() for message in messages]}")
-        return self._client.chat.completions.create(model=self.name, messages=MLLM.format_messages(messages), temperature=temperature, max_tokens=self.max_tokens).choices[0].message.content
+        try_times = 0
+        while True:
+            if try_times >= max_retry:
+                logger.error(f"Reach max retry times to fetch response from client, as error flag.")
+                return f"Reach max retry times to fetch response from client, as error flag."
+            try:
+                
+                response = self._client.chat.completions.create(model=self.name, messages=MLLM.format_messages(messages), temperature=temperature, max_tokens=self.max_tokens)
+                return response.choices[0].message.content.strip()
+            except Exception as e:
+                logger.warning(f"Error when fetching response from client, with response: {response}")
+                try_times += 1
 
 class BaseAgent():
     agent_name: str = None

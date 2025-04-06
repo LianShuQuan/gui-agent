@@ -1,0 +1,1506 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    Create Power Query formulas in Excel
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <p>
+     Just by using the Power Query Editor, you have been creating Power Query formulas all along. Let's see how Power Query works by looking under the hood. You can learn how to update or add formulas just by watching the Power Query Editor in action. You can even roll your own formulas with the Advanced Editor.
+    </p>
+   </section>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0ET-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ET-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Overview of the Power Query Editor
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0ET-button" class="ocpebw" id="ID0ET-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       The Power Query Editor provides a data query and shaping experience for Excel that you can use to reshape data from many data sources. To display the Power Query Editor window,
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/import-data-from-data-sources-power-query-be4330b3-5356-486c-a168-b68e9e616f5a">
+        import data from external data sources
+       </a>
+       in an Excel worksheet, select a cell in the data, and then select
+       <b class="ocpUI">
+        Query
+       </b>
+       &gt;
+       <b class="ocpUI">
+        Edit
+       </b>
+       . The following is a summary of the main components.
+      </p>
+      <p>
+       <picture>
+        <img alt="Query Editor Parts" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/d7e60d22-a9f4-46ec-bb7a-9f5ee129654e/15dbabb731ce94a4fc05fc67142203667f336c5a.png" style="aspect-ratio: 1067/485" width="1067"/>
+       </picture>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         The Power Query Editor ribbon that you use to shape your data
+        </p>
+       </li>
+       <li>
+        <p>
+         The Queries pane that you use to locate data sources and tables
+        </p>
+       </li>
+       <li>
+        <p>
+         Context menus that are convenient shortcuts to commands in the ribbon
+        </p>
+       </li>
+       <li>
+        <p>
+         The Data Preview that displays the results of the steps applied to the data
+        </p>
+       </li>
+       <li>
+        <p>
+         The Query Settings pane that lists properties and each step in the query
+        </p>
+       </li>
+      </ol>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0ER-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ER-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Overview of formulas
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0ER-button" class="ocpebw" id="ID0ER-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       Behind the scenes, each step in a query is based on a formula that is visible in the formula bar.
+      </p>
+      <p>
+       <picture>
+        <img alt="Query Editor Formula Sample" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/721a4827-98dc-4558-9eb3-e1c7be7b1fbe/78f6c357389169d781314881d7ae8690f151324c.png" style="aspect-ratio: 532/158" width="532"/>
+       </picture>
+      </p>
+      <p>
+       There may be times when you want to modify or create a formula. Formulas use the Power Query Formula Language, which you can use to build both simple and complex expressions. For more information about syntax, arguments, remarks, functions, and examples, see
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/powerquery-m/" target="_blank">
+        Power Query M formula language
+       </a>
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/powerquery-m/power-query-m-function-reference" target="_blank">
+        .
+       </a>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EP-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EP-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Follow a walk-through of applied steps and formulas
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EP-button" class="ocpebw" id="ID0EP-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       Using a list of soccer championships as an example, use Power Query to take raw data that you found on a website and turn it into a well-formatted table. Watch how query steps and corresponding formulas are created for each task in the
+       <b class="ocpUI">
+        Query Settings
+       </b>
+       pane under
+       <b class="ocpUI">
+        Applied Steps
+       </b>
+       and in the
+       <b class="ocpUI">
+        Formula bar
+       </b>
+       .
+      </p>
+      <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RWBQzh" data-videotitle="A walkthrough Power query (RWBQzh)" data-videotype="single" id="ocpVideo1">
+       <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"A walkthrough Power query (RWBQzh)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/thumbnail_w800.jpeg","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/video_1001_1731975303153_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/video_1001_1731975303153_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/video_1001_1731975303153_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/video_1001_1731975303153.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/video_1001_1731975303153_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-4675ae76-ccb3-4caf-87ec-7c5ae463b4df/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+        <picture>
+         <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+        </picture>
+       </universal-media-player>
+      </div>
+      <p>
+       <b class="ocpLegacyBold">
+        Procedure
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To import the data, select
+         <b class="ocpUI">
+          Data
+         </b>
+         &gt;
+         <b class="ocpUI">
+          From Web
+         </b>
+         , enter "http://en.wikipedia.org/wiki/UEFA_European_Football_Championship" in the
+         <b class="ocpUI">
+          URL
+         </b>
+         box, and then select
+         <b class="ocpUI">
+          OK
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the
+         <b class="ocpUI">
+          Navigator
+         </b>
+         dialog box, select the
+         <b class="ocpUI">
+          Results [Edit]
+         </b>
+         table on the left, and then select
+         <b class="ocpUI">
+          Transform Data
+         </b>
+         at the bottom. The Power Query editor appears.
+        </p>
+       </li>
+       <li>
+        <p>
+         To change the default query name, in the
+         <b class="ocpUI">
+          Query Settings
+         </b>
+         pane, under
+         <b class="ocpUI">
+          Properties
+         </b>
+         , delete "Results [Edit]" and then enter "UEFA champs".
+        </p>
+       </li>
+       <li>
+        <p>
+         To remove unwanted columns, select the first, fourth, and fifth columns, and then select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Remove Column
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Remove Other Columns
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         To remove unwanted values, select
+         <b class="ocpUI">
+          Column1
+         </b>
+         , select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Replace Values
+         </b>
+         , enter "details" in the Values to Find box, and then select
+         <b class="ocpUI">
+          OK
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         To remove rows that have the word "Year' in them, select the filter arrow in
+         <b class="ocpUI">
+          Column1
+         </b>
+         , clear the check box next to "Year", and then select
+         <b class="ocpUI">
+          OK
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         To rename the column headers, double-click each of them and then change "Column1" to "Year", "Column4" to "Winner", and "Column5" to "Final Score".
+        </p>
+       </li>
+       <li>
+        <p>
+         To save the query, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+      <p>
+       <picture>
+        <img alt="Results of the walkthrough - the first few rows" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/9cb43310-ac72-48bc-8241-473757c6a189/3b7892de3a05cdc8200a946ec4dfe2c924659a00.png" style="aspect-ratio: 361/383" width="361"/>
+       </picture>
+      </p>
+      <p>
+       The following table is a summary of each applied step and the corresponding formula.
+      </p>
+      <table aria-label="" class="grid width50">
+       <thead>
+        <tr>
+         <th>
+          <p>
+           Query step and task
+          </p>
+         </th>
+         <th>
+          <p>
+           Formula
+          </p>
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Source
+           </b>
+          </p>
+          <p>
+           Connect to a web data source
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Web.Page(Web.Contents("http://en.wikipedia.org/wiki/UEFA_European_Football_Championship"))
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Navigation
+           </b>
+          </p>
+          <p>
+           Select the table to connect
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            =Source{2}[Data]
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Changed Type
+           </b>
+          </p>
+          <p>
+           Change datatypes (which Power Query does automatically)
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Table.TransformColumnTypes(Data2,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}})
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Removed Other Columns
+           </b>
+          </p>
+          <p>
+           Remove other columns to only display columns of interest
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Table.SelectColumns(#"Changed Type",{"Column1", "Column4", "Column5"})
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Replaced Value
+           </b>
+          </p>
+          <p>
+           Replace values to clean up values in a selected column
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Table.ReplaceValue(#"Removed Other Columns","Details","",Replacer.ReplaceText,{"Column1"})
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Filtered Rows
+           </b>
+          </p>
+          <p>
+           Filter values in a column
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Table.SelectRows(#"Replaced Value", each ([Column1] &lt;&gt; "Year"))
+           </span>
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpUI">
+            Renamed Columns
+           </b>
+          </p>
+          <p>
+           Changed column headers to be meaningful
+          </p>
+         </td>
+         <td>
+          <p>
+           <span class="ocpCodeInline">
+            = Table.RenameColumns(#"Filtered Rows",{{"Column1", "Year"}, {"Column4", "Winner"}, {"Column5", "Final Score"}})
+           </span>
+          </p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection" data-bi-id="__toc354841869" id="__toc354841869">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EN-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EN-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Use the formula bar
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EN-button" class="ocpebw" id="ID0EN-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       <b class="ocpRunInHead">
+        Important
+       </b>
+       Be careful editing the
+       <b class="ocpUI">
+        Source
+       </b>
+       ,
+       <b class="ocpUI">
+        Navigation
+       </b>
+       ,and
+       <b class="ocpUI">
+        Changed Type
+       </b>
+       steps because they are created by Power Query to define and set up the data source.
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Show or hide the formula bar
+       </b>
+      </p>
+      <p>
+       The formula bar is shown by default, but if it's not visible you can redisplay it.
+      </p>
+      <ul>
+       <li>
+        <p>
+         Select
+         <b class="ocpUI">
+          View
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Layout
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Formula Bar
+         </b>
+         .
+        </p>
+       </li>
+      </ul>
+      <p>
+       <b class="ocpLegacyBold">
+        E
+        <b class="ocpLegacyBold">
+         dit a formula in the formula bar
+        </b>
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To open a query, locate one previously loaded from the Power Query Editor, select a cell in the data, and then select
+         <b class="ocpUI">
+          Query
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Edit
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="__toc354841869" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the
+         <b class="ocpUI">
+          Query Settings
+         </b>
+         pane, under
+         <b class="ocpUI">
+          Applied Steps
+         </b>
+         , select the step you want to edit.
+        </p>
+       </li>
+       <li>
+        <p>
+         In the formula bar, locate and change the parameter values, and then select the Enter
+         <picture>
+          <img alt="The Enter icon to the left of the formula bar in Power Query" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/ec37814e-a5ac-4d6c-8aab-50e08a1dbe4e/2227be64505622e8ce13583853c531b591a9f908.png" style="aspect-ratio: 28/28" width="28"/>
+         </picture>
+         icon or press Enter. For example, change this formula to also keep Column2:
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <b class="ocpLegacyBold">
+          Before:
+         </b>
+         <span class="ocpCodeInline">
+          = Table.SelectColumns(#"Changed Type",{"Column4", "Column1", "Column5"})
+         </span>
+         <br aria-hidden="true"/>
+         <b class="ocpLegacyBold">
+          After:
+         </b>
+         <span class="ocpCodeInline">
+          = Table.SelectColumns(#"Changed Type",{"Column2", "Column4", "Column1", "Column5"})
+         </span>
+        </p>
+       </li>
+       <li>
+        <p>
+         Select the Enter
+         <picture>
+          <img alt="The Enter icon to the left of the formula bar in Power Query" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/ec37814e-a5ac-4d6c-8aab-50e08a1dbe4e/2227be64505622e8ce13583853c531b591a9f908.png" style="aspect-ratio: 28/28" width="28"/>
+         </picture>
+         icon or press Enter to see the new results displayed in the Data Preview.
+        </p>
+       </li>
+       <li>
+        <p>
+         To see the result in an Excel worksheet, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Create a formula in the formula bar
+       </b>
+      </p>
+      <p>
+       For a simple formula example, let's convert a text value to proper case using the
+       <a class="ocpExternalLink" data-bi-area="__toc354841869" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/powerquery-m/text-proper" target="_blank">
+        Text.Proper
+       </a>
+       function.
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To open a blank query, in Excel select
+         <b class="ocpUI">
+          Data
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Get Data
+         </b>
+         &gt;
+         <b class="ocpUI">
+          From Other Sources
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Blank Query
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="__toc354841869" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the formula bar, enter
+         <span class="ocpCodeInline">
+          =Text.Proper("text value")
+         </span>
+         , and then select the Enter
+         <picture>
+          <img alt="The Enter icon to the left of the formula bar in Power Query" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/ec37814e-a5ac-4d6c-8aab-50e08a1dbe4e/2227be64505622e8ce13583853c531b591a9f908.png" style="aspect-ratio: 28/28" width="28"/>
+         </picture>
+         icon or press Enter.
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         The results display in Data Preview .
+        </p>
+       </li>
+       <li>
+        <p>
+         To see the result in an Excel worksheet, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Result:
+       </b>
+      </p>
+      <p>
+       <picture>
+        <img alt="Text.Proper" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/b9304e9d-3541-4aa2-8ca1-86a5516d6681/68cb2c8306233ff4cff97f673deb1838ec1caac4.png" style="aspect-ratio: 114/56" width="114"/>
+       </picture>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection" data-bi-id="__toc354841867" id="__toc354841867">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EL-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Working with formulas in Applied Steps
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EL-button" class="ocpebw" id="ID0EL-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       When you create a formula, Power Query validates the formula syntax. However, when you insert, reorder, or delete an intermediate step in a query you might potentially break a query. Always verify the results in Data Preview.
+      </p>
+      <p>
+       <b class="ocpRunInHead">
+        Important
+       </b>
+       Be careful editing the
+       <b class="ocpUI">
+        Source
+       </b>
+       ,
+       <b class="ocpUI">
+        Navigation
+       </b>
+       ,and
+       <b class="ocpUI">
+        Changed Type
+       </b>
+       steps because they are created by Power Query to define and set up the data source.
+      </p>
+      <p id="__toc354841870">
+       <b class="ocpLegacyBold">
+        Edit a formula by using a dialog box
+       </b>
+      </p>
+      <p id="__toc354841870_1">
+       This method makes use of dialog boxes that vary depending on the step. You don't need to know the syntax of the formula.
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To open a query, locate one previously loaded from the Power Query Editor, select a cell in the data, and then select
+         <b class="ocpUI">
+          Query
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Edit
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="__toc354841867" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the
+         <b class="ocpUI">
+          Query Settings
+         </b>
+         pane, under
+         <b class="ocpUI">
+          Applied Steps
+         </b>
+         , select the
+         <b class="ocpUI">
+          Edit Settings
+         </b>
+         <picture>
+          <img alt="Settings icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/training/neutral/7862de33-84ff-40f1-a80f-5257121010d8/8c3f5f571f5f15134d88b5bb677afe7e61ffddb4.png" style="aspect-ratio: 16/19" width="16"/>
+         </picture>
+         icon of the step you want to edit or right-click the step, and then select
+         <b class="ocpUI">
+          Edit Settings
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the dialog box, make your changes, and then select
+         <b class="ocpUI">
+          OK
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Insert a step
+       </b>
+      </p>
+      <p>
+       After you complete a query step that reshapes your data, a query step is added below the current query step. but when you insert a query step in the middle of the steps, an error might occur in subsequent steps. Power Query displays an
+       <b class="ocpUI">
+        Insert Step
+       </b>
+       warning when you try to insert a new step and the new step alters fields, such as column names, that are used in any of the steps that follow the inserted step.
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         In the
+         <b class="ocpUI">
+          Query Settings
+         </b>
+         pane, under
+         <b class="ocpUI">
+          Applied Steps
+         </b>
+         , select the step you want to immediately precede the new step and its corresponding formula.
+        </p>
+       </li>
+       <li>
+        <p>
+         Select the
+         <b class="ocpUI">
+          Add Step
+         </b>
+         <picture>
+          <img alt="Function icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/microsoft-365/neutral/ebcf44da-9435-4dfc-9c21-2687f13aa30d/1a665f72be2fe26f69bf2e7765c952683cb5592e.png" style="aspect-ratio: 28/28" width="28"/>
+         </picture>
+         icon to the left of the formula bar. Alternatively, right click a step and then select
+         <b class="ocpLegacyBold">
+          Insert Step After.
+         </b>
+         A new formula is created in the format :
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          = &lt;nameOfTheStepToReference&gt;
+         </span>
+         , such as
+         <span class="ocpCodeInline">
+          =Production.WorkOrder
+         </span>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         Type in the new formula using the format:
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          =Class.Function(ReferenceStep[,otherparameters])
+         </span>
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         For example, assume you have a table with the column Gender and you want to add a column with the value "Ms." or "Mr.", depending on the person's gender. The formula would be:
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          =Table.AddColumn(&lt;ReferencedStep&gt;, "Prefix", each if [Gender] = "F" then "Ms." else "Mr.")
+         </span>
+        </p>
+       </li>
+      </ol>
+      <p>
+       <picture>
+        <img alt="Example formula" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/1715f8e1-506e-4868-92a1-91157434018d/054e340be3028a851a1b36fb6a58a497fbab5371.png" style="aspect-ratio: 565/112" width="565"/>
+       </picture>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Reorder a step
+       </b>
+      </p>
+      <ul>
+       <li>
+        <p>
+         In the
+         <b class="ocpLegacyBold">
+          Queries Settings
+         </b>
+         pane under
+         <b class="ocpLegacyBold">
+          Applied Steps
+         </b>
+         , right click the step, and then select
+         <b class="ocpLegacyBold">
+          Move Up
+         </b>
+         or
+         <b class="ocpLegacyBold">
+          Move Down
+         </b>
+         .
+        </p>
+       </li>
+      </ul>
+      <p>
+       <b class="ocpLegacyBold">
+        Delete a step
+       </b>
+      </p>
+      <ul>
+       <li>
+        <p>
+         Select the
+         <b class="ocpLegacyBold">
+          Delete
+         </b>
+         <picture>
+          <img alt="Delete a step" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/bc846591-69d8-4512-b66e-641e9ce4f67d/2a227f7432f77dba854b2470976ce661cc144331.png" style="aspect-ratio: 17/15" width="17"/>
+         </picture>
+         icon to the left of the step, or right click the step, and then select
+         <b class="ocpLegacyBold">
+          Delete
+         </b>
+         or
+         <b class="ocpLegacyBold">
+          Delete Until End
+         </b>
+         . The
+         <b class="ocpLegacyBold">
+          Delete
+         </b>
+         <picture>
+          <img alt="Delete a step" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/bc846591-69d8-4512-b66e-641e9ce4f67d/2a227f7432f77dba854b2470976ce661cc144331.png" style="aspect-ratio: 17/15" width="17"/>
+         </picture>
+         icon is also available to the left of the formula bar.
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection" data-bi-id="advanced" id="advanced">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EJ-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJ-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Create an advanced formula
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EJ-button" class="ocpebw" id="ID0EJ-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       In this example, let's convert the text in a column to proper case using a combination of formulas in the Advanced Editor.
+      </p>
+      <p>
+       For example, you have an Excel table, called Orders, with a ProductName column that you want to convert to proper case.
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Before:
+       </b>
+      </p>
+      <p>
+       <picture>
+        <img alt="Before" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/f73ad7ce-9549-40f6-bb5e-7a7ffd2fac96/49848b2811084966e9afb9a478d737a5b6a3707c.png" style="aspect-ratio: 436/120" width="436"/>
+       </picture>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        After:
+       </b>
+      </p>
+      <picture>
+       <img alt="Step 4  - Result" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/e5bd4a95-2588-4b97-aff7-d682d68476e3/bca8c43654e95e081f54f384fb7c1c87ef7d75b3.png" style="aspect-ratio: 443/103" width="443"/>
+      </picture>
+      <p>
+       When you create an advanced query, you create a series of query formula steps based on the
+       <b class="ocpLegacyBold">
+        let
+       </b>
+       expression. Use the
+       <b class="ocpLegacyBold">
+        let
+       </b>
+       expression to assign names and calculate values that are then referenced by the
+       <b class="ocpLegacyBold">
+        in
+       </b>
+       clause, which defines the Step. This example returns the same result as the one in the "Create a formula in the formula bar" section.
+      </p>
+      <p>
+       <span class="ocpCodeInline">
+        let
+       </span>
+       <br aria-hidden="true"/>
+       <span class="ocpCodeInline">
+        Source = Text.Proper("hello world")
+       </span>
+       <br aria-hidden="true"/>
+       <span class="ocpCodeInline">
+        in
+       </span>
+       <br aria-hidden="true"/>
+       <span class="ocpCodeInline">
+        Source
+       </span>
+      </p>
+      <p>
+       You'll see that each step builds upon a previous step by referring to a step by name. As a reminder, the Power Query Formula Language is case-sensitive.
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Phase 1: Open the Advanced Editor
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         In Excel, select
+         <b class="ocpUI">
+          Data
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Get Data
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Other Sources
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Blank Query
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="advanced" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the Power Query Editor, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Advanced Editor,
+         </b>
+         which opens with a template of the
+         <b class="ocpLegacyBold">
+          let
+         </b>
+         expression.
+        </p>
+       </li>
+      </ol>
+      <p>
+       <picture>
+        <img alt="Advanced Editor2" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/637c41c6-9ba5-4fbc-84f0-67ae366dccda/c335e3ac77bdf2487370805d81f7f92a2296d14b.png" style="aspect-ratio: 600/245" width="600"/>
+       </picture>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Phase 2: Define the data source
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         Create the
+         <b class="ocpLegacyBold">
+          let
+         </b>
+         expression using the
+         <a class="ocpExternalLink" data-bi-area="advanced" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/powerquery-m/excel-currentworkbook" target="_blank">
+          Excel.CurrentWorkbook
+         </a>
+         function as follows:
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          let
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          Source = Excel.CurrentWorkbook(){[Name="Orders"]}[Content]
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          in
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          Source
+         </span>
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <picture>
+          <img alt="Step 1 - Advanced Editor" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/ea0788f3-be91-4694-b22b-77d6f146c613/4362c31dbcfa7cb94077ce3b518cb4efb72f28d1.png" style="aspect-ratio: 708/218" width="708"/>
+         </picture>
+        </p>
+       </li>
+       <li>
+        <p>
+         To load the query to a worksheet, select
+         <b class="ocpLegacyBold">
+          Done
+         </b>
+         , and then select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Close &amp; Load
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Result:
+       </b>
+      </p>
+      <picture>
+       <img alt="Step 1 - Result" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/1dfb8931-0857-4d42-952a-287b0f54b085/d75bc8cb0f7b589567a9a65c0802dc6882f13bb8.png" style="aspect-ratio: 445/128" width="445"/>
+      </picture>
+      <p>
+       <b class="ocpLegacyBold">
+        Phase 3: Promote the first row to headers
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To open the query, from the worksheet select a cell in the data, and then select
+         <b class="ocpUI">
+          Query
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Edit
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="advanced" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel (Power Query)
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the Power Query Editor, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Advanced Editor,
+         </b>
+         which opens with the statement you created in
+         <b class="ocpLegacyBold">
+          Phase 2: Define the data source
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the
+         <b class="ocpLegacyBold">
+          let
+         </b>
+         expression, add #"First Row as Header" and
+         <a class="ocpArticleLink" data-bi-area="advanced" data-bi-type="anchor" href="/en-us/topic/b8eaeb95-042a-42e1-9164-6d3c646acadc">
+          Table.PromoteHeaders
+         </a>
+         function as follows:
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          let
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          Source = Excel.CurrentWorkbook(){[Name="Orders"]}[Content],
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          #"First Row as Header" = Table.PromoteHeaders(Source)
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          in
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          #"First Row as Header"
+         </span>
+        </p>
+       </li>
+       <li>
+        <p>
+         To load the query to a worksheet, select
+         <b class="ocpLegacyBold">
+          Done
+         </b>
+         , and then select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Close &amp; Load
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Result:
+       </b>
+      </p>
+      <p>
+       <picture>
+        <img alt="Step 3  - Result" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/6a4a58fa-8486-4f54-a298-403bff3ccf5f/530b84dfaa2e5adeeb1bd8d4d24c905e7fd46564.png" style="aspect-ratio: 440/103" width="440"/>
+       </picture>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Phase 4: Change each value in a column to proper case
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         To open the query, from the worksheet select a cell in the data, and then select
+         <b class="ocpUI">
+          Query
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Edit
+         </b>
+         . For more information see
+         <a class="ocpArticleLink" data-bi-area="advanced" data-bi-type="anchor" href="/en-us/office/create-load-or-edit-a-query-in-excel-power-query-ca69e0f0-3db1-4493-900c-6279bef08df4">
+          Create, load, or edit a query in Excel
+         </a>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the Power Query Editor, select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Advanced Editor,
+         </b>
+         which opens with the statement you created in
+         <b class="ocpLegacyBold">
+          Phase 3: Promote the first row to headers
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the
+         <b class="ocpLegacyBold">
+          let
+         </b>
+         expression, convert each ProductName column value to proper text by using the
+         <a class="ocpArticleLink" data-bi-area="advanced" data-bi-type="anchor" href="/en-us/topic/523173e7-96ed-4d33-918b-4329b4be6223">
+          Table.TransformColumns
+         </a>
+         function, referring to the previous "First Row as Header" query formula step, adding #"Capitalized Each Word" to the data source, and then assigning #"Capitalized Each Word" to the
+         <b class="ocpLegacyBold">
+          in
+         </b>
+         result.
+         <br aria-hidden="true"/>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          let
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          Source = Excel.CurrentWorkbook(){[Name="Orders"]}[Content],
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          #"First Row as Header" = Table.PromoteHeaders(Source),
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          #"Capitalized Each Word" = Table.TransformColumns(#"First Row as Header",{{"ProductName", Text.Proper}})
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          in
+         </span>
+         <br aria-hidden="true"/>
+         <span class="ocpCodeInline">
+          #"Capitalized Each Word"
+         </span>
+        </p>
+       </li>
+       <li>
+        <p>
+         To load the query to a worksheet, select
+         <b class="ocpLegacyBold">
+          Done
+         </b>
+         , and then select
+         <b class="ocpUI">
+          Home
+         </b>
+         &gt;
+         <b class="ocpLegacyBold">
+          Close &amp; Load
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Close &amp; Load
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Result:
+       </b>
+      </p>
+      <p>
+       <picture>
+        <img alt="Step 4  - Result" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/e5bd4a95-2588-4b97-aff7-d682d68476e3/bca8c43654e95e081f54f384fb7c1c87ef7d75b3.png" style="aspect-ratio: 443/103" width="443"/>
+       </picture>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Global settings for formulas
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       You can control the behavior of the formula bar in the Power Query Editor for all your workbooks.
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Display or hide the formula bar
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         Select
+         <b class="ocpUI">
+          File
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Options and Settings
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Query Options
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the left pane, under
+         <b class="ocpUI">
+          GLOBAL
+         </b>
+         , select
+         <b class="ocpUI">
+          Power Query Editor
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the right pane, under
+         <b class="ocpUI">
+          Layout
+         </b>
+         , select or clear
+         <b class="ocpUI">
+          Display the Formula Bar
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpLegacyBold">
+        Turn on or off M Intellisense
+       </b>
+      </p>
+      <ol type="1">
+       <li>
+        <p>
+         Select
+         <b class="ocpUI">
+          File
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Options and Settings
+         </b>
+         &gt;
+         <b class="ocpUI">
+          Query Options
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the left pane, under
+         <b class="ocpUI">
+          GLOBAL
+         </b>
+         , select
+         <b class="ocpUI">
+          Power Query Editor
+         </b>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         In the right pane, under
+         <b class="ocpUI">
+          Formula
+         </b>
+         , select or clear
+         <b class="ocpUI">
+          Enable M Intellisense in the formula bar, advanced editor, and custom column dialog
+         </b>
+         .
+        </p>
+       </li>
+      </ol>
+      <p>
+       <b class="ocpRunInHead">
+        Note
+       </b>
+       Changing this setting will take effect the next time you open the Power Query Editor window.
+      </p>
+     </div>
+    </div>
+   </div>
+   <section aria-labelledby="ID0EDF" class="ocpSection">
+    <h2 class="" id="ID0EDF">
+     See Also
+    </h2>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/power-query-for-excel-help-2b433a85-ddfb-420b-9cda-fe0e60b82a94">
+      Power Query for Excel Help
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-and-invoke-a-custom-function-5dcedf5f-45a5-4dd7-b8f4-4d35c386d712">
+      Create and invoke a custom function
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/power-query/applied-steps" target="_blank">
+      Using the Applied Steps list (docs.com)
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/power-query/custom-function" target="_blank">
+      Using custom functions (docs.com)
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/powerquery-m/" target="_blank">
+      Power Query M formulas (docs.com)
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/en-us/power-query/dealing-with-errors" target="_blank">
+      Dealing with errors (docs.com)
+     </a>
+    </p>
+   </section>
+   <section aria-labelledby="" class="ocpSection">
+   </section>
+  </article>
+ </body>
+</html>

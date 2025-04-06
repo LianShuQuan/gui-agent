@@ -1,0 +1,1705 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    Create a PivotTable to analyze worksheet data
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <p>
+     A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel.
+    </p>
+    <p>
+     If you have the right
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/copilot/microsoft-365/microsoft-365-copilot-requirements#license-requirements" target="_blank">
+      license requirements
+     </a>
+     , you can
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/topic/create-pivottables-with-copilot-in-excel-93f14f4e-1cb4-4d24-9509-d36a8677d652">
+      ask Copilot to help you create a PivotTable
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+    <div class="tabControl" data-office-version-targeting="true" data-os-targeting="false" data-tab-control="ID0EBL" data-windows-version-targeting="false" id="section-1_tabControl-1">
+     <div class="tabControl__tablist" role="tablist">
+      <button aria-controls="section-1_tabControl-1_tabPanel-1" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-1" data-bi-name="Tab button" data-bi-slot="1" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EBL=Windows" id="section-1_tabControl-1_tab-1" role="tab" type="button">
+       <span class="focus">
+        Windows
+       </span>
+      </button>
+      <button aria-controls="section-1_tabControl-1_tabPanel-2" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-2" data-bi-name="Tab button" data-bi-slot="2" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EBL=Web" id="section-1_tabControl-1_tab-2" role="tab" type="button">
+       <span class="focus">
+        Web
+       </span>
+      </button>
+      <button aria-controls="section-1_tabControl-1_tabPanel-3" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-3" data-bi-name="Tab button" data-bi-slot="3" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EBL=macOS" id="section-1_tabControl-1_tab-3" role="tab" type="button">
+       <span class="focus">
+        macOS
+       </span>
+      </button>
+      <button aria-controls="section-1_tabControl-1_tabPanel-4" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-4" data-bi-name="Tab button" data-bi-slot="4" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EBL=Office_for_iOS" id="section-1_tabControl-1_tab-4" role="tab" type="button">
+       <span class="focus">
+        Office for iOS
+       </span>
+      </button>
+     </div>
+     <div class="tabControl_tabPanelContainer" id="section-1_tabControl-1_tabPanelContainer" tabindex="-1">
+      <div aria-labelledby="section-1_tabControl-1_tab-1" class="tabControl__tabpanel" id="section-1_tabControl-1_tabPanel-1" role="tabpanel" tabindex="-1">
+       <div class="ocpVideo" data-channel="" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RWfyHX" data-videotitle="Create a PivotTable (RWfyHX)" data-videotype="single" id="ocpVideo1">
+        <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Create a PivotTable (RWfyHX)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+         <picture>
+          <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+         </picture>
+        </universal-media-player>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EJBBHBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJBBHBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Create a PivotTable in Excel for Windows
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EJBBHBL-button" class="ocpebw" id="ID0EJBBHBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ol type="1">
+           <li>
+            <p>
+             Select the cells you want to create a PivotTable from.
+            </p>
+            <div class="ocpAlert">
+             <p class="ocpAlertSection">
+              <b class="ocpNote">
+               Note:
+              </b>
+              Your data should be organized in columns with a single header row. See the Data format tips and tricks section for more details.
+             </p>
+            </div>
+           </li>
+           <li>
+            <p>
+             Select
+             <b class="ocpLegacyBold">
+              Insert
+             </b>
+             &gt;
+             <b class="ocpLegacyBold">
+              PivotTable
+             </b>
+             .
+            </p>
+            <p>
+             <picture>
+              <img alt="PivotTable Button" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/dae34049-97db-4aab-8f32-6fb17bb32b2a/373f48d7cf0172d146d325bc1fdcf3a4c5c08826.png" style="aspect-ratio: 209/129" width="209"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             This creates a PivotTable based on an existing table or range.
+             <br aria-hidden="true"/>
+             <picture>
+              <img alt="PivotTable from Range or Table" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/69492290-77e8-4acf-82f1-4ad44a37cf14/5038750dbfbc9563b91a96f6f93dc044052c6cd5.png" style="aspect-ratio: 396/252" width="396"/>
+             </picture>
+            </p>
+            <div class="ocpAlert">
+             <p class="ocpAlertSection">
+              <b class="ocpNote">
+               Note:
+              </b>
+              Selecting
+              <b class="ocpUI">
+               Add this data to the Data Model
+              </b>
+              adds the table or range being used for this PivotTable into the workbook's Data Model.
+              <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-data-model-in-excel-87e7a54c-87dc-488e-9410-5c75dbcb0f7b">
+               Learn more
+              </a>
+              .
+             </p>
+            </div>
+           </li>
+           <li>
+            <p>
+             Choose where you want the PivotTable report to be placed. Select
+             <b class="ocpUI">
+              New Worksheet
+             </b>
+             to place the PivotTable in a new worksheet or
+             <b class="ocpUI">
+              Existing Worksheet
+             </b>
+             and select where you want the new PivotTable to appear.
+            </p>
+           </li>
+           <li>
+            <p>
+             Select
+             <b class="ocpUI">
+              OK
+             </b>
+             .
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EHBBHBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBBHBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           PivotTables from other sources
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EHBBHBL-button" class="ocpebw" id="ID0EHBBHBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           By clicking the down arrow on the button, you can select from other possible sources for your PivotTable. In addition to using an existing table or range, there are three other sources you can select from to populate your PivotTable.
+           <br aria-hidden="true"/>
+           <br aria-hidden="true"/>
+           <picture>
+            <img alt="Select PivotTable Source" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/a1183eab-4541-4407-8f7c-1d81ce14256f/59db1958857ca6ba2d6fe26f1fb5e8d6b696ccd5.png" style="aspect-ratio: 204/225" width="204"/>
+           </picture>
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            Depending on your organization's IT settings you might see your organization's name included in the list. For example, "From Power BI (Microsoft)."
+           </p>
+          </div>
+          <p>
+           <b class="ocpLegacyBold">
+            Get from External Data Source
+           </b>
+          </p>
+          <picture>
+           <img alt="PivotTable from External Source" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/3de008ea-10dd-477c-b799-d4054f143a3d/f06401a7514c62f26b0f205138880eb450233367.png" style="aspect-ratio: 397/271" width="397"/>
+          </picture>
+          <p>
+           <b class="ocpLegacyBold">
+            Get from Data Model
+           </b>
+          </p>
+          <p>
+           Use this option if your workbook contains a
+           <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-data-model-in-excel-87e7a54c-87dc-488e-9410-5c75dbcb0f7b">
+            Data Model
+           </a>
+           , and you want to create a PivotTable from multiple tables, enhance the PivotTable with custom measures, or are working with very large datasets.
+           <br aria-hidden="true"/>
+           <picture>
+            <img alt="PivotTable from Data Table" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/8d871a8c-0063-4bdf-b8a2-c998cec28722/67b8a9aec6886e4c237fb2ae93887e53e9799016.png" style="aspect-ratio: 396/159" width="396"/>
+           </picture>
+          </p>
+          <p>
+           <b class="ocpLegacyBold">
+            Get from Power BI
+           </b>
+          </p>
+          <p>
+           Use this option if your organization uses Power BI and you want to discover and connect to endorsed cloud datasets you have access to.
+          </p>
+          <picture>
+           <img alt="PivotTable from Power BI" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/02c7867c-094f-45c5-a1d7-14c78e100e3b/da7ad36299915733ee22a3e1811a1eb686ebb20c.png" style="aspect-ratio: 252/404" width="252"/>
+          </picture>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EFBBHBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBBHBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Building out your PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EFBBHBL-button" class="ocpebw" id="ID0EFBBHBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ol type="1">
+           <li>
+            <p>
+             To add a field to your PivotTable, select the field name checkbox in the
+             <b class="ocpLegacyBold">
+              PivotTables Fields
+             </b>
+             pane.
+            </p>
+            <div class="ocpAlert">
+             <p class="ocpAlertSection">
+              <b class="ocpNote">
+               Note:
+              </b>
+              Selected fields are added to their default areas: non-numeric fields are added to
+              <b class="ocpLegacyBold">
+               Rows
+              </b>
+              , date and time hierarchies are added to
+              <b class="ocpLegacyBold">
+               Columns
+              </b>
+              , and numeric fields are added to
+              <b class="ocpLegacyBold">
+               Values
+              </b>
+              .
+             </p>
+            </div>
+            <p>
+             <picture>
+              <img alt="Pivot Table" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/095beeee-8781-4b14-be42-9b05e9aff8d3/d4074c0df3eea1898d0929a2a629b58def577202.png" style="aspect-ratio: 288/540" width="288"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             To move a field from one area to another, drag the field to the target area.
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EDBBHBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBBHBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Refreshing PivotTables
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EDBBHBL-button" class="ocpebw" id="ID0EDBBHBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you add new data to your PivotTable data source, any PivotTables that were built on that data source need to be refreshed. To refresh just one PivotTable, you can right-click anywhere in the PivotTable range, and then select
+           <b class="ocpUI">
+            Refresh
+           </b>
+           . If you have multiple PivotTables, first select any cell in any PivotTable, then on the ribbon go to
+           <b class="ocpUI">
+            PivotTable Analyze
+           </b>
+           &gt; select the arrow under the
+           <b class="ocpUI">
+            Refresh
+           </b>
+           button, and then select
+           <b class="ocpUI">
+            Refresh All
+           </b>
+           .
+          </p>
+          <p>
+           <picture>
+            <img alt="Refresh a PivotTable" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/2474d5b6-4efd-4cb1-bed2-360268e03e34/ccbc4f9fc3d658a08ce86196754a9fde922acebd.png" style="aspect-ratio: 127/124" width="127"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EBBBHBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBHBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Working with PivotTable Values
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EBBBHBL-button" class="ocpebw" id="ID0EBBBHBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           <b class="ocpUI">
+            Summarize Values By
+           </b>
+          </p>
+          <p>
+           By default, PivotTable fields placed in the
+           <b class="ocpUI">
+            Values
+           </b>
+           area are displayed as a
+           <b class="ocpLegacyBold">
+            SUM
+           </b>
+           . If Excel interprets your data as text, the data is displayed as a
+           <b class="ocpLegacyBold">
+            COUNT
+           </b>
+           . This is why it's so important to make sure you don't mix data types for value fields. You can change the default calculation by first selecting the arrow to the right of the field name, and then select the
+           <b class="ocpUI">
+            Value Field Settings
+           </b>
+           option.
+          </p>
+          <p>
+           <picture>
+            <img alt="Excel Value Field Settings dialog" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/4e8b2572-c03f-4707-90d9-824161350b5f/c9615e6bd4bec2b9e1b96c11b72402d3df8dc816.png" style="aspect-ratio: 194/300" width="194"/>
+           </picture>
+          </p>
+          <p>
+          </p>
+          <p>
+           Next, change the calculation in the
+           <b class="ocpUI">
+            Summarize Values By
+           </b>
+           section. Note that when you change the calculation method, Excel automatically appends it in the
+           <b class="ocpUI">
+            Custom Name
+           </b>
+           section, like "Sum of FieldName", but you can change it. If you select
+           <b class="ocpUI">
+            Number Format
+           </b>
+           , you can change the number format for the entire field.
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpTip">
+             Tip:
+            </b>
+            Since changing the calculation in the
+            <b class="ocpUI">
+             Summarize Values By
+            </b>
+            section changes the PivotTable field name, it's best not to rename your PivotTable fields until you're finished setting up your PivotTable. One trick is to use
+            <b class="ocpUI">
+             Find &amp; Replace
+            </b>
+            (
+            <b class="ocpUI">
+             Ctrl+H
+            </b>
+            ) &gt;
+            <b class="ocpUI">
+             Find what
+            </b>
+            &gt; "
+            <b class="ocpUI">
+             Sum of
+            </b>
+            ", and then
+            <b class="ocpUI">
+             Replace with
+            </b>
+            &gt; leave blank to replace everything at once instead of manually retyping.
+           </p>
+          </div>
+          <p>
+           <picture>
+            <img alt="Excel Value Field Settings dialog for Summarize Values By options" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/0ff4b057-ad8e-4a90-a952-8e84d3255725/846d0c9756c839f72151938c3b6edcf9e63a90f6.png" style="aspect-ratio: 375/321" width="375"/>
+           </picture>
+          </p>
+          <p>
+           <b class="ocpUI">
+            Show Values As
+           </b>
+          </p>
+          <p>
+           Instead of using a calculation to summarize the data, you can also display it as a percentage of a field. In the following example, we changed our household expense amounts to display as a
+           <b class="ocpLegacyBold">
+            % of Grand Total
+           </b>
+           instead of the sum of the values.
+          </p>
+          <p>
+           <picture>
+            <img alt="PivotTable example with Values displayed as a percentage of the Grand Total" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/47b54356-0ebf-462c-9b92-3d184a11d056/e7bcf46d2a3875a2d23335ff37c4d1f86b59266c.png" style="aspect-ratio: 404/142" width="404"/>
+           </picture>
+           <picture>
+            <img alt="PivotTable example with Values displayed as a percentage of the Grand Total" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/47b54356-0ebf-462c-9b92-3d184a11d056/e7bcf46d2a3875a2d23335ff37c4d1f86b59266c.png" style="aspect-ratio: 404/142" width="404"/>
+           </picture>
+          </p>
+          <p>
+           Once you've opened the
+           <b class="ocpUI">
+            Value Field Setting
+           </b>
+           dialog box, you can make your selections from the
+           <b class="ocpUI">
+            Show Values As
+           </b>
+           tab.
+          </p>
+          <p>
+           <b class="ocpLegacyBold">
+            Display a value as both a calculation and percentage.
+           </b>
+          </p>
+          <p>
+           Simply drag the item into the
+           <b class="ocpUI">
+            Values
+           </b>
+           section twice, and then set the
+           <b class="ocpUI">
+            Summarize Values By
+           </b>
+           and
+           <b class="ocpUI">
+            Show Values As
+           </b>
+           options for each one.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-labelledby="section-1_tabControl-1_tab-2" class="tabControl__tabpanel" hidden="" id="section-1_tabControl-1_tabPanel-2" role="tabpanel" tabindex="-1">
+       <div class="ocpVideo" data-channel="" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RWfyHX" data-videotitle="Create a PivotTable (RWfyHX)" data-videotype="single" id="ocpVideo2">
+        <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Create a PivotTable (RWfyHX)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/video_1001_1731984843273_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-501b3c00-13b3-47c2-841e-d728184e6767/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+         <picture>
+          <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+         </picture>
+        </universal-media-player>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0ELBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ELBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Insert a PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0ELBBFBL-button" class="ocpebw" id="ID0ELBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ol type="1">
+           <li>
+            <p>
+             Select a table or range of data in your sheet and select
+             <b class="ocpUI">
+              Insert &gt; PivotTable
+             </b>
+             to open the
+             <b class="ocpUI">
+              Insert PivotTable
+             </b>
+             pane.
+            </p>
+           </li>
+           <li>
+            <p>
+             You can either manually create your own
+             <b class="ocpUI">
+              PivotTable
+             </b>
+             or choose a recommended
+             <b class="ocpUI">
+              PivotTable
+             </b>
+             to be created for you. Do one of the following:
+            </p>
+           </li>
+          </ol>
+          <ul>
+           <li>
+            <p>
+             On the
+             <b class="ocpUI">
+              Create your own PivotTable
+             </b>
+             card, select either
+             <b class="ocpLegacyBold">
+              New sheet
+             </b>
+             or
+             <b class="ocpLegacyBold">
+              Existing sheet
+             </b>
+             to choose the destination of the PivotTable.
+            </p>
+           </li>
+           <li>
+            <p>
+             On a recommended PivotTable, select either
+             <b class="ocpLegacyBold">
+              New sheet
+             </b>
+             or
+             <b class="ocpLegacyBold">
+              Existing sheet
+             </b>
+             to choose the destination of the PivotTable.
+            </p>
+           </li>
+          </ul>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            Recommended
+            <b class="ocpUI">
+             PivotTables
+            </b>
+            are available only to Microsoft 365 subscribers.
+           </p>
+          </div>
+          <p>
+           <picture>
+            <img alt="The Insert PivotTable pane lets you set the source, destination, and other aspects of the PivotTable." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/b1406656-fd22-4ae0-a0ff-104e7b332925/231d877bddbab7aac28ce5c7513fbba6cfd16a59.png" style="aspect-ratio: 422/721" width="422"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EJBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Change the source data
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EJBBFBL-button" class="ocpebw" id="ID0EJBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           You can change the data sourcefor the PivotTable data as you are creating it.
+          </p>
+          <ol type="1">
+           <li>
+            <p>
+             In the
+             <b class="ocpLegacyBold">
+              Insert PivotTable
+             </b>
+             pane, select the text box under
+             <b class="ocpUI">
+              Source
+             </b>
+             . While changing the
+             <b class="ocpUI">
+              Source
+             </b>
+             , cards in the pane won't be available.
+            </p>
+           </li>
+           <li>
+            <p>
+             Make a selection of data on the grid or enter a range in the text box.
+            </p>
+           </li>
+           <li>
+            <p>
+             Press Enter on your keyboard or the button to confirm your selection. The pane updates with new recommended
+             <b class="ocpUI">
+              PivotTables
+             </b>
+             based on the new source of data.
+            </p>
+           </li>
+          </ol>
+          <p>
+           <picture>
+            <img alt="Insert PivotTable pane asking for a table or range to use as a Source and allowing you to change the Destination." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/fc673704-21c0-4b0e-880c-efc2a72446be/521c6e1014b79a442c20a57af9b7ea1d4a432b3d.png" style="aspect-ratio: 422/404" width="422"/>
+           </picture>
+          </p>
+          <p>
+           <b class="ocpLegacyBold">
+            Get from Power BI
+           </b>
+          </p>
+          <p>
+           Use this option if your organization uses Power BI and you want to discover and connect to endorsed cloud datasets you have access to.
+          </p>
+          <p>
+           <picture>
+            <img alt="PivotTable from Power BI" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/02c7867c-094f-45c5-a1d7-14c78e100e3b/da7ad36299915733ee22a3e1811a1eb686ebb20c.png" style="aspect-ratio: 252/404" width="252"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EHBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Working with the PivotTable Fields pane
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EHBBFBL-button" class="ocpebw" id="ID0EHBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           In the
+           <b class="ocpUI">
+            PivotTable Fields
+           </b>
+           pane, select the check box for any field you want to add to your PivotTable.
+          </p>
+          <p>
+           By default, non-numeric fields are added to the
+           <b class="ocpUI">
+            Rows
+           </b>
+           area, date and time fields are added to the
+           <b class="ocpUI">
+            Columns
+           </b>
+           area, and numeric fields are added to the
+           <b class="ocpUI">
+            Values
+           </b>
+           area.
+          </p>
+          <p>
+           You can also manually drag-and-drop any available item into any of the
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           fields, or if you no longer want an item in your PivotTable, drag it out from the list or uncheck it.
+          </p>
+          <p>
+           <picture>
+            <img alt="PivotTable Fields in Excel for the web" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/6d1629ae-6cfb-46a8-bb80-065edfe97782/78767d90341823c294c8a895122cb62ef213da08.png" style="aspect-ratio: 423/462" width="423"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EFBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Working with PivotTable Values
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EFBBFBL-button" class="ocpebw" id="ID0EFBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           <b class="ocpUI">
+            Summarize Values By
+           </b>
+          </p>
+          <p>
+           By default,
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           fields in the
+           <b class="ocpUI">
+            Values
+           </b>
+           area are displayed as a
+           <b class="ocpLegacyBold">
+            SUM
+           </b>
+           . If Excel interprets your data as text, it is displayed as a
+           <b class="ocpLegacyBold">
+            COUNT
+           </b>
+           . This is why it's so important to make sure you don't mix data types for value fields.
+           <br aria-hidden="true"/>
+           <br aria-hidden="true"/>
+           Change the default calculation by right-clicking any value in the row and selecting the
+           <b class="ocpUI">
+            Summarize Values By
+           </b>
+           option.
+          </p>
+          <p>
+           <picture>
+            <img alt="Summarize By in Excel for the web" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/6892b69f-5ce0-4b7a-905e-76a40bde2502/30ab432cdf56562e9b1ffebfa629394b8f206763.png" style="aspect-ratio: 300/385" width="300"/>
+           </picture>
+          </p>
+          <p>
+          </p>
+          <p>
+           <b class="ocpUI">
+            Show Values As
+           </b>
+          </p>
+          <p>
+           Instead of using a calculation to summarize the data, you can also display it as a percentage of a field. In the following example, we changed our household expense amounts to display as a
+           <b class="ocpLegacyBold">
+            % of Grand Total
+           </b>
+           instead of the sum of the values.
+          </p>
+          <p>
+           <picture>
+            <img alt="PivotTable example with Values displayed as a percentage of the Grand Total" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/47b54356-0ebf-462c-9b92-3d184a11d056/e7bcf46d2a3875a2d23335ff37c4d1f86b59266c.png" style="aspect-ratio: 404/142" width="404"/>
+           </picture>
+          </p>
+          <p>
+          </p>
+          <p>
+           Right-click any value in the column you'd like to show the value for. Select
+           <b class="ocpUI">
+            Show Values As
+           </b>
+           in the menu. A list of available values displays.
+          </p>
+          <p>
+           Make your selection from the list.
+          </p>
+          <p>
+           To show as a
+           <b class="ocpUI">
+            % of Parent Total
+           </b>
+           , hover over that item in the list and select the parent field you want to use as the basis of the calculation.
+          </p>
+          <p>
+           <picture>
+            <img alt="Show As" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/e7a601a5-8686-4850-9e6f-066c955697ae/1d4345508dfcdb9bef6d3c6be1a7be0d3712e5a4.png" style="aspect-ratio: 400/363" width="400"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EDBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Refreshing PivotTables
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EDBBFBL-button" class="ocpebw" id="ID0EDBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you add new data to your
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           data source, any
+           <b class="ocpUI">
+            PivotTables
+           </b>
+           built on that data source must be refreshed. Right-click anywhere in the
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           range, and then select
+           <b class="ocpUI">
+            Refresh
+           </b>
+           .
+          </p>
+          <p>
+           <picture>
+            <img alt="Refresh PivotTable" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/119c6e28-f19a-4fd6-982b-dc82764afa8d/0decd546e3d9decb1688d838503fb02a2c2fcd5d.png" style="aspect-ratio: 319/373" width="319"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EBBBFBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBFBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Delete a PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EBBBFBL-button" class="ocpebw" id="ID0EBBBFBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you created a
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           and decide you no longer want it, select the entire
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           range and press
+           <b class="ocpUI">
+            Delete
+           </b>
+           . This won't have any effect on other data or
+           <b class="ocpUI">
+            PivotTables
+           </b>
+           or charts around it. If your
+           <b class="ocpUI">
+            PivotTable
+           </b>
+           is on a separate sheet that has no other data you want to keep, deleting the sheet is a fast way to remove the
+           <b class="ocpUI">
+            PivotTable.
+           </b>
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-labelledby="section-1_tabControl-1_tab-3" class="tabControl__tabpanel" hidden="" id="section-1_tabControl-1_tabPanel-3" role="tabpanel" tabindex="-1">
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0ELBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ELBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Before you get started
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0ELBBDBL-button" class="ocpebw" id="ID0ELBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ul>
+           <li>
+            <p>
+             Your data should be organized in a tabular format, and not have any blank rows or columns. Ideally, you can use an
+             <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/overview-of-excel-tables-7ab0bb7d-3a9e-4b56-a3c9-6c94334e492c">
+              Excel table
+             </a>
+             .
+            </p>
+           </li>
+           <li>
+            <p>
+             Tables are a great PivotTable data source, because rows added to a table are included automatically in the PivotTable when you refresh the data, and any new columns are included in the
+             <b class="ocpUI">
+              PivotTable Fields
+             </b>
+             list. Otherwise, you need to either
+             <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/change-the-source-data-for-a-pivottable-afd93524-f7de-432c-84d0-3896fbbc2577">
+              Change the source data for a PivotTable
+             </a>
+             , or use a
+             <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/en-us/kb/830287" target="_blank">
+              dynamic named range formula
+             </a>
+             .
+            </p>
+           </li>
+           <li>
+            <p>
+             Data types in columns should be the same. For example, you shouldn't mix dates and text in the same column.
+            </p>
+           </li>
+           <li>
+            <p>
+             PivotTables work on a snapshot of your data, called the cache, so your actual data doesn't get altered in any way.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EJBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Create by using a Recommended PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EJBBDBL-button" class="ocpebw" id="ID0EJBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you have limited experience with PivotTables, or are not sure how to get started, a
+           <b class="ocpUI">
+            Recommended PivotTable
+           </b>
+           is a good choice. When you use this feature, Excel determines a meaningful layout by matching the data with the most suitable areas in the PivotTable. This helps give you a starting point for additional experimentation. After a recommended PivotTable is created, you can explore different orientations and rearrange fields to achieve your desired results. You can also download our interactive
+           <a class="ocpExternalLink" data-bi-type="anchor" href="https://templates.office.com/en-us/PivotTable-tutorial-TM16400647" target="_blank">
+            Make your first PivotTable
+           </a>
+           tutorial.
+          </p>
+          <ol type="1">
+           <li>
+            <p>
+             Select a cell in the source data or table range.
+            </p>
+           </li>
+           <li>
+            <p>
+             Go to
+             <b class="ocpUI">
+              Insert
+             </b>
+             &gt;
+             <b class="ocpUI">
+              Recommended PivotTable
+             </b>
+             .
+             <br aria-hidden="true"/>
+             <br aria-hidden="true"/>
+             <picture>
+              <img alt="Go to Insert &gt; Recommended PivotTables to have Excel create a PivotTable for you" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/73c2b585-9ccd-4f06-9026-26790637b390/e87e3bc40b1be722991c8035e206d29af084e7f5.png" style="aspect-ratio: 193/129" width="193"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             Excel analyzes your data and presents you with several options, as in this example using the household expense data.
+             <br aria-hidden="true"/>
+             <br aria-hidden="true"/>
+             <picture>
+              <img alt="Excel Recommended PivotTables dialog" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/35c8fd6d-5abe-4b87-beea-17a2f4bbf6ac/0052055d4da7b2b4de1c97a2feed1eba6b8b3a63.png" style="aspect-ratio: 207/284" width="207"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             Select the PivotTable that looks best to you and press
+             <b class="ocpUI">
+              OK
+             </b>
+             . Excel creates a PivotTable on a new sheet and displays the
+             <b class="ocpUI">
+              PivotTable Fields
+             </b>
+             list.
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EHBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Manually create a PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EHBBDBL-button" class="ocpebw" id="ID0EHBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ol type="1">
+           <li>
+            <p>
+             Select a cell in the source data or table range.
+            </p>
+           </li>
+           <li>
+            <p>
+             Go to
+             <b class="ocpUI">
+              Insert
+             </b>
+             &gt;
+             <b class="ocpUI">
+              PivotTable
+             </b>
+             .
+             <br aria-hidden="true"/>
+             <br aria-hidden="true"/>
+             <picture>
+              <img alt="Data tab, Analysis group" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/019ce9c8-3683-489e-bf9f-418ec1631613/f64a10df487360dac6ba3c0b864f541e6c9f2b6e.gif" style="aspect-ratio: 186/122" width="186"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             Excel displays the
+             <b class="ocpUI">
+              Create PivotTable
+             </b>
+             dialog box with your range or table name selected. In this case, we're using a table called "tbl_HouseholdExpenses".
+            </p>
+           </li>
+           <li>
+            <p>
+             In the
+             <b class="ocpLegacyBold">
+              Choose where you want the PivotTable report to be placed
+             </b>
+             section, select
+             <b class="ocpUI">
+              New Worksheet
+             </b>
+             , or
+             <b class="ocpUI">
+              Existing Worksheet
+             </b>
+             . For
+             <b class="ocpUI">
+              Existing Worksheet
+             </b>
+             , select the cell where you want the PivotTable placed.
+            </p>
+           </li>
+           <li>
+            <p>
+             Select
+             <b class="ocpUI">
+              OK
+             </b>
+             , and Excel creates a blank PivotTable and displays the
+             <b class="ocpUI">
+              PivotTable Fields
+             </b>
+             list.
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EFBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Working with the PivotTable Fields list
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EFBBDBL-button" class="ocpebw" id="ID0EFBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           <b class="ocpLegacyBold">
+            PivotTable Fields list
+           </b>
+          </p>
+          <p>
+           In the
+           <b class="ocpUI">
+            Field Name
+           </b>
+           area at the top, select the check box for any field you want to add to your PivotTable. By default, non-numeric fields are added to the
+           <b class="ocpUI">
+            Row
+           </b>
+           area, date and time fields are added to the
+           <b class="ocpUI">
+            Column
+           </b>
+           area, and numeric fields are added to the
+           <b class="ocpUI">
+            Values
+           </b>
+           area. You can also manually drag-and-drop any available item into any of the PivotTable fields, or if you no longer want an item in your PivotTable, simply drag it out of the Fields list or uncheck it. Being able to rearrange Field items is one of the PivotTable features that makes changing its appearance so easy.
+          </p>
+          <p>
+           <b class="ocpLegacyBold">
+            PivotTable Fields list
+           </b>
+          </p>
+          <p>
+           <picture>
+            <img alt="Example of the Excel PivotTable Fields list dialog" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/d8e0bf76-0992-4666-b693-04fbe4225836/3c21e87ccac0cd69e8676317e17831d1136147e5.png" style="aspect-ratio: 299/524" width="299"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EDBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           PivotTable Values
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EDBBDBL-button" class="ocpebw" id="ID0EDBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ul>
+           <li>
+            <p>
+             <b class="ocpUI">
+              Summarize by
+             </b>
+            </p>
+            <p>
+             By default, PivotTable fields placed in the
+             <b class="ocpUI">
+              Values
+             </b>
+             area are displayed as a
+             <b class="ocpLegacyBold">
+              SUM
+             </b>
+             . If Excel interprets your data as text, the data is displayed as a
+             <b class="ocpLegacyBold">
+              COUNT
+             </b>
+             . This is why it's so important to make sure you don't mix data types for value fields. You can change the default calculation by first selecting the arrow to the right of the field name, and then by selecting the
+             <b class="ocpUI">
+              Field Settings
+             </b>
+             option.
+            </p>
+            <p>
+             Next, change the calculation in the
+             <b class="ocpUI">
+              Summarize by
+             </b>
+             section. Note that when you change the calculation method, Excel automatically appends it in the
+             <b class="ocpUI">
+              Custom Name
+             </b>
+             section, like "Sum of FieldName", but you can change it. If you select
+             <b class="ocpUI">
+              Number...
+             </b>
+             , you can change the number format for the entire field.
+            </p>
+            <div class="ocpAlert">
+             <p class="ocpAlertSection">
+              <b class="ocpTip">
+               Tip:
+              </b>
+              Since changing the calculation in the
+              <b class="ocpUI">
+               Summarize by
+              </b>
+              section changes the PivotTable field name, it's best not to rename your PivotTable fields until you're finished setting up your PivotTable. One trick is to select
+              <b class="ocpUI">
+               Replace
+              </b>
+              (
+              <b class="ocpUI">
+               on the Edit menu
+              </b>
+              ) &gt;
+              <b class="ocpUI">
+               Find what
+              </b>
+              &gt; "
+              <b class="ocpUI">
+               Sum of
+              </b>
+              ", and then
+              <b class="ocpUI">
+               Replace with
+              </b>
+              &gt; leave blank to replace everything at once instead of manually retyping.
+             </p>
+            </div>
+           </li>
+           <li>
+            <p>
+             <b class="ocpUI">
+              Show data as
+             </b>
+            </p>
+            <p>
+             Instead of using a calculation to summarize the data, you can also display it as a percentage of a field. In the following example, we changed our household expense amounts to display as a
+             <b class="ocpLegacyBold">
+              % of Grand Total
+             </b>
+             instead of the sum of the values.
+            </p>
+            <picture>
+             <img alt="PivotTable example with Values displayed as a percentage of the Grand Total" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/47b54356-0ebf-462c-9b92-3d184a11d056/e7bcf46d2a3875a2d23335ff37c4d1f86b59266c.png" style="aspect-ratio: 404/142" width="404"/>
+            </picture>
+            <p>
+             Once you've opened the
+             <b class="ocpUI">
+              Field Settings
+             </b>
+             dialog box, you can make your selections from the
+             <b class="ocpUI">
+              Show data as
+             </b>
+             tab.
+            </p>
+           </li>
+           <li>
+            <p>
+             <b class="ocpLegacyBold">
+              Display a value as both a calculation and percentage.
+             </b>
+            </p>
+            <p>
+             Simply drag the item into the
+             <b class="ocpUI">
+              Values
+             </b>
+             section twice, right-click the value and select
+             <b class="ocpUI">
+              Field Settings
+             </b>
+             , and then set the
+             <b class="ocpUI">
+              Summarize by
+             </b>
+             and
+             <b class="ocpUI">
+              Show data as
+             </b>
+             options for each one.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EBBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBDBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Refreshing PivotTables
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EBBBDBL-button" class="ocpebw" id="ID0EBBBDBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you add new data to your PivotTable data source, any PivotTables that were built on that data source must be refreshed. To refresh just one PivotTable you can right-click anywhere in the PivotTable range, and then select
+           <b class="ocpUI">
+            Refresh
+           </b>
+           . If you have multiple PivotTables, first select any cell in any PivotTable, and then on the ribbon go to
+           <b class="ocpUI">
+            PivotTable Analyze
+           </b>
+           &gt; select the arrow under the
+           <b class="ocpUI">
+            Refresh
+           </b>
+           button, and then select
+           <b class="ocpUI">
+            Refresh All
+           </b>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="ocpSection">
+         <h3 class="ocpExpandoHead">
+          <button aria-controls="ID0EBBBBBDBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBBBDBL-button" ms.interactiontype="11" type="button">
+           <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+            <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+            </i>
+           </div>
+           <div class="ocpExpandoHeadTitleContainer" role="none">
+            Deleting a PivotTable
+           </div>
+          </button>
+         </h3>
+         <div aria-labelledby="ID0EBBBBBDBL-button" class="ocpebw" id="ID0EBBBBBDBL-panel" role="region">
+          <div class="ocpExpandoBody">
+           <p>
+            If you created a PivotTable and decide you no longer want it, you can simply select the entire PivotTable range, and then press
+            <b class="ocpUI">
+             Delete
+            </b>
+            . This doesn't affect any other data or PivotTables or charts around it. If your PivotTable is on a separate sheet that has no other data you want to keep, deleting that sheet is a fast way to remove the PivotTable.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div aria-labelledby="section-1_tabControl-1_tab-4" class="tabControl__tabpanel" hidden="" id="section-1_tabControl-1_tabPanel-4" role="tabpanel" tabindex="-1">
+       <p>
+        PivotTable on iPad is available to customers running Excel on iPad version 2.82.205.0 and above. To access this feature, please ensure your app is updated to the latest version through the App Store.
+       </p>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EHBBBBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBBBBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Create a PivotTable in Excel on iPad
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EHBBBBL-button" class="ocpebw" id="ID0EHBBBBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <ol type="1">
+           <li>
+            <p>
+             Select a cell in the source data or table range.
+            </p>
+           </li>
+           <li>
+            <p>
+             Go to
+             <b class="ocpLegacyBold">
+              Insert &gt; PivotTable
+             </b>
+             .
+            </p>
+            <p>
+             <picture>
+              <img alt="Insert a PivotTable on iPad." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/4741c7f2-0d21-41e8-b23d-d436b04bf3b9/61c757a61053213690e8063824826a30243b4e78.jpg" style="aspect-ratio: 2048/1536" width="2048"/>
+             </picture>
+            </p>
+           </li>
+           <li>
+            <p>
+             Choose where you want the PivotTable to be placed. Select
+             <b class="ocpLegacyBold">
+              Insert on new sheet
+             </b>
+             to place the PivotTable in a new worksheet or  select the cell where you want the new PivotTable placed in the Destination field.
+            </p>
+           </li>
+           <li>
+            <p>
+             Select
+             <b class="ocpLegacyBold">
+              Insert
+             </b>
+             .
+            </p>
+           </li>
+          </ol>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EFBBBBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBBBBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Working with the PivotTable Field List
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EFBBBBL-button" class="ocpebw" id="ID0EFBBBBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           Typically, non-numeric fields are added to the
+           <b class="ocpLegacyBold">
+            Rows
+           </b>
+           area, date and time fields are added to the
+           <b class="ocpLegacyBold">
+            Columns
+           </b>
+           area, and numeric fields are added to the
+           <b class="ocpLegacyBold">
+            Values
+           </b>
+           area. You can also manually drag-and-drop any available item into any of the PivotTable fields, or if you no longer want an item in your PivotTable, simply drag it out of the Fields list or uncheck it. Being able to rearrange Field items is one of the PivotTable features that makes changing its appearance so easy.
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            If the field list is no longer visible, go to the
+            <b class="ocpLegacyBold">
+             PivotTable
+            </b>
+            tab, swipe left, and select
+            <b class="ocpLegacyBold">
+             Field List
+            </b>
+            to display the field list.
+           </p>
+          </div>
+          <p>
+           <picture>
+            <img alt="PivotTable on iPad Field list" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/2f11dd92-35aa-4ee0-96a8-1dcfdf97bce3/019f7487ca0905dae89420bbcd9398ccfc267a60.png" style="aspect-ratio: 444/1280" width="444"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EDBBBBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBBBBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Refreshing PivotTables
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EDBBBBL-button" class="ocpebw" id="ID0EDBBBBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you add new data to your PivotTable data source, any PivotTables that were built on that data source must be refreshed. To refresh just one PivotTable you can select and hold on a cell anywhere in the PivotTable range, and then select
+           <b class="ocpLegacyBold">
+            Refresh
+           </b>
+           . If you have multiple go to
+           <b class="ocpLegacyBold">
+            PivotTable tab
+           </b>
+           on the ribbon and select
+           <b class="ocpLegacyBold">
+            Refresh
+           </b>
+           .
+          </p>
+          <p>
+          </p>
+          <p>
+           <picture>
+            <img alt="Screenshot of refreshing pivot table on Excel for iPad" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/eb772299-b338-4ebb-a63f-ce6c36b19186/7ac5d6631f8f8baa4c54a0c82d3647420ce88842.png" style="aspect-ratio: 480/244" width="480"/>
+           </picture>
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EBBBBBL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBBBL-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Deleting a PivotTable
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EBBBBBL-button" class="ocpebw" id="ID0EBBBBBL-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           If you created a PivotTable and decide you no longer want it, you can select the rows and columns spanning the entire PivotTable range, and then press
+           <b class="ocpLegacyBold">
+            Delete
+           </b>
+           .
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="ID0EDJ" class="ocpSection">
+    <h2 class="" id="ID0EDJ">
+     Data format tips and tricks
+    </h2>
+    <ul>
+     <li>
+      <p>
+       Use
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19" target="_blank">
+        clean
+       </a>
+       , tabular data for best results.
+      </p>
+     </li>
+     <li>
+      <p>
+       Organize your data in columns, not rows.
+      </p>
+     </li>
+     <li>
+      <p>
+       Make sure all columns have headers, with a single row of unique, non-blank labels for each column. Avoid double rows of headers or merged cells.
+       <br aria-hidden="true"/>
+       <br aria-hidden="true"/>
+       <picture>
+        <img alt="Excel column 2" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/microsoft-365/neutral/2004591d-ffcb-4ed3-98e6-5b3a1d1a5b81/b0f5313a3f38d4caad28ff7143d9cc00f0302faf.png" style="aspect-ratio: 349/228" width="349"/>
+       </picture>
+      </p>
+     </li>
+     <li>
+      <p>
+       Format your data as an
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/overview-of-excel-tables-7ab0bb7d-3a9e-4b56-a3c9-6c94334e492c" target="_blank">
+        Excel table
+       </a>
+       (select anywhere in your data, and then select
+       <b class="ocpUI">
+        Insert &gt; Table
+       </b>
+       from the ribbon).
+      </p>
+     </li>
+     <li>
+      <p>
+       If you have complicated or nested data, use
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/en-us/office/about-power-query-in-excel-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a" target="_blank">
+        Power Query
+       </a>
+       to transform it (for example, to
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/unpivot-columns-power-query-0f7bad4b-9ea1-49c1-9d95-f588221c7098" target="_blank">
+        unpivot your data
+       </a>
+       ) so it's organized in columns with a single header row.
+      </p>
+     </li>
+    </ul>
+   </section>
+   <section aria-labelledby="ID0EDH" class="ocpSection">
+    <h2 class="" id="ID0EDH">
+     Need more help?
+    </h2>
+    <p>
+     You can always ask an expert in the
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+      Excel Tech Community
+     </a>
+     or get support in
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+      Communities
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+   </section>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EF-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Microsoft Privacy Policy
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EF-button" class="ocpebw" id="ID0EF-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       PivotTable Recommendations are a part of the
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://docs.microsoft.com/deployoffice/privacy/connected-experiences#connected-experiences-that-download-online-content" target="_blank">
+        connected experience in Microsoft 365
+       </a>
+       , and analyzes your data with artificial intelligence services. If you choose to opt out of the connected experience in Microsoft 365, your data will not be sent to the artificial intelligence service, and you will not be able to use PivotTable Recommendations. Read the
+       <a class="ocpExternalLink" data-bi-type="anchor" href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">
+        Microsoft privacy statement
+       </a>
+       for more details.
+      </p>
+     </div>
+    </div>
+   </div>
+   <section aria-labelledby="ID0EDD" class="ocpSection">
+    <h2 class="" id="ID0EDD">
+     Related articles
+    </h2>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-pivotchart-c1b1e057-6990-4c38-b52b-8255538e7b1c">
+      Create a PivotChart
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/use-slicers-to-filter-data-249f966b-a9d5-4b0f-b31a-12651785d29d">
+      Use slicers to filter PivotTable data
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-pivottable-timeline-to-filter-dates-d3956083-01be-408c-906d-6fc99d9fadfa">
+      Create a PivotTable timeline to filter dates
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/use-multiple-tables-to-create-a-pivottable-in-excel-b5e3ff48-2921-4e29-be15-511e09b5cf2d">
+      Create a PivotTable with the Data Model to analyze data in multiple tables
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-pivottable-from-power-bi-datasets-31444a04-9c38-4dd7-9a45-22848c666884">
+      Create a PivotTable connected to Power BI Datasets
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/use-the-field-list-to-arrange-fields-in-a-pivottable-43980e05-a585-4fcd-bd91-80160adfebec">
+      Use the Field List to arrange fields in a PivotTable
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/change-the-source-data-for-a-pivottable-afd93524-f7de-432c-84d0-3896fbbc2577">
+      Change the source data for a PivotTable
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/calculate-values-in-a-pivottable-11f41417-da80-435c-a5c6-b0185e59da77">
+      Calculate values in a PivotTable
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/delete-a-pivottable-1de9b894-9178-43b3-b436-92e3ddb9175b">
+      Delete a PivotTable
+     </a>
+    </p>
+   </section>
+  </article>
+ </body>
+</html>

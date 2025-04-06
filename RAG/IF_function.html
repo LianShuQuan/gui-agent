@@ -1,0 +1,376 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    IF function
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <p id="__goback_1">
+     The IF function is one of the most popular functions in Excel, and it allows you to make logical comparisons between a value and what you expect.
+    </p>
+    <p>
+     So an IF statement can have two results. The first result is if your comparison is True, the second if your comparison is False.
+    </p>
+    <p>
+     For example, =IF(C2=”Yes”,1,2) says IF(C2 = Yes, then return a 1, otherwise return a 2).
+    </p>
+    <div class="ocpVideo" data-channel="" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RE285qJ" data-videotitle="IF_ (RE285qJ)" data-videotype="single" id="ocpVideo1">
+     <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"IF_ (RE285qJ)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/video_1001_1731979318379_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/video_1001_1731979318379_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/video_1001_1731979318379_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/video_1001_1731979318379.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/video_1001_1731979318379_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-2187395c-64af-4405-8098-2b3c182b31cc/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+      <picture>
+       <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+      </picture>
+     </universal-media-player>
+    </div>
+   </section>
+   <div class="ocpSection">
+    <h2 class="ocpExpandoHead">
+     <button aria-controls="ID0EL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EL-button" ms.interactiontype="11" type="button">
+      <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+       <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+       </i>
+      </div>
+      <div class="ocpExpandoHeadTitleContainer" role="none">
+       Syntax
+      </div>
+     </button>
+    </h2>
+    <div aria-labelledby="ID0EL-button" class="ocpebw" id="ID0EL-panel" role="region">
+     <div class="ocpExpandoBody">
+      <p>
+       Use the IF function, one of the
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/logical-functions-reference-e093c192-278b-43f6-8c3a-b6ce299931f5">
+        logical functions
+       </a>
+       , to return one value if a condition is true and another value if it's false.
+      </p>
+      <p>
+       IF(logical_test, value_if_true, [value_if_false])
+      </p>
+      <p>
+       For example:
+      </p>
+      <ul>
+       <li>
+        <p>
+         =IF(A2&gt;B2,"Over Budget","OK")
+        </p>
+       </li>
+       <li>
+        <p>
+         =IF(A2=B2,B4-A4,"")
+        </p>
+       </li>
+      </ul>
+      <table aria-label="" class="banded">
+       <thead>
+        <tr>
+         <th>
+          <p>
+           <b class="ocpLegacyBold">
+            Argument name
+           </b>
+          </p>
+         </th>
+         <th>
+          <p>
+           <b class="ocpLegacyBold">
+            Description
+           </b>
+          </p>
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpRunInHead">
+            logical_test
+           </b>
+           (required)
+          </p>
+         </td>
+         <td>
+          <p>
+           The condition you want to test.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpRunInHead">
+            value_if_true
+           </b>
+           (required)
+          </p>
+         </td>
+         <td>
+          <p>
+           The value that you want returned if the result of
+           <b class="ocpLegacyBold">
+            <i class="ocpItalic">
+             logical_test
+            </i>
+           </b>
+           is TRUE.
+          </p>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <p>
+           <b class="ocpRunInHead">
+            value_if_false
+           </b>
+           (optional)
+          </p>
+         </td>
+         <td>
+          <p>
+           The value that you want returned if the result of
+           <b class="ocpLegacyBold">
+            <i class="ocpItalic">
+             logical_test
+            </i>
+           </b>
+           is FALSE.
+          </p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <section aria-labelledby="ID0EDJ" class="ocpSection">
+    <h2 class="" id="ID0EDJ">
+     Simple IF examples
+    </h2>
+    <picture>
+     <img alt='Cell D2 contains a formula =IF(C2="Yes",1,2)' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/9f8095f1-ed25-451b-a818-e2b9db01d829/30b97a24624afbc2dc8c831d021499e1dfe52f50.png" style="aspect-ratio: 204/125" width="204"/>
+    </picture>
+    <ul>
+     <li>
+      <p>
+       =IF(C2=”Yes”,1,2)
+      </p>
+     </li>
+    </ul>
+    <p>
+     In the above example, cell D2 says:
+     <i class="ocpItalic">
+      IF(C2 = Yes, then return a 1, otherwise return a 2)
+     </i>
+    </p>
+    <picture>
+     <img alt='Cell D2 contains the formula =IF(C2=1,"YES","NO")' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/d0ae94da-d05f-4600-8331-7ef742c126fb/c23e1366d68beb0b8cc81beecb1d4803081432b7.png" style="aspect-ratio: 198/119" width="198"/>
+    </picture>
+    <ul>
+     <li>
+      <p>
+       =IF(C2=1,”Yes”,”No”)
+      </p>
+     </li>
+    </ul>
+    <p>
+     In this example, the formula in cell D2 says:
+     <i class="ocpItalic">
+      IF(C2 = 1, then return Yes, otherwise return No)
+     </i>
+     As you see, the IF function can be used to evaluate both text and values. It can also be used to
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586">
+      evaluate errors
+     </a>
+     . You are not limited to only checking if one thing is equal to another and returning a single result, you can also use mathematical operators and perform additional calculations depending on your criteria. You can also nest multiple IF functions together in order to perform multiple comparisons.
+    </p>
+    <picture>
+     <img alt="Formula in cell D2 is =IF(C2&gt;B2,”Over Budget”,”Within Budget”)" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/219d0e3f-36d1-4d82-87df-29ac68330edb/4543d38de6f0790ebaa46d8356a8b905a4596706.png" style="aspect-ratio: 415/191" width="415"/>
+    </picture>
+    <ul>
+     <li>
+      <p>
+       =IF(C2&gt;B2,”Over Budget”,”Within Budget”)
+      </p>
+     </li>
+    </ul>
+    <p>
+     In the above example, the IF function in D2 is saying
+     <i class="ocpItalic">
+      IF(C2 Is Greater Than B2, then return “Over Budget”, otherwise return “Within Budget”)
+     </i>
+    </p>
+    <picture>
+     <img alt='Formula in cell E2 is =IF(C2&gt;B2,C2-B2,"")' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/4bbae039-b79d-4998-b8b3-a18950f4350e/ed69af35c497f68cad2f3ac7e83062b8de560aa8.png" style="aspect-ratio: 405/185" width="405"/>
+    </picture>
+    <ul>
+     <li>
+      <p>
+       =IF(C2&gt;B2,C2-B2,0)
+      </p>
+     </li>
+    </ul>
+    <p>
+     In the above illustration, instead of returning a text result, we are going to return a mathematical calculation. So the formula in E2 is saying
+     <i class="ocpItalic">
+      IF(Actual is Greater than Budgeted, then Subtract the Budgeted amount from the Actual amount, otherwise return nothing).
+     </i>
+    </p>
+    <picture>
+     <img alt="Formula in Cell F7 is IF(E7=”Yes”,F5*0.0825,0)" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/d263a33c-3229-4e4d-9631-0568abc55d63/ce16d78e17c0dbb1314224dc990d305ae20d4866.png" style="aspect-ratio: 319/276" width="319"/>
+    </picture>
+    <ul>
+     <li>
+      <p>
+       =IF(E7=”Yes”,F5*0.0825,0)
+      </p>
+     </li>
+    </ul>
+    <p>
+     In this example, the formula in F7 is saying
+     <i class="ocpItalic">
+      IF(E7 = “Yes”, then calculate the Total Amount in F5 * 8.25%, otherwise no Sales Tax is due so return 0)
+     </i>
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      If you are going to use text in formulas, you need to wrap the text in quotes (e.g. “Text”). The only exception to that is using TRUE or FALSE, which Excel automatically understands.
+     </p>
+    </div>
+   </section>
+   <section aria-labelledby="ID0EDH" class="ocpSection">
+    <h2 class="" id="ID0EDH">
+     Common problems
+    </h2>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         Problem
+        </p>
+       </th>
+       <th>
+        <p>
+         What went wrong
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         0 (zero) in cell
+        </p>
+       </td>
+       <td>
+        <p>
+         There was no argument for either
+         <i class="ocpItalic">
+          <b class="ocpLegacyBold">
+           value_if_true
+          </b>
+         </i>
+         or
+         <i class="ocpItalic">
+          <b class="ocpLegacyBold">
+           value_if_False
+          </b>
+         </i>
+         arguments. To see the right value returned, add argument text to the two arguments, or add TRUE or FALSE to the argument.
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         #NAME? in cell
+        </p>
+       </td>
+       <td>
+        <p>
+         This usually means that the formula is misspelled.
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section aria-labelledby="ID0EDF" class="ocpSection">
+    <h2 class="" id="ID0EDF">
+     Need more help?
+    </h2>
+    <p>
+     You can always ask an expert in the
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+      Excel Tech Community
+     </a>
+     or get support in
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+      Communities
+     </a>
+     .
+    </p>
+    <p>
+    </p>
+   </section>
+   <section aria-labelledby="ID0EDD" class="ocpSection">
+    <h2 class="" id="ID0EDD">
+     See Also
+    </h2>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/if-function-nested-formulas-and-avoiding-pitfalls-0b22ff44-f149-44ba-aeb5-4ef99da241c8">
+      IF function - nested formulas and avoiding pitfalls
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/topic/23c84e31-fc11-425d-ab03-5630f247b566">
+      IFS function
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/using-if-with-and-or-and-not-functions-in-excel-d895f58c-b36c-419e-b1f2-5c193a236d97">
+      Using IF with AND, OR and NOT functions
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+      COUNTIF function
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586">
+      How to avoid broken formulas
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173">
+      Overview of formulas in Excel
+     </a>
+    </p>
+   </section>
+  </article>
+ </body>
+</html>

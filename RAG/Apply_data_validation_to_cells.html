@@ -1,0 +1,1326 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    Apply data validation to cells
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <p id="bmbacktotop">
+     Use data validation to restrict the type of data or the values that users enter into a cell, like a dropdown list.
+    </p>
+    <p id="bmbacktotop_1">
+    </p>
+    <div class="tabControl" data-office-version-targeting="true" data-os-targeting="false" data-tab-control="ID0EDF" data-windows-version-targeting="false" id="section-1_tabControl-1">
+     <div class="tabControl__tablist" role="tablist">
+      <button aria-controls="section-1_tabControl-1_tabPanel-1" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-1" data-bi-name="Tab button" data-bi-slot="1" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EDF=Windows" id="section-1_tabControl-1_tab-1" role="tab" type="button">
+       <span class="focus">
+        Windows
+       </span>
+      </button>
+      <button aria-controls="section-1_tabControl-1_tabPanel-2" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-2" data-bi-name="Tab button" data-bi-slot="2" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EDF=macOS" id="section-1_tabControl-1_tab-2" role="tab" type="button">
+       <span class="focus">
+        macOS
+       </span>
+      </button>
+      <button aria-controls="section-1_tabControl-1_tabPanel-3" class="tabControl__tab" data-bi-area="section-1" data-bi-bhvr="TAB" data-bi-compnm="TabControl" data-bi-hn="" data-bi-id="section-1_tabControl-1_tab-3" data-bi-name="Tab button" data-bi-slot="3" data-bi-type="button" data-bi-view="tabControl" data-tab-hash="ID0EDF=Web" id="section-1_tabControl-1_tab-3" role="tab" type="button">
+       <span class="focus">
+        Web
+       </span>
+      </button>
+     </div>
+     <div class="tabControl_tabPanelContainer" id="section-1_tabControl-1_tabPanelContainer" tabindex="-1">
+      <div aria-labelledby="section-1_tabControl-1_tab-1" class="tabControl__tabpanel" id="section-1_tabControl-1_tabPanel-1" role="tabpanel" tabindex="-1">
+       <div class="ocpVideo" data-channel="" data-llcc="en-us" data-player="SP_MOD_OfficeCom" data-videoid="RWfvNp" data-videotitle="Validate cell data (RWfvNp)" data-videotype="single" id="ocpVideo1">
+        <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Validate cell data (RWfvNp)","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/video_1001_1730157174659_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/video_1001_1730157174659_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/video_1001_1730157174659_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/video_1001_1730157174659.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/video_1001_1730157174659_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-fd8c2f45-0700-42e5-bc89-25713459d9ed/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+         <picture>
+          <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/surface-and-devices/neutral/4873755a-8b1e-497e-bc54-101d1e75d3e7/d07c07fd6aabfe12ed716e87301dc3a1a3a7b5b0.png" style="aspect-ratio: 960/540" width="960"/>
+         </picture>
+        </universal-media-player>
+       </div>
+       <p>
+        Select the cell(s) you want to create a rule for.
+       </p>
+       <ol type="1">
+        <li>
+         <p>
+          Select
+          <b class="ocpLegacyBold">
+           Data &gt;Data Validation
+          </b>
+          .
+         </p>
+         <p>
+          <picture>
+           <img alt="Data Validation" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/bc7f8c19-4535-4ada-92a5-787d723df4d6/bb97fc95c02263b03a4f9beb773e149a5a5c0cee.png" style="aspect-ratio: 345/102" width="345"/>
+          </picture>
+         </p>
+        </li>
+        <li>
+         <p>
+          On the
+          <b class="ocpLegacyBold">
+           Settings
+          </b>
+          tab, under
+          <b class="ocpLegacyBold">
+           Allow
+          </b>
+          , select an option:
+         </p>
+         <ul>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Whole Number
+            </b>
+            - to restrict the cell to accept only whole numbers.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Decimal
+            </b>
+            - to restrict the cell to accept only decimal numbers.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             List
+            </b>
+            - to pick data from the drop-down list.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Date
+            </b>
+            - to restrict the cell to accept only date.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Time
+            </b>
+            - to restrict the cell to accept only time.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Text Length
+            </b>
+            - to restrict the length of the text.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Custom
+            </b>
+            – for custom formula.
+           </p>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <p>
+          Under
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+          , select a condition.
+         </p>
+        </li>
+        <li>
+         <p>
+          Set the other required values based on what you chose for
+          <b class="ocpLegacyBold">
+           Allow
+          </b>
+          and
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+          .
+         </p>
+        </li>
+        <li>
+         <p>
+          Select the
+          <b class="ocpLegacyBold">
+           Input Message
+          </b>
+          tab and customize a message users will see when entering data.
+         </p>
+        </li>
+        <li>
+         <p>
+          Select the
+          <b class="ocpLegacyBold">
+           Show input message when cell is selected
+          </b>
+          checkbox to display the message when the user selects or hovers over the selected cell(s).
+         </p>
+        </li>
+        <li>
+         <p>
+          Select the
+          <b class="ocpUI">
+           Error Alert
+          </b>
+          tab to customize the error message and to choose a
+          <b class="ocpUI">
+           Style
+          </b>
+          .
+         </p>
+        </li>
+        <li>
+         <p>
+          Select
+          <b class="ocpLegacyBold">
+           OK
+          </b>
+          .
+         </p>
+         <p>
+          Now, if the user tries to enter a value that is not valid, an
+          <b class="ocpUI">
+           Error Alert
+          </b>
+          appears with your customized message.
+         </p>
+        </li>
+       </ol>
+      </div>
+      <div aria-labelledby="section-1_tabControl-1_tab-2" class="tabControl__tabpanel" hidden="" id="section-1_tabControl-1_tabPanel-2" role="tabpanel" tabindex="-1">
+       <section aria-labelledby="ID0EDHBBDDF" class="ocpSection">
+        <h2 class="" id="ID0EDHBBDDF">
+         Download our examples
+        </h2>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="http://download.microsoft.com/download/9/6/8/968A9140-2E13-4FDC-B62C-C1D98D2B0FE6/Data Validation Examples.xlsx" target="_blank">
+          Download an example workbook with all data validation examples in this article
+         </a>
+        </p>
+        <p>
+         If you're creating a sheet that requires users to enter data, you might want to restrict entry to a certain range of dates or numbers, or make sure that only positive whole numbers are entered. Excel can restrict data entry to certain cells by using data validation , prompt users to enter valid data when a cell is selected, and display an error message when a user enters invalid data.
+        </p>
+       </section>
+       <section aria-labelledby="ID0EDFBBDDF" class="ocpSection">
+        <h2 class="" id="ID0EDFBBDDF">
+         Restrict data entry
+        </h2>
+        <ol type="1">
+         <li>
+          <p>
+           Select the cells where you want to restrict data entry.
+          </p>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Data
+           </b>
+           tab, select
+           <b class="ocpUI">
+            Data Validation
+           </b>
+           .
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            If the validation command is unavailable, the sheet might be protected or the workbook might be shared. You cannot change data validation settings if your workbook is shared or your sheet is protected. For more information about workbook protection, see
+            <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/protect-a-workbook-7e365a4d-3e89-4616-84ca-1931257c1517#ID0EBBH=macOS" target="_blank">
+             Protect a workbook
+            </a>
+            .
+           </p>
+          </div>
+         </li>
+         <li>
+          <p>
+           In the
+           <b class="ocpUI">
+            Allow
+           </b>
+           box, select the type of data you want to allow, and fill in the limiting criteria and values.
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            The boxes where you enter limiting values are labeled based on the data and limiting criteria that you have chosen. For example, if you choose Date as your data type, you can enter limiting values in minimum and maximum value boxes labeled
+            <b class="ocpUI">
+             Start Date
+            </b>
+            and
+            <b class="ocpUI">
+             End Date
+            </b>
+            .
+           </p>
+          </div>
+         </li>
+        </ol>
+       </section>
+       <section aria-labelledby="ID0EDDBBDDF" class="ocpSection">
+        <h2 class="" id="ID0EDDBBDDF">
+         Prompt users for valid entries
+        </h2>
+        <p>
+         When users select a cell that has data entry requirements, you can display a message that explains what data is valid.
+        </p>
+        <ol type="1">
+         <li>
+          <p>
+           Select the cells where you want to prompt users for valid data entries.
+          </p>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Data
+           </b>
+           tab, select
+           <b class="ocpUI">
+            Data Validation
+           </b>
+           .
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            If the validation command is unavailable, the sheet might be protected or the workbook might be shared. You cannot change data validation settings if your workbook is shared or your sheet is protected. For more information about workbook protection, see
+            <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/protect-a-workbook-7e365a4d-3e89-4616-84ca-1931257c1517#ID0EBBH=macOS" target="_blank">
+             Protect a workbook
+            </a>
+            .
+           </p>
+          </div>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Input Message
+           </b>
+           tab, select the
+           <b class="ocpUI">
+            Show input message when cell is selected
+           </b>
+           check box.
+          </p>
+         </li>
+         <li>
+          <p>
+           In the
+           <b class="ocpUI">
+            Title
+           </b>
+           box, type a title for your message.
+          </p>
+         </li>
+         <li>
+          <p>
+           In the
+           <b class="ocpUI">
+            Input message
+           </b>
+           box, type the message that you want to display.
+          </p>
+         </li>
+        </ol>
+       </section>
+       <section aria-labelledby="ID0EDBBBDDF" class="ocpSection">
+        <h2 class="" id="ID0EDBBBDDF">
+         Display an error message when invalid data is entered
+        </h2>
+        <p>
+         If you have data restrictions in place and a user enters invalid data into a cell, you can display a message that explains the error.
+        </p>
+        <ol type="1">
+         <li>
+          <p>
+           Select the cells where you want to display your error message.
+          </p>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Data
+           </b>
+           tab, select
+           <b class="ocpUI">
+            Data Validation
+           </b>
+           .
+          </p>
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Note:
+            </b>
+            If the validation command is unavailable, the sheet might be protected or the workbook might be shared. You cannot change data validation settings if your workbook is shared or your sheet is protected. For more information about workbook protection, see
+            <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/protect-a-workbook-7e365a4d-3e89-4616-84ca-1931257c1517#ID0EBBH=macOS" target="_blank">
+             Protect a workbook
+            </a>
+            .
+           </p>
+          </div>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Error Alert
+           </b>
+           tab, in the
+           <b class="ocpUI">
+            Title
+           </b>
+           box, type a title for your message.
+          </p>
+         </li>
+         <li>
+          <p>
+           In the
+           <b class="ocpUI">
+            Error message
+           </b>
+           box, type the message that you want to display if invalid data is entered.
+          </p>
+         </li>
+         <li>
+          <p>
+           Do one of the following:
+          </p>
+          <table aria-label="" class="banded">
+           <thead>
+            <tr>
+             <th>
+              <p>
+               <b class="ocpLegacyBold">
+                To
+               </b>
+              </p>
+             </th>
+             <th>
+              <p>
+               <b class="ocpLegacyBold">
+                On the
+               </b>
+               <b class="ocpUI">
+                Style
+               </b>
+               <b class="ocpLegacyBold">
+                pop-up menu, select
+               </b>
+              </p>
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <p>
+               Require users to fix the error before proceeding
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                Stop
+               </b>
+              </p>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Warn users that data is invalid, and require them to select
+               <b class="ocpUI">
+                Yes
+               </b>
+               or
+               <b class="ocpUI">
+                No
+               </b>
+               to indicate if they want to continue
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                Warning
+               </b>
+              </p>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Warn users that data is invalid, but allow them to proceed after dismissing the warning message
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                Important
+               </b>
+              </p>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </li>
+        </ol>
+       </section>
+      </div>
+      <div aria-labelledby="section-1_tabControl-1_tab-3" class="tabControl__tabpanel" hidden="" id="section-1_tabControl-1_tabPanel-3" role="tabpanel" tabindex="-1">
+       <section aria-labelledby="ID0EDFBBBDF" class="ocpSection" data-bi-id="bkmk_dv" id="bkmk_dv">
+        <h2 class="" id="ID0EDFBBBDF">
+         Add data validation to a cell or a range
+        </h2>
+        <div class="ocpAlert">
+         <p class="ocpAlertSection">
+          <b class="ocpNote">
+           Note:
+          </b>
+          The first two steps in this section are for adding any type of data validation. Steps 3-7 are specifically for creating a drop-down list.
+         </p>
+        </div>
+        <ol type="1">
+         <li>
+          <p>
+           Select one or more cells to validate.
+          </p>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Data
+           </b>
+           tab, in the
+           <b class="ocpUI">
+            Data Tools
+           </b>
+           group, select
+           <b class="ocpUI">
+            Data Validation
+           </b>
+           .
+          </p>
+         </li>
+         <li>
+          <p>
+           On the
+           <b class="ocpUI">
+            Settings
+           </b>
+           tab, in the
+           <b class="ocpUI">
+            Allow
+           </b>
+           box, select
+           <b class="ocpUI">
+            List
+           </b>
+           .
+          </p>
+         </li>
+         <li>
+          <p>
+           In the
+           <b class="ocpUI">
+            Source
+           </b>
+           box, type your list values, separated by commas. For example, type
+           <b class="ocpLegacyBold">
+            Low,Average,High
+           </b>
+           .
+          </p>
+         </li>
+         <li>
+          <p>
+           Make sure that the
+           <b class="ocpUI">
+            In-cell dropdown
+           </b>
+           check box is selected. Otherwise, you won't see the drop-down arrow next to the cell.
+          </p>
+         </li>
+         <li>
+          <p>
+           To specify how you want to handle blank (null) values, select or clear the
+           <b class="ocpUI">
+            Ignore blank
+           </b>
+           check box.
+          </p>
+         </li>
+         <li>
+          <p>
+           Test the data validation to make sure that it's working correctly. Try entering both valid and invalid data in the cells to make sure that your settings are working as you intended and your messages are appearing when you expect.
+          </p>
+         </li>
+        </ol>
+        <div class="ocpAlert">
+         <p class="ocpAlertSection">
+          <b class="ocpNote">
+           Notes:
+          </b>
+         </p>
+         <ul class="ocpAlertSectionListContainer">
+          <li>
+           <p>
+            After you create your drop-down list, make sure it works the way you want. For example, you might want to check to see if the
+            <a class="ocpArticleLink" data-bi-area="BKMK_DV" data-bi-type="anchor" href="/en-us/office/change-the-column-width-and-row-height-72f5e3cc-994d-43e8-ae58-9774a0905f46">
+             cell is wide enough
+            </a>
+            to show all your entries.
+           </p>
+          </li>
+          <li>
+           <p>
+            <b class="ocpLegacyBold">
+             Remove data validation
+            </b>
+            - Select the cell or cells that contain the validation you want to delete, go to
+            <b class="ocpUI">
+             Data &gt; Data Validation
+            </b>
+            and in the data validation dialog box press
+            <b class="ocpUI">
+             Clear All
+            </b>
+            , and then select
+            <b class="ocpUI">
+             OK
+            </b>
+            .
+           </p>
+          </li>
+         </ul>
+        </div>
+       </section>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EDBBBDF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBBBDF-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Adding other types of data validation
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EDBBBDF-button" class="ocpebw" id="ID0EDBBBDF-panel" role="region">
+         <div class="ocpExpandoBody">
+          <p>
+           The following table lists other types of data validation and shows you ways to add it to your worksheets.
+          </p>
+          <table aria-label="" class="banded">
+           <thead>
+            <tr>
+             <th>
+              <p>
+               To do this:
+              </p>
+             </th>
+             <th>
+              <p>
+               Follow these steps:
+              </p>
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <p>
+               Restrict data entry to whole numbers within limits.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 From the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 list, select
+                 <b class="ocpUI">
+                  Whole number
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want. For example, to set upper and lower limits, select
+                 <b class="ocpUI">
+                  between
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 Enter the minimum, maximum, or specific value to allow.
+                </p>
+                <p>
+                 You can also enter a formula that returns a number value.
+                </p>
+                <p>
+                 For example, say you're validating data in cell F1. To set a minimum limit of deductions to two times the number of children in that cell, select
+                 <b class="ocpUI">
+                  greater than or equal to
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box and enter the formula,
+                 <b class="ocpUI">
+                  =2*F1
+                 </b>
+                 , in the
+                 <b class="ocpUI">
+                  Minimum
+                 </b>
+                 box.
+                </p>
+               </li>
+              </ol>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Restrict data entry to a decimal number within limits.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 box, select
+                 <b class="ocpUI">
+                  Decimal
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want. For example, to set upper and lower limits, select
+                 <b class="ocpUI">
+                  between
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 Enter the minimum, maximum, or specific value to allow.
+                </p>
+                <p>
+                 You can also enter a formula that returns a number value. For example, to set a maximum limit for commissions and bonuses of 6% of a salesperson's salary in cell E1, select
+                 <b class="ocpUI">
+                  less than or equal to
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box and enter the formula,
+                 <b class="ocpUI">
+                  =E1*6%
+                 </b>
+                 , in the
+                 <b class="ocpUI">
+                  Maximum
+                 </b>
+                 box.
+                </p>
+                <div class="ocpAlert">
+                 <p class="ocpAlertSection">
+                  <b class="ocpNote">
+                   Note:
+                  </b>
+                  To let a user enter percentages, for example 20%, select
+                  <b class="ocpUI">
+                   Decimal
+                  </b>
+                  in the
+                  <b class="ocpUI">
+                   Allow
+                  </b>
+                  box, select the type of restriction that you want in the
+                  <b class="ocpUI">
+                   Data
+                  </b>
+                  box, enter the minimum, maximum, or specific value as a decimal, for example
+                  <b class="ocpLegacyBold">
+                   .2
+                  </b>
+                  , and then display the data validation cell as a percentage by selecting the cell and clicking
+                  <b class="ocpUI">
+                   Percent Style
+                  </b>
+                  <picture>
+                   <img alt="Button image" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/office/neutral/6130b268-ad5b-457f-b429-7656dc1689ed/6ff1089139b46cac2ec89553f49f10191f209bf9.gif" style="aspect-ratio: 21/20" width="21"/>
+                  </picture>
+                  in the
+                  <b class="ocpUI">
+                   Number
+                  </b>
+                  group on the
+                  <b class="ocpUI">
+                   Home
+                  </b>
+                  tab.
+                 </p>
+                </div>
+               </li>
+              </ol>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Restrict data entry to a date within range of dates.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 box, select
+                 <b class="ocpUI">
+                  Date
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want. For example, to allow dates after a certain day, select
+                 <b class="ocpUI">
+                  greater than
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 Enter the start, end, or specific date to allow.
+                </p>
+                <p>
+                 You can also enter a formula that returns a date. For example, to set a time frame between today's date and 3 days from today's date, select
+                 <b class="ocpUI">
+                  between
+                 </b>
+                 in the
+                 <b class="ocpLegacyBold">
+                  Data
+                 </b>
+                 box, enter
+                 <b class="ocpLegacyBold">
+                  =TODAY()
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Start date
+                 </b>
+                 box, and enter
+                 <b class="ocpLegacyBold">
+                  =TODAY()+3
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  End date
+                 </b>
+                 box.
+                </p>
+               </li>
+              </ol>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Restrict data entry to a time within a time frame.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 box, select
+                 <b class="ocpUI">
+                  Time
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want. For example, to allow times before a certain time of day, select
+                 <b class="ocpUI">
+                  less than
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 Enter the start, end, or specific time to allow. If you want to enter specific times, use the hh:mm time format.
+                </p>
+                <p>
+                 For example, say you have cell E2 set up with a start time (8:00 AM), and cell F2 with an end time (5:00 PM), and you want to limit meeting times between those times then select
+                 <b class="ocpUI">
+                  between
+                 </b>
+                 in the
+                 <b class="ocpLegacyBold">
+                  Data
+                 </b>
+                 box, enter
+                 <b class="ocpLegacyBold">
+                  =E2
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Start time
+                 </b>
+                 box, and then enter
+                 <b class="ocpLegacyBold">
+                  =F2
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  End time
+                 </b>
+                 box.
+                </p>
+               </li>
+              </ol>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Restrict data entry to text of a specified length.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 box, select
+                 <b class="ocpUI">
+                  Text Length
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want. For example, to allow up to a certain number of characters, select
+                 <b class="ocpUI">
+                  less than or equal to
+                 </b>
+                 .
+                </p>
+               </li>
+               <li>
+                <p>
+                 In this case we want to limit entry to 25 characters, so select
+                 <b class="ocpUI">
+                  less than or equal to
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box and enter
+                 <b class="ocpLegacyBold">
+                  25
+                 </b>
+                 in the
+                 <b class="ocpUI">
+                  Maximum
+                 </b>
+                 box.
+                </p>
+               </li>
+              </ol>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Calculate what is allowed based on the content of another cell.
+              </p>
+             </td>
+             <td>
+              <ol type="1">
+               <li>
+                <p>
+                 Follow steps 1-2 above.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 box, select the type of data that you want.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the type of restriction that you want.
+                </p>
+               </li>
+               <li>
+                <p>
+                 In the box or boxes below the
+                 <b class="ocpUI">
+                  Data
+                 </b>
+                 box, select the cell that you want to use to specify what is allowed.
+                </p>
+                <p>
+                 For example, to allow entries for an account only if the result won't go over the budget in cell E1, select
+                 <b class="ocpUI">
+                  Allow
+                 </b>
+                 &gt;
+                 <b class="ocpUI">
+                  Whole number, Data
+                 </b>
+                 , less than or equal to, and
+                 <b class="ocpUI">
+                  Maximum
+                 </b>
+                 &gt;=
+                 <b class="ocpLegacyBold">
+                  =E1
+                 </b>
+                 .
+                </p>
+               </li>
+              </ol>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </div>
+        </div>
+       </div>
+       <div class="ocpSection">
+        <h2 class="ocpExpandoHead">
+         <button aria-controls="ID0EBBBBDF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBBBDF-button" ms.interactiontype="11" type="button">
+          <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+           <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+           </i>
+          </div>
+          <div class="ocpExpandoHeadTitleContainer" role="none">
+           Examples of formulas in data validation
+          </div>
+         </button>
+        </h2>
+        <div aria-labelledby="ID0EBBBBDF-button" class="ocpebw" id="ID0EBBBBDF-panel" role="region">
+         <div class="ocpExpandoBody">
+          <div class="ocpAlert">
+           <p class="ocpAlertSection">
+            <b class="ocpNote">
+             Notes:
+            </b>
+           </p>
+           <ul class="ocpAlertSectionListContainer">
+            <li>
+             <p>
+              The following examples use the Custom option where you write formulas to set your conditions. You don't need to worry about whatever the Data box shows, as that's disabled with the Custom option.
+             </p>
+            </li>
+            <li>
+             <p>
+              The screen shots in this article were taken in Excel 2016 ; but the functionality is the same in Excel for the web .
+             </p>
+            </li>
+           </ul>
+          </div>
+          <table aria-label="" class="banded">
+           <thead>
+            <tr>
+             <th>
+              <p>
+               <b class="ocpLegacyBold">
+                To make sure that
+               </b>
+              </p>
+             </th>
+             <th>
+              <p>
+               <b class="ocpLegacyBold">
+                Enter this formula
+               </b>
+              </p>
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <p>
+               The cell that contains a product ID (C2) always begins with the standard prefix of "ID-" and is at least 10 (greater than 9) characters long.
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                =AND(LEFT(C2,3)="ID-",LEN(C2)&gt;9)
+               </b>
+              </p>
+              <picture>
+               <img alt="Example 6: Formulas in data validation" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/99943453-ec05-4480-8247-f15068ce99a8/91e604c29384f8ec78f8628790285f8fe54cad9b.png" style="aspect-ratio: 418/435" width="418"/>
+              </picture>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               The cell that contains a product name (D2) only contains text.
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                =ISTEXT(D2)
+               </b>
+              </p>
+              <picture>
+               <img alt="Example 2: Formulas in data validation" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/f038d4a8-93d9-428e-a6af-ac3834b47ee4/31b7eb2a90a55e4e1a8b773436bc43121aee81fb.png" style="aspect-ratio: 414/435" width="414"/>
+              </picture>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               The cell that contains someone's birthday (B6) has to be greater than the number of years set in cell B4.
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                =IF(B6&lt;=(TODAY()-(365*B4)),TRUE,FALSE)
+               </b>
+              </p>
+              <picture>
+               <img alt="Data validation example to restrict an entry to a minimum age" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/f0e6eed8-18f9-4943-8445-d166f51b7cd5/5b464a7e6acd57966f540dbbe86c93c4614cc021.png" style="aspect-ratio: 456/491" width="456"/>
+              </picture>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               All the data in the cell range A2:A10 contains unique values.
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                =COUNTIF($A$2:$A$10,A2)=1
+               </b>
+              </p>
+              <picture>
+               <img alt="Example 4: Formulas in data validation" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/8bd414ad-75e2-440a-9c50-2e5be369179f/66335b698dc2e49e39a0034849ea3e4aff76c07b.png" style="aspect-ratio: 520/354" width="520"/>
+              </picture>
+              <div class="ocpAlert">
+               <p class="ocpAlertSection">
+                <b class="ocpNote">
+                 Note:
+                </b>
+                You must enter the data validation formula for cell A2 first, then copy A2 to A3:A10 so that the second argument to the COUNTIF will match the current cell. That is the
+                <b class="ocpLegacyBold">
+                 A2)=1
+                </b>
+                portion will change to
+                <b class="ocpLegacyBold">
+                 A3)=1, A4)=1
+                </b>
+                and so on.
+               </p>
+              </div>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <p>
+               Ensure that an e-mail address entry in cell B4 contains the @ symbol.
+              </p>
+             </td>
+             <td>
+              <p>
+               <b class="ocpUI">
+                =ISNUMBER(FIND("@",B4))
+               </b>
+              </p>
+              <picture>
+               <img alt="Data validation example ensuring an e-mail address contains the @ symbol" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/e67afeed-3561-423c-af00-eb427d99917b/04bfe4665885271ba47ae3b5b7d8a7acd074835f.png" style="aspect-ratio: 412/480" width="412"/>
+              </picture>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpTip">
+       Tip:
+      </b>
+      If you're a small business owner looking for more information on how to get Microsoft 365 set up, visit
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://go.microsoft.com/fwlink/?linkid=2224585" target="_blank">
+       Small business help &amp; learning
+      </a>
+      .
+     </p>
+    </div>
+    <p>
+    </p>
+   </section>
+   <section aria-labelledby="ID0EDD" class="ocpSection">
+    <h2 class="" id="ID0EDD">
+     Want more?
+    </h2>
+    <p>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-drop-down-list-7693307a-59ef-400a-b769-c5402dce407b">
+      Create a drop-down list
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/add-or-remove-items-from-a-drop-down-list-0b26d3d1-3c4d-41f5-adb4-0addb82e8d2c">
+      Add or remove items from a drop-down list
+     </a>
+    </p>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/more-on-data-validation-f38dee73-9900-4ca6-9301-8a5f6e1f0c4c">
+      More on data validation
+     </a>
+    </p>
+   </section>
+  </article>
+ </body>
+</html>

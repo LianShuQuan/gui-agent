@@ -1,0 +1,595 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <style>
+   body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
+ </head>
+ <body>
+  <header aria-labelledby="page-header" class="ocpArticleTitleSection" role="banner">
+   <h1 class="" id="page-header">
+    Calculate the difference between two dates
+   </h1>
+  </header>
+  <article class="ocpArticleContent">
+   <section class="ocpIntroduction">
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpWarning">
+       Warning:
+      </b>
+      Excel provides the DATEDIF function in order to support older workbooks from Lotus 1-2-3. The DATEDIF function may calculate incorrect results under certain scenarios. For more information, please go to the
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/25dba1a4-2812-480b-84dd-8b32a451b35c#bkmk_datedif_known_issues" target="_blank">
+       known issues section of the DATEDIF function
+      </a>
+      article.
+     </p>
+    </div>
+    <p>
+     Use the DATEDIF function when you want to calculate the difference between two dates. First put a start date in a cell, and an end date in another. Then type a formula like one of the following.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      I﻿f the
+      <i class="ocpItalic">
+       Start_date
+      </i>
+      is greater than the
+      <i class="ocpItalic">
+       End_date
+      </i>
+      , the result will be
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-correct-a-num-error-f5193bfc-4400-43f4-88c4-8e1dcca0428b">
+       #NUM!
+      </a>
+      .
+     </p>
+    </div>
+    <div class="supARG" data-bi-view="Grid 2x2">
+     <div class="supARG-row">
+      <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 2x2">
+       <h2 class="" id="ID0EDDDBL">
+        Difference in days
+       </h2>
+       <picture>
+        <img alt='=DATEDIF(D9,E9,"d") with result of 856' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/22c08e15-d2ea-48e7-bcd1-976acc7ca817/8d621fed01561d29091f363259cbbb5b8813ffd6.png" style="aspect-ratio: 419/119" width="419"/>
+       </picture>
+       <p>
+        In this example, the start date is in cell D9, and the end date is in E9. The formula is in F9. The
+        <b class="ocpUI">
+         “d”
+        </b>
+        returns the number of full days between the two dates.
+       </p>
+      </div>
+      <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 2x2">
+       <h2 class="" id="ID0EDBDBL">
+        Difference in weeks
+       </h2>
+       <picture>
+        <img alt='=(DATEDIF(D13,E13,"d")/7) and result: 122.29' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/41e28163-d081-4314-8464-054d018b9cd3/8b5c6ba31cf58bcc8c12187c152d269e32b6194c.png" style="aspect-ratio: 418/121" width="418"/>
+       </picture>
+       <p>
+        In this example, the start date is in cell D13, and the end date is in E13. The “d” returns the number of days. But notice the
+        <b class="ocpUI">
+         /7
+        </b>
+        at the end. That divides the number of days by 7, since there are 7 days in a week. Note that this result also needs to be formatted as a number. Press CTRL + 1. Then click
+        <b class="ocpUI">
+         Number
+        </b>
+        &gt;
+        <b class="ocpUI">
+         Decimal places: 2
+        </b>
+        .
+       </p>
+      </div>
+     </div>
+     <div class="supARG-row">
+      <div class="supARG-column-1-2" data-bi-compnm="row-2,col-1" data-bi-view="Grid 2x2">
+       <h2 class="" id="ID0EDDBBL">
+        Difference in months
+       </h2>
+       <picture>
+        <img alt='=DATEDIF(D5,E5,"m") and result: 28' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/21601e88-a749-4eaf-8eb2-3599512a4ef2/ab31d63bec92d6e928d6ed40709ab5422caea4cd.png" style="aspect-ratio: 419/119" width="419"/>
+       </picture>
+       <p>
+        In this example, the start date is in cell D5, and the end date is in E5. In the formula, the
+        <b class="ocpUI">
+         “m”
+        </b>
+        returns the number of full months between the two days.
+       </p>
+      </div>
+      <div class="supARG-column-1-2" data-bi-compnm="row-2,col-2" data-bi-view="Grid 2x2">
+       <h2 class="" id="ID0EDBBBL">
+        Difference in years
+       </h2>
+       <picture>
+        <img alt='=DATEDIF(D2,E2,"y") and result: 2' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/af258eaf-039e-4f72-a5ac-e686b25ff131/44b5a74d17e3506b273da25033644f1f81d785fa.png" style="aspect-ratio: 419/119" width="419"/>
+       </picture>
+       <p>
+        In this example, the start date is in cell D2, and the end date is in E2. The
+        <b class="ocpUI">
+         “y”
+        </b>
+        returns the number of full years between the two days.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="ID0EFJ" class="ocpSection">
+    <h2 class="" id="ID0EFJ">
+     Calculate age in accumulated years, months, and days
+    </h2>
+    <p>
+     You can also calculate age or someone’s time of service. The result can be something like “2 years, 4 months, 5 days.”
+    </p>
+    <section aria-labelledby="ID0EDDDBBBBJ" class="ocpSection">
+     <div class="supARG" data-bi-view="Grid 2x2">
+      <div class="supARG-row">
+       <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 2x2">
+        <h3 class="" id="ID0EDDDBBBBJ">
+         1. Use DATEDIF to find the total years.
+        </h3>
+        <picture>
+         <img alt='=DATEDIF(D17,E17,"y") and result: 2' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/21f608e6-6d77-4f8b-8d3c-c1e159376e31/5fa143c19447e5c016b1e74dd2f2881a08a1eea2.png" style="aspect-ratio: 419/182" width="419"/>
+        </picture>
+        <p>
+         In this example, the start date is in cell D17, and the end date is in E17. In the formula, the
+         <b class="ocpUI">
+          “y”
+         </b>
+         returns the number of full years between the two days.
+        </p>
+       </div>
+       <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 2x2">
+        <h3 class="" id="ID0EDBDBBBBJ">
+         2. Use DATEDIF again with “ym” to find months.
+        </h3>
+        <picture>
+         <img alt='=DATEDIF(D17,E17,"ym") and result: 4' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/4833a113-7df4-406b-b7ce-87cced7e6cf0/dd93ccb9d678218759414d906fce7be4404f0bfd.png" style="aspect-ratio: 418/179" width="418"/>
+        </picture>
+        <p>
+         In another cell, use the DATEDIF formula with the
+         <b class="ocpUI">
+          “ym”
+         </b>
+         parameter. The “ym” returns the number of remaining months past the last full year.
+        </p>
+       </div>
+      </div>
+      <div class="supARG-row">
+       <div class="supARG-column-1-2" data-bi-compnm="row-2,col-1" data-bi-view="Grid 2x2">
+        <h3 class="" id="ID0EDDBBBBBJ">
+         3. Use a different formula to find days.
+        </h3>
+        <picture>
+         <img alt='=DATEDIF(D17,E17,"md") and result: 5' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/a50cd076-9f82-47e6-83a5-6f408a682f84/a8c7738a202127e4715afa750a9fdd738e3510ca.png" style="aspect-ratio: 420/186" width="420"/>
+        </picture>
+        <p>
+         Now we need to find the number of remaining days. We'll do this by writing a different kind of formula, shown above. This formula subtracts the first day of the ending month (5/1/2016) from the original end date in cell E17 (5/6/2016). Here's how it does this: First the DATE function creates the date, 5/1/2016. It creates it using the year in cell E17, and the month in cell E17. Then the
+         <b class="ocpUI">
+          1
+         </b>
+         represents the first day of that month. The result for the DATE function is 5/1/2016. Then, we subtract that from the original end date in cell E17, which is 5/6/2016. 5/6/2016 minus 5/1/2016 is 5 days.
+        </p>
+        <div class="ocpAlert">
+         <p class="ocpAlertSection">
+          <b class="ocpWarning">
+           Warning:
+          </b>
+          We don't recommend using the DATEDIF "md" argument because it may calculate inaccurate results.
+         </p>
+        </div>
+       </div>
+       <div class="supARG-column-1-2" data-bi-compnm="row-2,col-2" data-bi-view="Grid 2x2">
+        <h3 class="" id="ID0EDBBBBBBJ">
+         4. Optional: Combine three formulas in one.
+        </h3>
+        <picture>
+         <img alt='=DATEDIF(D17,E17,"y")&amp;" years, "&amp;DATEDIF(D17,E17,"ym")&amp;" months, "&amp;DATEDIF(D17,E17,"md")&amp;" days" and result: 2 years, 4 months, 5 days' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/b26bb985-8951-4acb-a4b3-4694d6891596/0e270e00a5a2b1ad1b2f1f5436fa5da93f28b5dc.png" style="aspect-ratio: 420/225" width="420"/>
+        </picture>
+        <p>
+         You can put all three calculations in one cell like this example. Use ampersands, quotes, and text. It’s a longer formula to type, but at least it’s all in one.
+         <b class="ocpLegacyBold">
+          Tip:
+         </b>
+         Press ALT+ENTER to put line breaks in your formula. This makes it easier to read. Also, press CTRL+SHIFT+U if you can’t see the whole formula.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+   </section>
+   <section aria-labelledby="ID0EDH" class="ocpSection">
+    <h2 class="" id="ID0EDH">
+     Download our examples
+    </h2>
+    <p>
+     You can download an example workbook with all of the examples in this article. You can follow along, or create your own formulas.
+     <br aria-hidden="true"/>
+     <br aria-hidden="true"/>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="http://download.microsoft.com/download/1/6/E/16E53176-D46B-401F-893C-B70B1414F167/Calculate difference between dates.xlsx" target="_blank">
+      Download date calculation examples
+     </a>
+    </p>
+   </section>
+   <section aria-labelledby="ID0EFF" class="ocpSection">
+    <h2 class="" id="ID0EFF">
+     Other date and time calculations
+    </h2>
+    <div class="ocpSection">
+     <h3 class="ocpExpandoHead">
+      <button aria-controls="ID0EHBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBF-button" ms.interactiontype="11" type="button">
+       <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+        <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+        </i>
+       </div>
+       <div class="ocpExpandoHeadTitleContainer" role="none">
+        Calculate between today and another date
+       </div>
+      </button>
+     </h3>
+     <div aria-labelledby="ID0EHBF-button" class="ocpebw" id="ID0EHBF-panel" role="region">
+      <div class="ocpExpandoBody">
+       <p>
+        As you saw above, the DATEDIF function calculates the difference between a start date and an end date. However, instead of typing specific dates, you can also use the
+        <b class="ocpUI">
+         TODAY()
+        </b>
+        function inside the formula. When you use the TODAY() function, Excel uses your computer's current date for the date. Keep in mind this will change when the file is opened again on a future day.
+       </p>
+       <picture>
+        <img alt='=DATEDIF(TODAY(),D28,"y") and result: 984' class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/e2f04bef-aff8-4a37-904f-09e0bdab2f22/195e761ca8f7c615cfa14cbcc7ae73ac4ee9f126.png" style="aspect-ratio: 433/118" width="433"/>
+       </picture>
+       <p>
+        Please note that at the time of this writing, the day was October 6, 2016.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="ocpSection">
+     <h3 class="ocpExpandoHead">
+      <button aria-controls="ID0EFBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBF-button" ms.interactiontype="11" type="button">
+       <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+        <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+        </i>
+       </div>
+       <div class="ocpExpandoHeadTitleContainer" role="none">
+        Calculate workdays, with or without holidays
+       </div>
+      </button>
+     </h3>
+     <div aria-labelledby="ID0EFBF-button" class="ocpebw" id="ID0EFBF-panel" role="region">
+      <div class="ocpExpandoBody">
+       <p>
+        Use the NETWORKDAYS.INTL function when you want to calculate the number of workdays between two dates. You can also have it exclude weekends and holidays too.
+       </p>
+       <p>
+        <b class="ocpLegacyBold">
+         Before you begin:
+        </b>
+        Decide if you want to exclude holiday dates. If you do, type a list of holiday dates in a separate area or sheet. Put each holiday date in its own cell. Then select those cells, select
+        <b class="ocpUI">
+         Formulas
+        </b>
+        &gt;
+        <b class="ocpUI">
+         Define Name
+        </b>
+        . Name the range
+        <b class="ocpUI">
+         MyHolidays
+        </b>
+        , and click
+        <b class="ocpUI">
+         OK
+        </b>
+        . Then create the formula using the steps below.
+       </p>
+       <div class="supARG" data-bi-view="Grid 2x2">
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDDBBFBF">
+           1. Type a start date and an end date.
+          </h3>
+          <picture>
+           <img alt="Start date in cell D53 is 1/1/2016, end date is in cell E53 is 12/31/2016" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/d1e0e05b-2c7c-4d8e-9e33-f65324010df9/0101eabb0ca66fa2d876dc1af54bf73daba4f58b.png" style="aspect-ratio: 418/116" width="418"/>
+          </picture>
+          <p>
+           In this example, the start date is in cell D53 and the end date is in cell E53.
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBDBBFBF">
+           2. In another cell, type a formula like this:
+          </h3>
+          <picture>
+           <img alt="=NETWORKDAYS.INTL(D53,E53,1) and result: 261" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/e79cbb20-9c72-4fa5-9b40-d7a7756bc2ea/a46f12a2ed4e077c5de020d694c0dc1b8443a18b.png" style="aspect-ratio: 418/117" width="418"/>
+          </picture>
+          <p>
+           Type a formula like the above example. The 1 in the formula establishes Saturdays and Sundays as weekend days, and excludes them from the total.
+          </p>
+         </div>
+        </div>
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDBBBFBF">
+           3. If necessary, change the 1.
+          </h3>
+          <picture>
+           <img alt="Intellisense list showing 2 - Sunday, Monday; 3 - Monday, Tuesday, and so on" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/3c049208-0c7a-4cb8-8a92-b537cedaa3e0/d5f9fce028918e0355dc656c54cb23e3e7b5d11c.png" style="aspect-ratio: 418/155" width="418"/>
+          </picture>
+          <p>
+           If Saturday and Sunday are not your weekend days, then change the 1 to another number from the IntelliSense list. For example, 2 establishes Sundays and Mondays as weekend days.
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBBBBFBF">
+           4. Type the holiday range name.
+          </h3>
+          <picture>
+           <img alt="=NETWORKDAYS.INTL(D53,E53,1,MyHolidays) and result: 252" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/e9b593bd-3572-4f29-821e-ff8d2bc00db4/cc92cacbacda77a385c374a50d6955c07845d7e6.png" style="aspect-ratio: 418/118" width="418"/>
+          </picture>
+          <p>
+           If you created a holiday range name in the “Before you begin” section above, then type it at the end like this. If you don't have holidays, you can leave the comma and MyHolidays out.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="ocpSection">
+     <h3 class="ocpExpandoHead">
+      <button aria-controls="ID0EDBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBF-button" ms.interactiontype="11" type="button">
+       <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+        <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+        </i>
+       </div>
+       <div class="ocpExpandoHeadTitleContainer" role="none">
+        Calculate elapsed time
+       </div>
+      </button>
+     </h3>
+     <div aria-labelledby="ID0EDBF-button" class="ocpebw" id="ID0EDBF-panel" role="region">
+      <div class="ocpExpandoBody">
+       <p>
+        You can calculate elapsed time by subtracting one time from another. First put a start time in a cell, and an end time in another. Make sure to type a full time, including the hour, minutes,
+        <i class="ocpItalic">
+         and a space before the AM or PM
+        </i>
+        . Here’s how:
+       </p>
+       <div class="supARG" data-bi-view="Grid 2x2">
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDDBBDBF">
+           1. Type a start time and end time.
+          </h3>
+          <picture>
+           <img alt="Start date/time of 7:15 AM, End date/time of 4:30 PM" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/264d7550-4780-4e40-a2c0-cc28b6844eb1/128a7115828f400fcbcd41265fdaa5d5841af431.png" style="aspect-ratio: 419/117" width="419"/>
+          </picture>
+          <p>
+           In this example, the start time is in cell D80 and the end time is in E80. Make sure to type the hour, minute,
+           <i class="ocpItalic">
+            and a space before the AM or PM
+           </i>
+           .
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBDBBDBF">
+           2. Set the h:mm AM/PM format.
+          </h3>
+          <picture>
+           <img alt="Format cells dialog box, Custom command, h:mm AM/PM type" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/c2821d36-c171-4ebe-b39b-f69c7d6b9550/eb2bef22d09c9e5ab4d4ecca2adc4f29a96a2b1e.png" style="aspect-ratio: 419/142" width="419"/>
+          </picture>
+          <p>
+           Select both dates and press CTRL + 1 (or
+           <picture>
+            <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/cross-app/neutral/b7f18703-a23f-4d8c-81e4-4488ea64c049/6950fc3ff217135b0e0864443b9e9014d91626cf.png" style="aspect-ratio: 16/16" width="16"/>
+           </picture>
+           + 1 on the Mac). Make sure to select
+           <b class="ocpUI">
+            Custom
+           </b>
+           &gt;
+           <b class="ocpUI">
+            h:mm AM/PM
+           </b>
+           , if it isn’t already set.
+          </p>
+         </div>
+        </div>
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDBBBDBF">
+           3. Subtract the two times.
+          </h3>
+          <picture>
+           <img alt="=E80-D80 and result: 9:15 AM" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/1b57ad7b-7aef-440b-a626-d76a6d4b975b/205dc918c5a089bacecee011caa3af8d94c2185d.png" style="aspect-ratio: 418/117" width="418"/>
+          </picture>
+          <p>
+           In another cell, subtract the start time cell from the end time cell.
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBBBBDBF">
+           4. Set the h:mm format.
+          </h3>
+          <picture>
+           <img alt="Format Cells dialog, Custom command, h:mm type" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/f6de02dc-36da-422e-b44d-3b00dcfa36c4/87b22e65173bc5152896f3daa3293915133b5909.png" style="aspect-ratio: 419/177" width="419"/>
+          </picture>
+          <p>
+           Press CTRL + 1 (or
+           <picture>
+            <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/cross-app/neutral/b7f18703-a23f-4d8c-81e4-4488ea64c049/6950fc3ff217135b0e0864443b9e9014d91626cf.png" style="aspect-ratio: 16/16" width="16"/>
+           </picture>
+           + 1 on the Mac). Choose
+           <b class="ocpUI">
+            Custom
+           </b>
+           &gt;
+           <b class="ocpUI">
+            h:mm
+           </b>
+           so that the result excludes AM and PM.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="ocpSection">
+     <h3 class="ocpExpandoHead">
+      <button aria-controls="ID0EBBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBF-button" ms.interactiontype="11" type="button">
+       <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+        <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+        </i>
+       </div>
+       <div class="ocpExpandoHeadTitleContainer" role="none">
+        Calculate elapsed time between two dates and times
+       </div>
+      </button>
+     </h3>
+     <div aria-labelledby="ID0EBBF-button" class="ocpebw" id="ID0EBBF-panel" role="region">
+      <div class="ocpExpandoBody">
+       <p>
+        To calculate the time between two dates and times, you can simply subtract one from the other. However, you must apply formatting to each cell to ensure that Excel returns the result you want.
+       </p>
+       <div class="supARG" data-bi-view="Grid 2x2">
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDDBBBBF">
+           1. Type two full dates and times.
+          </h3>
+          <picture>
+           <img alt="Start date of 1/1/16 1:00 PM; End date of 1/2/16 2:00 PM" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/7f847dbd-fe5b-4121-9343-ce41d3e1a82d/a1e164b7535ccd5a8a005beedb9937a0285d5ce6.png" style="aspect-ratio: 419/118" width="419"/>
+          </picture>
+          <p>
+           In one cell, type a full start date/time. And in another cell, type a full end date/time. Each cell should have a month, day, year, hour, minute,
+           <i class="ocpItalic">
+            and a space before the AM or PM.
+           </i>
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBDBBBBF">
+           2. Set the 3/14/12 1:30 PM format.
+          </h3>
+          <picture>
+           <img alt="Format Cells dialog, Date command, 3/14/12 1:30 PM type" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/bd843a18-f891-4ece-a637-70b6f903ea60/2bd82204462dac7984ebdea32f576f13b9a6c4b5.png" style="aspect-ratio: 419/118" width="419"/>
+          </picture>
+          <p>
+           Select both cells, and then press CTRL + 1 (or
+           <picture>
+            <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/cross-app/neutral/b7f18703-a23f-4d8c-81e4-4488ea64c049/6950fc3ff217135b0e0864443b9e9014d91626cf.png" style="aspect-ratio: 16/16" width="16"/>
+           </picture>
+           + 1 on the Mac). Then select
+           <b class="ocpUI">
+            Date
+           </b>
+           &gt;
+           <b class="ocpUI">
+            3/14/12 1:30 PM
+           </b>
+           . This isn't the date you'll set, it's just a sample of how the format will look. Note that in versions prior to Excel 2016, this format might have a different sample date like 3/14/
+           <b class="ocpUI">
+            01
+           </b>
+           1:30 PM.
+          </p>
+         </div>
+        </div>
+        <div class="supARG-row">
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-1" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDDBBBBBF">
+           3. Subtract the two.
+          </h3>
+          <picture>
+           <img alt="=E84-D84 and result of 1.041666667" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/8061bf97-0ef4-47d3-8c18-422dd3ee5434/050e41af3c90cb893be4fbd17f298722e31bb41d.png" style="aspect-ratio: 419/118" width="419"/>
+          </picture>
+          <p>
+           In another cell, subtract the start date/time from the end date/time. The result will probably look like a number and decimal. You'll fix that in the next step.
+          </p>
+         </div>
+         <div class="supARG-column-1-2" data-bi-compnm="row-2,col-2" data-bi-view="Grid 2x2">
+          <h3 class="" id="ID0EDBBBBBBF">
+           4. Set the [h]:mm format.
+          </h3>
+          <picture>
+           <img alt="Format Cells dialog, Custom command, [h]:mm type" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/central/neutral/2edbd461-d4c5-49a7-a5a2-b6d9329c0411/6f3d40d3e2fe3e29d861c10c55a9a156fbfb169d.png" style="aspect-ratio: 419/129" width="419"/>
+          </picture>
+          <p>
+           Press CTRL + 1 (or
+           <picture>
+            <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="https://cxcs.microsoft.net/static/public/cross-app/neutral/b7f18703-a23f-4d8c-81e4-4488ea64c049/6950fc3ff217135b0e0864443b9e9014d91626cf.png" style="aspect-ratio: 16/16" width="16"/>
+           </picture>
+           + 1 on the Mac). Select
+           <b class="ocpUI">
+            Custom
+           </b>
+           . In the
+           <b class="ocpUI">
+            Type
+           </b>
+           box, type
+           <b class="ocpUI">
+            [h]:mm
+           </b>
+           .
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-labelledby="ID0EDD" class="ocpSection">
+    <h2 class="" id="ID0EDD">
+     Related Topics
+    </h2>
+    <p>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/datedif-function-25dba1a4-2812-480b-84dd-8b32a451b35c">
+      DATEDIF function
+     </a>
+     <br aria-hidden="true"/>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/networkdays-intl-function-a9b26239-4f20-46a1-9ab8-4e925bfd5e28">
+      NETWORKDAYS.INTL function
+     </a>
+     <br aria-hidden="true"/>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/networkdays-function-48e717bf-a7a3-495f-969e-5005e3eb18e7">
+      NETWORKDAYS
+     </a>
+     <br aria-hidden="true"/>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/date-and-time-functions-reference-fd1b5961-c1ae-4677-be58-074152f97b81">
+      More date and time functions
+     </a>
+     <br aria-hidden="true"/>
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/calculate-the-difference-between-two-times-in-excel-e1c78778-749b-49a3-b13e-737715505ff6">
+      Calculate the difference between two times
+     </a>
+    </p>
+   </section>
+  </article>
+ </body>
+</html>
