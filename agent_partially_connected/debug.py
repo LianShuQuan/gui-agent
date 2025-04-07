@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     coder = UITars(config_name="coder")
 
-    coder.output_action("新建一个python文件。不要使用快捷键", img=ImageGrab.grab())
+    coder.output_action("新建一个python文件。", img=ImageGrab.grab())
             
 
 
