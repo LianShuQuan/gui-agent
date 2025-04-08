@@ -15,6 +15,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 parent_dir = os.path.dirname(parent_dir)
 sys.path.append(parent_dir)
+sys.path.append(parent_dir + "/agent_partially_connected")
+
 
 logger.remove()  # 这行很关键，先删除logger自动产生的handler，不然会出现重复输出的问题
 logger.add(sys.stderr, level='DEBUG')  # 只输出警告以上的日志
