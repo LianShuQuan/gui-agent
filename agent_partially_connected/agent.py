@@ -7,13 +7,12 @@ from qwen_vl_utils import process_vision_info
 import torch
 from pydantic import BaseModel
 from pydantic.fields import Field
-from logger import logger
-
+from loguru import logger
 from excutor import *
 from prompts import *
 from utils import *
 from schema import *
-from config.config import LLMSettings, config
+from agent_partially_connected.config.config import LLMSettings, config
 
 class MLLM(BaseModel, ABC):
     name: str = Field(None, description="Model name")
