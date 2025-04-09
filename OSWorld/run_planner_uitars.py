@@ -8,6 +8,7 @@ import json
 import logging
 import os
 import sys
+import traceback
 
 from tqdm import tqdm
 
@@ -206,7 +207,7 @@ def test(args: argparse.Namespace, test_all_meta: dict) -> None:
                     scores,
                 )
             except Exception as e:
-                logger.error(f"Exception in {domain}/{example_id}: {e}")
+                logger.error(f"Exception in {domain}/{example_id}: {traceback.format_exc()}")
                 env.controller.end_recording(
                     os.path.join(example_result_dir, "recording.mp4")
                 )
@@ -217,6 +218,7 @@ def test(args: argparse.Namespace, test_all_meta: dict) -> None:
                         )
                     )
                     f.write("\n")
+            agent.reset()
 
     env.close()
     logger.info(f"Average score: {sum(scores) / len(scores)}")

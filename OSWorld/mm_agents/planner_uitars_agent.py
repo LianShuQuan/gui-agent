@@ -453,7 +453,7 @@ class PlannerUITARSAgent:
         self.max_trajectory_length = max_trajectory_length
         self.runtime_conf = runtime_conf
 
-        self.solver = UITars()
+        self.solver = UITars(config_name="coder")
         self.planner = Planner()
         self.subtask_success = False
         self.subtask = None
@@ -495,9 +495,9 @@ class PlannerUITARSAgent:
         """
         Predict the next action(s) based on the current observation.
         """
-        
+        screenshot = Image.open(BytesIO(obs['screenshot']))
         if self.subtask is None or self.subtask_success:
-            self.subtask = self.planner.inference_subtask(instruction, obs["screenshot"])
+            self.subtask = self.planner.inference_subtask(instruction, screenshot)
 
         def str_match(str1: str, str2: str) -> bool:
             return str1.lower() in str2.lower() or str2.lower() in str1.lower()
@@ -505,7 +505,7 @@ class PlannerUITARSAgent:
             self.success = True
             return "DONE", ["DONE"]      
 
-        prediction = self.solver.output_action(self.subtask, obs["screenshot"])
+        prediction = self.solver.output_action(self.subtask, screenshot)
         parsed_responses = self.customize_action_parser(
             prediction,
             self.action_parse_res_factor,
@@ -529,10 +529,12 @@ class PlannerUITARSAgent:
                 
                 elif parsed_response["action_type"] == ENV_FAIL_WORD:
                     self.actions.append(actions)
+                    self.solver.reset()
                     return prediction, ["FAIL"]
 
                 elif parsed_response["action_type"] == CALL_USER:
                     self.actions.append(actions)
+                    self.solver.reset()
                     return prediction, ["FAIL"]
 
             
@@ -556,216 +558,6 @@ class PlannerUITARSAgent:
 
 
 
-
-
-        # Append trajectory
-        # print(len(self.observations), len(self.actions), len(self.actions))
-        assert len(self.observations) == len(self.actions) and len(self.actions) == len(
-            self.thoughts
-        ), "The number of observations and actions should be the same."
-
-        self.history_images.append(obs["screenshot"])
-
-        if self.observation_type in ["screenshot", "screenshot_a11y_tree"]:
-            base64_image = obs["screenshot"]
-
-
-
-            self.observations.append(
-                {"screenshot": base64_image, "accessibility_tree": None}
-            )
-
-        else:
-            raise ValueError(
-                "Invalid observation_type type: " + self.observation_type
-            )  # 1}}}
-        
-        if self.infer_mode == "qwen2vl_user":
-            user_prompt = self.prompt_template.format(
-                instruction=instruction,
-                action_space=self.prompt_action_space,
-                language=self.language
-            )
-
-
-        if len(self.history_images) > self.history_n:
-            self.history_images = self.history_images[-self.history_n:]
-
-        max_pixels = 1350 * 28 * 28
-        min_pixels = 100 * 28 * 28
-        messages, images = [], []
-        if isinstance(self.history_images, bytes):
-            self.history_images = [self.history_images]
-        elif isinstance(self.history_images, np.ndarray):
-            self.history_images = list(self.history_images)
-        elif isinstance(self.history_images, list):
-            pass
-        else:
-            raise TypeError(f"Unidentified images type: {type(self.history_images)}")
-        max_image_nums_under_32k = int(32768*0.75/max_pixels*28*28)
-        if len(self.history_images) > max_image_nums_under_32k:
-            num_of_images = min(5, len(self.history_images))
-            max_pixels = int(32768*0.75) // num_of_images
-
-        for turn, image in enumerate(self.history_images):
-            if len(images) >= 5:
-                break
-            try:
-                image = Image.open(BytesIO(image))
-            except Exception as e:
-                raise RuntimeError(f"Error opening image: {e}")
-
-            if image.width * image.height > max_pixels:
-                """
-                如果图片超过/低于像素限制，则计算一个缩放因子resize_factor，使图片的像素数缩小到等于或小于max_pixels。这个缩放因子是通过开平方根计算的，确保纵横比保持不变,这样原始的相对坐标可以不经转换直接复用
-                """
-                resize_factor = math.sqrt(max_pixels / (image.width * image.height))
-                width, height = int(image.width * resize_factor), int(image.height * resize_factor)
-                image = image.resize((width, height))
-            if image.width * image.height < min_pixels:
-                resize_factor = math.sqrt(min_pixels / (image.width * image.height))
-                width, height = math.ceil(image.width * resize_factor), math.ceil(image.height * resize_factor)
-                image = image.resize((width, height))
-
-            if image.mode != "RGB":
-                image = image.convert("RGB")
-
-            images.append(image)
-
-        messages = [
-            {
-                "role": "system",
-                "content": [{"type": "text", "text": "You are a helpful assistant."}]
-            },
-            {
-                "role": "user",
-                "content": [{"type": "text", "text": user_prompt}]
-            }
-        ]
-        
-        image_num = 0
-        if len(self.history_responses) > 0:
-            for history_idx, history_response in enumerate(self.history_responses):
-                # send at most history_n images to the model
-                if history_idx + self.history_n > len(self.history_responses):
-
-                    cur_image = images[image_num]
-                    encoded_string = pil_to_base64(cur_image)
-                    messages.append({
-                        "role": "user",
-                        "content": [{"type": "image_url", "image_url": {"url": f"data:image/png;base64,{encoded_string}"}}]
-                    })
-                    image_num += 1
-                    
-                messages.append({
-                    "role": "assistant",
-                    "content": [history_response]
-                })
-
-            cur_image = images[image_num]
-            encoded_string = pil_to_base64(cur_image)
-            messages.append({
-                "role": "user",
-                "content": [{"type": "image_url", "image_url": {"url": f"data:image/png;base64,{encoded_string}"}}]
-            })
-            image_num += 1
-        
-        else:
-            cur_image = images[image_num]
-            encoded_string = pil_to_base64(cur_image)
-            messages.append({
-                "role": "user",
-                "content": [{"type": "image_url", "image_url": {"url": f"data:image/png;base64,{encoded_string}"}}]
-            })
-            image_num += 1
-
-        try_times = 3
-        while True:
-            if try_times <= 0:
-                print(f"Reach max retry times to fetch response from client, as error flag.")
-                return "client error", ["DONE"], []
-            try:
-                
-                response = self.vlm.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    frequency_penalty=1,
-                    max_tokens=self.max_tokens,
-                    temperature=self.temperature,
-                    top_k=self.top_k,
-                    top_p=self.top_p
-                )
-                # print(response.choices[0].message.content)
-                prediction = response.choices[0].message.content.strip()
-                
-                prediction = response[0]["prediction"].strip()
-                parsed_responses = self.customize_action_parser(
-                    prediction,
-                    self.action_parse_res_factor,
-                    self.runtime_conf["screen_height"],
-                    self.runtime_conf["screen_width"]
-                )
-                break
-            except Exception as e:
-                print(f"Error when fetching response from client, with response: {response}")
-                prediction = None
-                try_times -= 1
-                
-        if prediction is None:
-            return "client error", ["DONE"]
-
-        
-        self.history_responses.append(prediction)
-        self.thoughts.append(prediction)
-
-        try:
-            parsed_responses = self.customize_action_parser(
-                prediction,
-                self.action_parse_res_factor,
-                self.runtime_conf["screen_height"],
-                self.runtime_conf["screen_width"]
-            )
-        except Exception as e:
-            print(f"Parsing action error: {prediction}, with error:\n{e}")
-            return f"Parsing action error: {prediction}, with error:\n{e}", ["DONE"]
-
-        actions = []
-        for parsed_response in parsed_responses:
-            if "action_type" in parsed_response:
-
-                if parsed_response["action_type"] == FINISH_WORD:
-                    self.actions.append(actions)
-
-                    return prediction, ["DONE"]
-                
-                elif parsed_response["action_type"] == WAIT_WORD:
-                    self.actions.append(actions)
-                    return prediction, ["WAIT"]
-                
-                elif parsed_response["action_type"] == ENV_FAIL_WORD:
-                    self.actions.append(actions)
-                    return prediction, ["FAIL"]
-
-                elif parsed_response["action_type"] == CALL_USER:
-                    self.actions.append(actions)
-                    return prediction, ["FAIL"]
-
-            
-            pyautogui_code = parsing_response_to_pyautogui_code(
-                parsed_response,
-                self.runtime_conf["screen_height"],
-                self.runtime_conf["screen_width"],
-                self.input_swap
-            )
-            actions.append(pyautogui_code)
-
-        self.actions.append(actions)
-
-        if len(self.history_responses) >= self.max_trajectory_length:
-            # Default to FAIL if exceed max steps
-            actions = ["FAIL"]
-
-        return prediction, actions
 
 
     @backoff.on_exception(
@@ -792,9 +584,11 @@ class PlannerUITARSAgent:
         max_tries=10,
     )
     
-    def reset(self, runtime_logger):
+    def reset(self, runtime_logger: None):
         self.thoughts = []
         self.actions = []
         self.observations = []
         self.history_images = []
         self.history_responses = []
+        self.solver.reset()
+        self.planner.reset()

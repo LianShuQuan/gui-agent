@@ -9,7 +9,7 @@ temperature = 0.1
 
 # Optional configuration for specific LLM models
 [llm.coder]
-model = "UI-TARS-7B-SFT"
+model = "UI-TARS-7B-DPO"
 base_url = "http://localhost:8000/v1"
 api_key = "sk-..."
 temperature = 1.0
