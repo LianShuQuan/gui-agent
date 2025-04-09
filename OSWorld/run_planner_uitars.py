@@ -66,6 +66,7 @@ def config() -> argparse.Namespace:
     )
 
     # environment config
+    parser.add_argument("--provider_name", type=str, default="vmware")
     parser.add_argument("--path_to_vm", type=str, default=None)
     parser.add_argument(
         "--headless", action="store_true", help="Run in headless machine"
@@ -154,6 +155,7 @@ def test(args: argparse.Namespace, test_all_meta: dict) -> None:
 
 
     env = DesktopEnv(
+        provider_name=args.provider_name,
         path_to_vm=args.path_to_vm,
         action_space=agent.action_space,
         screen_size=(args.screen_width, args.screen_height),
