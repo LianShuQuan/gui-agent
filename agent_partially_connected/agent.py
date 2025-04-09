@@ -138,7 +138,7 @@ class BaseAgent():
 
     def reset(self):
         self.memory = Memory()
-        self.cur_subtask = []
+        self.subtasks = []
 
     def cur_subtask(self):
         return self.subtasks[-1]
