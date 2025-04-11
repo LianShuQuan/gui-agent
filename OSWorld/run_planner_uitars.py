@@ -94,7 +94,7 @@ def config() -> argparse.Namespace:
     )
 
     # lm config
-    parser.add_argument("--model", type=str, default="gpt-4o")
+    parser.add_argument("--model", type=str, default="UI-tars-7B-DPO")
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top_p", type=float, default=0.9)
     parser.add_argument("--max_tokens", type=int, default=1500)
@@ -138,17 +138,9 @@ def test(args: argparse.Namespace, test_all_meta: dict) -> None:
         "result_dir": args.result_dir,
     }
 
-    # agent = UITARSAgent(
-    #     model=args.model,
-    #     max_tokens=args.max_tokens,
-    #     top_p=args.top_p,
-    #     temperature=args.temperature,
-    #     action_space=args.action_space,
-    #     observation_type=args.observation_type,
-    #     max_trajectory_length=args.max_trajectory_length,
-    # )
 
-    agent = PlannerUITARSAgent(model=args.model, max_tokens=args.max_tokens,
+
+    agent = PlannerUITARSAgent(max_tokens=args.max_tokens,
                                top_p=args.top_p, temperature=args.temperature,
                                action_space=args.action_space,
                                observation_type=args.observation_type,

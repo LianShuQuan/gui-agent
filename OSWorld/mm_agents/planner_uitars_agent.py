@@ -420,7 +420,6 @@ def trim_accessibility_tree(linearized_accessibility_tree, max_tokens):
 class PlannerUITARSAgent:
     def __init__(
         self,
-        model="UI-TARS-7B-DPO",
         platform="ubuntu",
         max_tokens=1000,
         top_p=0.9,
@@ -442,7 +441,6 @@ class PlannerUITARSAgent:
             "screen_width": 1920
         }
     ):
-        self.model = model
         self.platform = platform
         self.max_tokens = max_tokens
         self.top_p = top_p

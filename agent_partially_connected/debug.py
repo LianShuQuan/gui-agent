@@ -16,7 +16,7 @@ parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 
 logger.remove()  # 这行很关键，先删除logger自动产生的handler，不然会出现重复输出的问题
-logger.add(sys.stderr, level='INFO')  # 只输出警告以上的日志
+logger.add(sys.stderr, level='DEBUG')  # 只输出警告以上的日志
 
 
 if __name__ == "__main__":
